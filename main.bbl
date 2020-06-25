@@ -1,0 +1,29 @@
+\begin{thebibliography}{}
+
+\bibitem[Bristow et~al., 2013]{bristow2013fast}
+Bristow, H., Eriksson, A., and Lucey, S. (2013).
+\newblock Fast convolutional sparse coding.
+\newblock In {\em The IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}.
+
+\bibitem[{Girshick} et~al., 2014]{girshick2014rich}
+{Girshick}, R., {Donahue}, J., {Darrell}, T., and {Malik}, J. (2014).
+\newblock Rich feature hierarchies for accurate object detection and semantic
+  segmentation.
+\newblock In {\em 2014 IEEE Conference on Computer Vision and Pattern
+  Recognition}, pages 580--587.
+
+\bibitem[{Hosang} et~al., 2016]{hosang2016what}
+{Hosang}, J., {Benenson}, R., {Dollár}, P., and {Schiele}, B. (2016).
+\newblock What makes for effective detection proposals?
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  38(4):814--830.
+
+\bibitem[Ren et~al., 2015]{ren2015faster}
+Ren, S., He, K., Girshick, R., and Sun, J. (2015).
+\newblock Faster r-cnn: Towards real-time object detection with region proposal
+  networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  91--99.
+
+\end{thebibliography}

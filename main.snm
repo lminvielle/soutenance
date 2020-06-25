@@ -1,0 +1,9 @@
+\beamer@slide {fig:introduction_signals_walk}{5}
+\beamer@slide {fig:walk_class_ex_preprocessing}{6}
+\beamer@slide {fig:walk_class_cnn_spn}{15}
+\beamer@slide {eq:cdl_baseform}{18}
+\beamer@slide {fig:walk_class_ex_stepboxes}{18}
+\beamer@slide {eq: convolutional embedding}{21}
+\beamer@slide {eq: def IOU}{26}
+\beamer@slide {fig:walk_class_ex_stepboxes}{26}
+\beamer@slide {eq: loss training CNN}{28}
