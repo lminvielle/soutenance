@@ -1,10 +1,10 @@
 \beamer@slide {fig:introduction_signals_walk}{4}
 \beamer@slide {tab:fall_detection_sensors_comparison}{5}
-\beamer@slide {fig:walk_class_ex_preprocessing}{10}
-\beamer@slide {fig:walk_class_cnn_spn}{19}
-\beamer@slide {eq:cdl_baseform}{22}
-\beamer@slide {fig:walk_class_ex_stepboxes}{22}
-\beamer@slide {eq: convolutional embedding}{25}
-\beamer@slide {eq: def IOU}{30}
-\beamer@slide {fig:walk_class_ex_stepboxes}{30}
-\beamer@slide {eq: loss training CNN}{32}
+\beamer@slide {fig:walk_class_ex_preprocessing}{11}
+\beamer@slide {fig:walk_class_cnn_spn}{20}
+\beamer@slide {eq:cdl_baseform}{23}
+\beamer@slide {fig:walk_class_ex_stepboxes}{23}
+\beamer@slide {eq: convolutional embedding}{26}
+\beamer@slide {eq: def IOU}{31}
+\beamer@slide {fig:walk_class_ex_stepboxes}{31}
+\beamer@slide {eq: loss training CNN}{33}

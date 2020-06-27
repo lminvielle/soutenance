@@ -3,10 +3,10 @@
 \beamer@sectionintoc {2}{A tour of monitoring systems}{5}{0}{2}
 \beamer@subsectionintoc {2}{1}{Systems}{5}{0}{2}
 \beamer@subsectionintoc {2}{2}{Processing}{9}{0}{2}
-\beamer@sectionintoc {3}{Step proposal network}{12}{0}{3}
-\beamer@subsectionintoc {3}{1}{Region proposal network}{12}{0}{3}
-\beamer@subsectionintoc {3}{2}{Main architecture}{18}{0}{3}
-\beamer@subsectionintoc {3}{3}{Signal embedding}{21}{0}{3}
-\beamer@subsectionintoc {3}{4}{Step proposal network}{29}{0}{3}
-\beamer@subsectionintoc {3}{5}{Results}{33}{0}{3}
-\beamer@sectionintoc {4}{Conclusion}{39}{0}{4}
+\beamer@sectionintoc {3}{Step proposal network}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{Region proposal network}{13}{0}{3}
+\beamer@subsectionintoc {3}{2}{Main architecture}{19}{0}{3}
+\beamer@subsectionintoc {3}{3}{Signal embedding}{22}{0}{3}
+\beamer@subsectionintoc {3}{4}{Step proposal network}{30}{0}{3}
+\beamer@subsectionintoc {3}{5}{Results}{34}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{40}{0}{4}

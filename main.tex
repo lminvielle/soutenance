@@ -292,7 +292,8 @@
 
 
 % \begin{minipage}[t]{\linewidth}
-    \begin{minipage}[c]{0.49\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
 What makes a good monitoring system ?
         \begin{itemize}
             \item coverage and occlusion
@@ -304,7 +305,8 @@ What makes a good monitoring system ?
         \end{itemize}
 
     \end{minipage}\hfill
-    \begin{minipage}[c]{0.49\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
         \begin{overprint}
             \onslide<2>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_1-14.pdf}
             \onslide<3>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_2-14.pdf}
@@ -344,43 +346,46 @@ What makes a good monitoring system ?
 \subsection{Processing}
 \begin{frame}{A tour of monitoring systems}{Processing}
 
-    \begin{minipage}[c]{0.49\linewidth}
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
     How to process the inputs ?
     \begin{itemize}
         \item All systems use feature extraction
         \item The ``level'' of feature engineering depends on the complexity / dimensionality of the input signal
     \end{itemize}
-    \begin{tcolorbox}[height=2cm]
-        \textbf{Time series classification}\\
-    \end{tcolorbox}
-
-    How to deal with
-    \begin{itemize}
-        
-      
-        \item Series as sequence
-        \begin{itemize}
-            \item Distance-based methods
-        \end{itemize}
-        \item Series as feature vector
-        \begin{itemize}
-            \item Computing several measures over a fixed size
-            \item Classification models
+    How to deal with processed signals ?
+    \begin{tcolorbox}[height=4.2cm]
+        \textbf{Time series classification}\\[-5pt]
+        \begin{enumerate}
+            \item Series as \emph{sequences}
             \begin{itemize}
-                \item Anomaly detection, classical supervised models...
+                \item Distance-based methods
             \end{itemize}
-        \end{itemize}
-    \end{itemize}
-    \vfill
+            \item Series as \emph{feature vectors}
+            \begin{itemize}
+                \item Computing several measures over a fixed size
+                \item Classification models
+                (Anomaly detection, classical supervised models...)
+            \end{itemize}
+        \end{enumerate}
+    \end{tcolorbox}
+%     \vfill
 %     \vspace{10cm}
-    \end{minipage}\hfill
-    \begin{minipage}[c]{0.49\linewidth}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
         \begin{overprint}
 %             \onslide<3>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_2-14.pdf}
 %             \onslide<4>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_3-14.pdf}
             \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
         \end{overprint}
     \end{minipage}
+% \end{minipage}
+\end{frame}
+
+\begin{frame}{A tour of monitoring systems}{Tarkett sensor}
 \end{frame}
 
 
