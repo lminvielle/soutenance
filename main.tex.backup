@@ -1,4 +1,4 @@
-\documentclass[8pt,t]{beamer} 
+\documentclass[9pt,t,aspectratio=1610]{beamer} 
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -10,20 +10,42 @@
 \usepackage{bibentry}  % bibtex elements into text
 % \usepackage{animate}
 
+\usepackage{biolinum} % new font
+\usepackage{booktabs}  % for \specialrule
+\usepackage{pifont}  % symbols (like \ding)
+
 % --------------------------------------------------------------------------------------------------
 % Template
 % --------------------------------------------------------------------------------------------------
-\usetheme{default}
-\usecolortheme{default}
+% \usetheme{default}
+% \usecolortheme{default}
+
+% My colors
+% \definecolor{myblue}{RGB}{31, 119, 180}
+% \definecolor{myorange}{RGB}{230, 107, 0}
+% \definecolor{mygreen}{RGB}{0, 135, 30}
+
+\definecolor{myblue}{RGB}{31, 119, 180}
+\definecolor{myorange}{RGB}{245, 117, 4}
+\definecolor{mygreen}{RGB}{34, 150, 34}
+
+\usecolortheme[named=myblue]{structure}
+\setbeamercolor{itemize subitem}{fg=myorange}
+\setbeamercolor{section in head/foot}{fg=white, bg=myblue}
+\setbeamercolor{subsection in head/foot}{fg=white, bg=myblue}
+\setbeamercolor{section in sidebar}{fg=black, bg=myblue}
+\setbeamercolor{subsection in sidebar}{fg=black, bg=myblue}
+\setbeamercolor{sidebar}{bg=myblue}
+
 \setbeamertemplate{frametitle}[default][center]
 \setbeamertemplate{navigation symbols}{}% remove navigation symbols
-\usepackage{biolinum} % new font
 
+% ajoute les numero de slides
 \addtobeamertemplate{navigation symbols}{}{%
     \usebeamerfont{footline}%
-    \usebeamercolor[fg]{footline}%
+    \usebeamercolor[fg]{section title}%
     \hspace{1em}%
-    \insertframenumber/\inserttotalframenumber
+    \normalsize{\insertframenumber/\inserttotalframenumber}
 }
 
 % pour ne pas compter toutes les frames de biblio
@@ -31,32 +53,63 @@
 
 % margins
 \setbeamersize{text margin left=15mm,text margin right=15mm} % left and right
-\addtobeamertemplate{frametitle}{\vspace*{5mm}}{\vspace*{0mm}} % top
+\addtobeamertemplate{frametitle}{\vspace*{2mm}}{\vspace*{0mm}} % top and bottom
 
 % to have the section and subsection number in the table of contents
 \setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in head/foot}[sections numbered]
 
+% Add bar with outline
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.78cm,dp=1.125ex]{section in head/foot}%
+    \small
+%     \insertsectionnumber
+    \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
+    \footnotesize
+    \insertsubsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
+    \vfill
+    \end{beamercolorbox}
+  }
+}
+
+% \newlength\sidebarwd
+% \setlength\sidebarwd{3.3cm}
+% \setbeamersize{sidebar width left = \sidebarwd}
+% \setbeamertemplate{sidebar left}{%
+% \footnotesize
+%     \insertsectionnavigation{0.5cm}{\vspace*{2cm}}{}
+%     \insertsubsectionnavigation{2cm}{}{}
+% \vfill
+% }
+
+% \setbeamercolor{background canvas}{bg=darkgray}
+
+% \setbeamercolor{headline}{bg=gray}
+% \setbeamercolor{footline}{bg=gray}
 % Pour avoir des tirets dans les itemize
-\setbeamertemplate{itemize items}[$-$]
+% \setbeamertemplate{itemize items}[$-$]
 
 % pour faire de jolis blocs
-\usepackage{tcolorbox}
+% \usepackage{tcolorbox}
 % optiions
-\tcbset{top=0mm, bottom=-1mm, % marge haut et bas.
-left=0mm, right=0mm}
+% \tcbset{top=55mm, bottom=10mm, % marge haut et bas.
+% left=0mm, right=0mm}
 
 
 % --------------------------------------------------------------------------------------------------
 %Information to be included in the title page:
 \title{Détection d'événements à partir de capteurs sols -- application au suivi de personnes fragiles}
 \subtitle{Soutenance de thèse}
-\author{Ludovic Minvielle\\[0.5cm]
-    Directeur: Nicolas Vayatis\\
-    Co-encadrante: Mathilde Mougeot}
+\author{Ludovic Minvielle\\[0.4cm]
+    Directeur: Nicolas Vayatis, Centre Borelli, ENS Paris-Saclay\\
+    Co-encadrante: Mathilde Mougeot, Centre Borelli, ENS Paris-Saclay}
 \institute[VFU] % (optional)
 {
-    Centre Borelli, ENS Paris-Saclay\\
-    Tarkett
+%     $^1$Centre Borelli, ENS Paris-Saclay\\
+%     $^2$Tarkett
+        Thèse industrielle entre l'ENS Paris-Saclay et Tarkett
 }
 \date{Mercredi 15 Juillet 2020}
 
@@ -71,6 +124,9 @@ left=0mm, right=0mm}
 % --------------------------------------------------------------------------------------------------     
 
 % COMMANDS, SHORTUCTS
+\newcommand{\myemph}[1]{\textcolor{myblue}{#1}}
+\newcommand{\myemphtwo}[1]{\textcolor{myorange}{#1}}
+\newcommand{\myemphthree}[1]{\textcolor{mygreen}{#1}}
 \newcommand{\ratio}{0.5}
 \newcommand{\algo}{{\textsc{NurseNet}}\ }
 \newcommand{\subalgo}{{\small\textsc{SPN}}\ }
@@ -101,70 +157,197 @@ left=0mm, right=0mm}
 \newcommand{\st}            {\mbox{s.t.\ }}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand\mymidrule{\specialrule{0.4pt}{1.5pt}{1.5pt}} % thiner midrule than original
+\newcommand{\starw}{\ding{73}}%
+\newcommand{\starb}{\ding{72}}%
+
+
 
 \begin{document}
 \graphicspath{{./images/}}
 \begingroup
+\makeatletter
+% \setlength{\hoffset}{-.5\sidebarwd}  % is sidebar
+\makeatother
 \setbeamertemplate{navigation symbols}{}  % remove page number within the group
-\frame[noframenumbering]{\titlepage}
+\frame[noframenumbering, plain]{\titlepage}
 \endgroup
 % 
+
 % ---------------------------------------------------------------
-\begin{frame}[noframenumbering]{Table of contents}
-% \centering
-% \setbeamersize{text margin left=15mm,text margin right=15mm} % left and right
-% \begin{minipage}[c]{0.5\linewidth}
-%     \tableofcontents[subsubsectionstyle=show]
-% \end{minipage}
-% \setlength{\leftskip}{3cm}
+\begingroup
+\setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\begin{frame}[noframenumbering, plain]{Table of contents}
 \hfill
 \parbox[t]{.85\textwidth}{
-%   \large
   \begin{minipage}[c][0.65\textheight]{\textwidth}
   \tableofcontents
   \end{minipage}
 }
-% \tableofcontents
 \end{frame}
+\endgroup
 
 \section{Introduction}
+\subsection{}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begingroup
+% \setbeamertemplate{navigation symbols}{}  % remove page number within the group
+% \begin{frame}[noframenumbering, plain]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
+% \endgroup
 
 
 
 \begin{frame}{Introduction}
+\begin{minipage}[t]{\linewidth}
+    \begin{minipage}[t]{0.5\linewidth}
+        \textbf{Context}
+        \begin{itemize}
+            \item Elderly population is growing
+            \item Higher levels of frailty globally
+            \item Increasing demand for reliable monitoring devices
+            \item Tarkett, French company with 12,500 employees, 13 industrial sites, sells 1.3 millions m$^2$ of flooring every day
+            \item \emph{Floor in Motion}: a floor-based sensor for elderly care
+            \item \textbf{Objective}: providing tools for elderly monitoring in nursing homes
+        %     \cite{minvielle2019nursenet}
+            \begin{itemize}
+                \item First aimed application: fall detection
+            \end{itemize}
+        \end{itemize}
+%         \centering
+%         \myemph{First aimed application: fall detection}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+        \begin{figure}[h]
+                \centering
+                \vspace{1cm}
+                \onslide<1->\includegraphics[width=0.4\linewidth]{Tarkett-logo_red.jpg}\\[5pt]
+                \onslide<1->\includegraphics[width=0.4\linewidth]{FIM.jpg}\\[15pt]
+                \onslide<1->\includegraphics[width=0.95\linewidth]{schema_fall_detector.pdf}\\
+        %         \onslide<1->\includegraphics[width=0.4\linewidth, trim={20 230 430 200}, clip]{schema_sensor_installation_3.pdf}\\[5pt]
+%                 \onslide<2->\includegraphics[width=0.4\linewidth, trim={360 230 5 160}, clip]{schema_sensor_installation_room_3.pdf}
+        %         \onslide<2->\includegraphics[width=0.6\linewidth, trim= 50 150 50 210, clip]{schema_couloir_plan_blue.pdf}
+        %     \end{minipage}
+        %     \caption{System installation in a nursing home.}
+        %     \label{fig:schema_installation}
+        \end{figure}
+    \end{minipage}
+\end{minipage}
+\end{frame}
 
-\begin{itemize}
-%     \item Thiw work is a part of \cite{minvielle2019nursenet}
-    \item Floor-based sensor for elderly care
-    \item Advantages: unobtrusive, reliable, scalable, robust to occlusions
-    \item Motivation: Providing tools for activity monitoring in nursing homes
-%     \cite{minvielle2019nursenet}
-\end{itemize}
+\begin{frame}{Introduction}{}
+% \hspace{4cm}
+\begin{minipage}[t]{\linewidth}
+%     \centering
+    \textbf{Motivation}
+    \begin{itemize}
+        \item Processing and understanding time series
+        \begin{itemize}
+            \item Proliferation of sensor-based systems
+            \item Redundancy, interpretability, external pertubations
+        \end{itemize}
+        \item Real world application
+        \begin{itemize}
+            \item Real-time processing in a limited system
+            \item Convenient hypotheses not granted
+        \end{itemize}
+    \end{itemize}
+\end{minipage}
 
-\begin{figure}[h]
-%     \begin{minipage}{\linewidth}
+\renewcommand{\ratio}{0.4}
+\begin{figure}[b]
+    \centering
+    \begin{minipage}{\linewidth}
         \centering
-%         \vspace{1cm}
-        % trim: left bottom right top
-        \onslide<1->\includegraphics[width=0.5\linewidth]{schema_fall_detector.pdf}\\[5pt]
-%         \onslide<1->\includegraphics[width=0.4\linewidth, trim={20 230 430 200}, clip]{schema_sensor_installation_3.pdf}\\[5pt]
-        \onslide<2->\includegraphics[width=0.4\linewidth, trim={360 230 5 160}, clip]{schema_sensor_installation_room_3.pdf}
-        \onslide<2->\includegraphics[width=0.6\linewidth, trim= 50 150 50 210, clip]{schema_couloir_plan_blue.pdf}
-%     \end{minipage}
-%     \caption{System installation in a nursing home.}
-%     \label{fig:schema_installation}
+        \begin{minipage}{\ratio\linewidth}
+            \centering
+            \includegraphics[width=0.91\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
+            {\small (a)\; Foot-attached accelerometer}
+        \end{minipage}
+        \begin{minipage}{\ratio\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{signal_marche_tarkett_epure.pdf}\\
+            {\small (b)\; Tarkett's floor sensor}
+        \end{minipage}
+    \end{minipage}
+%     \caption{Example of walk signals from different sensors.}
+    \label{fig:introduction_signals_walk}
 \end{figure}
-\pause[3]
+
+\end{frame}
+
+\section{A tour of monitoring systems}
+\subsection{Systems}
+\begin{frame}{A tour of monitoring systems}{Systems}
+    
+
+
+What makes a good monitoring system ?
+
+\begin{minipage}[t]{0.49\linewidth}
+    \begin{itemize}
+        \item coverage and occlusion
+        \item intrusiveness
+        \item signal quality / information
+        \item robustness
+        \item ease of installation / use
+        \item scalability
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.49\linewidth}
+    \begin{overprint}
+        \onslide<2>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_1-14.pdf}
+        \onslide<3>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_2-14.pdf}
+        \onslide<4>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_3-14.pdf}
+        \onslide<5>\includegraphics[width=0.9\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
+    \end{overprint}
+\end{minipage}
+
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\myvar}{45}
+\begin{table}[]
+\centering
+\footnotesize
+% \small
+    \begin{tabular}{l c c c c c c c}
+%     \hline
+    Criteria & \rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam} & \rotatebox{\myvar}{Wearable} & \rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor} \\
+    \midrule
+    Coverage/Occlusion & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starb & \starb\starb\starw & \starb\starw\starw & \starb\starb\starb & \starb\starb\starb \\
+    Intrusiveness & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb & \starb\starb\starb \\
+    Signal quality / info &\onslide<2->{\starb\starb\starb & \starb\starb\starb} & \starb\starb\starw & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starw \\
+    Robustness & \onslide<2->{\starb\starb\starw & \starb\starb\starb} & \starb\starb\starb & \starb\starw\starw & \starb\starw\starw & \starb\starw\starw & \starb\starb\starw \\
+    Ease of instal. / use & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starw & \starb\starb\starw & \starb\starb\starw & \starb\starb\starb & \starb\starw\starw \\
+    Scalability & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starb & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb \\
+    \midrule
+    \end{tabular}
+% \caption{Sensors evaluation over key criteria for patient monitoring systems.}
+\label{tab:fall_detection_sensors_comparison}
+\end{table}
+\renewcommand{\arraystretch}{1.0}
+
+\end{frame}
+
+\subsection{Processing}
+\begin{frame}{A tour of monitoring systems}{Processing}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Introduction}{}
 \begin{itemize}
     \item \textbf{Issue}: one-dimensional signals for large areas
     \item Goal: Classify elderly from other individuals
@@ -174,11 +357,6 @@ left=0mm, right=0mm}
     \end{itemize}
     \item \textbf{Subtask}: Bring the model's attention over step-related signals
 \end{itemize}
-
-\end{frame}
-
-\begin{frame}{Introduction}{}
-
 \begin{itemize}
     \item A model to recognize steps ?
 \end{itemize}

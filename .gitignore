@@ -1,0 +1,13 @@
+**/*.swp
+**/*-swp
+**/*.bbl
+**/*.blg
+**/*.log
+**/*.out
+**/*.ptc
+**/*.toc
+**/*.aux
+**/*.gz
+**/*.kilepr
+**/*.backup
+**/*.directory

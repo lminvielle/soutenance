@@ -11,6 +11,9 @@
 % \usepackage{animate}
 
 \usepackage{biolinum} % new font
+\usepackage{booktabs}  % for \specialrule
+\usepackage{pifont}  % symbols (like \ding)
+
 % --------------------------------------------------------------------------------------------------
 % Template
 % --------------------------------------------------------------------------------------------------
@@ -27,8 +30,12 @@
 \definecolor{mygreen}{RGB}{34, 150, 34}
 
 \usecolortheme[named=myblue]{structure}
-\setbeamercolor{section in head/foot}{fg=white, bg=myblue}
 \setbeamercolor{itemize subitem}{fg=myorange}
+\setbeamercolor{section in head/foot}{fg=white, bg=myblue}
+\setbeamercolor{subsection in head/foot}{fg=white, bg=myblue}
+\setbeamercolor{section in sidebar}{fg=black, bg=myblue}
+\setbeamercolor{subsection in sidebar}{fg=black, bg=myblue}
+\setbeamercolor{sidebar}{bg=myblue}
 
 \setbeamertemplate{frametitle}[default][center]
 \setbeamertemplate{navigation symbols}{}% remove navigation symbols
@@ -46,22 +53,36 @@
 
 % margins
 \setbeamersize{text margin left=15mm,text margin right=15mm} % left and right
-\addtobeamertemplate{frametitle}{\vspace*{5mm}}{\vspace*{0mm}} % top and bottom
+\addtobeamertemplate{frametitle}{\vspace*{2mm}}{\vspace*{0mm}} % top and bottom
 
 % to have the section and subsection number in the table of contents
 \setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in head/foot}[sections numbered]
 
+% Add bar with outline
 \setbeamertemplate{headline}{%
-\normalsize
-% \usebeamercolor[fg]{section title}
 \leavevmode%
   \hbox{%
-    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}%
-    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
-    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.78cm,dp=1.125ex]{section in head/foot}%
+    \small
+%     \insertsectionnumber
+    \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
+    \footnotesize
+    \insertsubsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
+    \vfill
+    \end{beamercolorbox}
   }
-% \textcolor{gray}{\rule{\paperwidth}{0.5pt}}
 }
+
+% \newlength\sidebarwd
+% \setlength\sidebarwd{3.3cm}
+% \setbeamersize{sidebar width left = \sidebarwd}
+% \setbeamertemplate{sidebar left}{%
+% \footnotesize
+%     \insertsectionnavigation{0.5cm}{\vspace*{2cm}}{}
+%     \insertsubsectionnavigation{2cm}{}{}
+% \vfill
+% }
 
 % \setbeamercolor{background canvas}{bg=darkgray}
 
@@ -136,10 +157,18 @@
 \newcommand{\st}            {\mbox{s.t.\ }}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand\mymidrule{\specialrule{0.4pt}{1.5pt}{1.5pt}} % thiner midrule than original
+\newcommand{\starw}{\ding{73}}%
+\newcommand{\starb}{\ding{72}}%
+
+
 
 \begin{document}
 \graphicspath{{./images/}}
 \begingroup
+\makeatletter
+% \setlength{\hoffset}{-.5\sidebarwd}  % is sidebar
+\makeatother
 \setbeamertemplate{navigation symbols}{}  % remove page number within the group
 \frame[noframenumbering, plain]{\titlepage}
 \endgroup
@@ -159,19 +188,19 @@
 \endgroup
 
 \section{Introduction}
+\subsection{}
 
-\begingroup
-\setbeamertemplate{navigation symbols}{}  % remove page number within the group
-\begin{frame}[noframenumbering, plain]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
-\endgroup
+% \begingroup
+% \setbeamertemplate{navigation symbols}{}  % remove page number within the group
+% \begin{frame}[noframenumbering, plain]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
+% \endgroup
 
 
 
@@ -213,21 +242,23 @@
 \end{frame}
 
 \begin{frame}{Introduction}{}
-\textbf{Motivation}
-\begin{itemize}
-    \item Processing and understanding time series
+% \hspace{4cm}
+\begin{minipage}[t]{\linewidth}
+%     \centering
+    \textbf{Motivation}
     \begin{itemize}
-        \item Proliferation of sensor-based systems
-        \item Redundancy, interpretability, external pertubations
+        \item Processing and understanding time series
+        \begin{itemize}
+            \item Proliferation of sensor-based systems
+            \item Redundancy, interpretability, external pertubations
+        \end{itemize}
+        \item Real world application
+        \begin{itemize}
+            \item Real-time processing in a limited system
+            \item Convenient hypotheses not granted
+        \end{itemize}
     \end{itemize}
-
-    \item Real world application
-    \begin{itemize}
-        \item Real-time processing in a limited system
-        
-    \end{itemize}
-
-\end{itemize}
+\end{minipage}
 
 \renewcommand{\ratio}{0.4}
 \begin{figure}[b]
@@ -250,6 +281,90 @@
 \end{figure}
 
 \end{frame}
+
+\section{A tour of monitoring systems}
+\subsection{Systems}
+\begin{frame}{A tour of monitoring systems}{Systems}
+    
+
+
+
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[c]{0.49\linewidth}
+What makes a good monitoring system ?
+        \begin{itemize}
+            \item coverage and occlusion
+            \item intrusiveness
+            \item signal quality / information
+            \item robustness
+            \item ease of installation / use
+            \item scalability
+        \end{itemize}
+
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.49\linewidth}
+        \begin{overprint}
+            \onslide<2>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_1-14.pdf}
+            \onslide<3>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_2-14.pdf}
+            \onslide<4>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_3-14.pdf}
+        \end{overprint}
+    \end{minipage}
+% \end{minipage}
+
+% \onslide<1>{
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\myvar}{45}
+\begin{table}[]
+\centering
+\footnotesize
+% \small
+    \begin{tabular}{l c c c c c c c}
+%     \hline
+    Criteria & \rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam} & \rotatebox{\myvar}{Wearable} & \rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor} \\
+    \midrule
+    Coverage/Occlusion & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starb & \starb\starb\starb} \\
+    Intrusiveness & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starw\starw & \starb\starb\starw & \starb\starb\starb & \starb\starb\starb} \\
+    Signal quality / info &\onslide<2->{\starb\starb\starb & \starb\starb\starb} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starw} \\
+    Robustness & \onslide<2->{\starb\starb\starw & \starb\starb\starb} & \starb\starb\starb & \starb\starw\starw & \starb\starw\starw & \starb\starw\starw & \starb\starb\starw \\
+    Ease of instal. / use & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starw & \starb\starb\starw & \starb\starb\starw & \starb\starb\starb & \starb\starw\starw \\
+    Scalability & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starb & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb \\
+    \midrule
+    \end{tabular}
+% \caption{Sensors evaluation over key criteria for patient monitoring systems.}
+\label{tab:fall_detection_sensors_comparison}
+\end{table}
+\renewcommand{\arraystretch}{1.0}
+% }
+
+\end{frame}
+
+\subsection{Processing}
+\begin{frame}{A tour of monitoring systems}{Processing}
+
+    \begin{minipage}[c]{0.49\linewidth}
+    How to process the inputs ?
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.49\linewidth}
+        \begin{overprint}
+%             \onslide<3>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_2-14.pdf}
+%             \onslide<4>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_3-14.pdf}
+            \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
+        \end{overprint}
+    \end{minipage}
+\end{frame}
+
+
+
+
+
+
+
+
+
 
 \begin{frame}{Introduction}{}
 \begin{itemize}
