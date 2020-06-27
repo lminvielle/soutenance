@@ -13,6 +13,8 @@
 \usepackage{biolinum} % new font
 \usepackage{booktabs}  % for \specialrule
 \usepackage{pifont}  % symbols (like \ding)
+\usepackage{tcolorbox}
+
 
 % --------------------------------------------------------------------------------------------------
 % Template
@@ -311,8 +313,9 @@ What makes a good monitoring system ?
     \end{minipage}
 % \end{minipage}
 
+\vspace{-0.8cm}
 % \onslide<1>{
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.1}
 \newcommand{\myvar}{45}
 \begin{table}[]
 \centering
@@ -320,14 +323,14 @@ What makes a good monitoring system ?
 % \small
     \begin{tabular}{l c c c c c c c}
 %     \hline
-    Criteria & \rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam} & \rotatebox{\myvar}{Wearable} & \rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor} \\
+    Criteria & \onslide<2->{\rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam}} & \onslide<3->{\rotatebox{\myvar}{Wearable}} & \onslide<4->{\rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor}} \\
     \midrule
     Coverage/Occlusion & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starb & \starb\starb\starb} \\
     Intrusiveness & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starw\starw & \starb\starb\starw & \starb\starb\starb & \starb\starb\starb} \\
     Signal quality / info &\onslide<2->{\starb\starb\starb & \starb\starb\starb} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starw} \\
-    Robustness & \onslide<2->{\starb\starb\starw & \starb\starb\starb} & \starb\starb\starb & \starb\starw\starw & \starb\starw\starw & \starb\starw\starw & \starb\starb\starw \\
-    Ease of instal. / use & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starw & \starb\starb\starw & \starb\starb\starw & \starb\starb\starb & \starb\starw\starw \\
-    Scalability & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starb & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb \\
+    Robustness & \onslide<2->{\starb\starb\starw & \starb\starb\starb} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starw\starw & \starb\starw\starw & \starb\starw\starw & \starb\starb\starw} \\
+    Ease of instal. / use & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starb\starw & \starb\starb\starw & \starb\starb\starb & \starb\starw\starw} \\
+    Scalability & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb} \\
     \midrule
     \end{tabular}
 % \caption{Sensors evaluation over key criteria for patient monitoring systems.}
@@ -344,9 +347,32 @@ What makes a good monitoring system ?
     \begin{minipage}[c]{0.49\linewidth}
     How to process the inputs ?
     \begin{itemize}
-        \item 
+        \item All systems use feature extraction
+        \item The ``level'' of feature engineering depends on the complexity / dimensionality of the input signal
     \end{itemize}
+    \begin{tcolorbox}[height=2cm]
+        \textbf{Time series classification}\\
+    \end{tcolorbox}
 
+    How to deal with
+    \begin{itemize}
+        
+      
+        \item Series as sequence
+        \begin{itemize}
+            \item Distance-based methods
+        \end{itemize}
+        \item Series as feature vector
+        \begin{itemize}
+            \item Computing several measures over a fixed size
+            \item Classification models
+            \begin{itemize}
+                \item Anomaly detection, classical supervised models...
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \vfill
+%     \vspace{10cm}
     \end{minipage}\hfill
     \begin{minipage}[c]{0.49\linewidth}
         \begin{overprint}
