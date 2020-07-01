@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  27 JUN 2020 20:10
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  2 JUL 2020 00:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1514,57 +1514,132 @@ Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 \tcb@temp=\box77
 \tcb@out=\write5
 )
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen299
+\pgffor@skip=\dimen300
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count284
+\pgfplotmarksize=\dimen301
+)
+\tikz@lastx=\dimen302
+\tikz@lasty=\dimen303
+\tikz@lastxsaved=\dimen304
+\tikz@lastysaved=\dimen305
+\tikzleveldistance=\dimen306
+\tikzsiblingdistance=\dimen307
+\tikz@figbox=\box78
+\tikz@figbox@bg=\box79
+\tikz@tempbox=\box80
+\tikz@tempbox@bg=\box81
+\tikztreelevel=\count285
+\tikznumberofchildren=\count286
+\tikznumberofcurrentchild=\count287
+\tikz@fig@count=\count288
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count289
+\pgfmatrixcurrentcolumn=\count290
+\pgf@matrix@numberofcolumns=\count291
+)
+\tikz@expandcount=\count292
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen308
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen309
+\pgfdecoratedremainingdistance=\dimen310
+\pgfdecoratedinputsegmentcompleteddistance=\dimen311
+\pgfdecoratedinputsegmentremainingdistance=\dimen312
+\pgf@decorate@distancetomove=\dimen313
+\pgf@decorate@repeatstate=\count293
+\pgfdecorationsegmentamplitude=\dimen314
+\pgfdecorationsegmentlength=\dimen315
+)
+\tikz@lib@dec@box=\box82
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemest
 ructure.sty
 Package: beamercolorthemestructure 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 109.
+(hyperref)                removing `\\' on input line 113.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 109.
+(hyperref)                removing `\\' on input line 113.
 
-(./main.aux
-
-LaTeX Warning: Label `fig:walk_class_ex_stepboxes' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 168.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 168.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 195.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 195.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 168.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 168.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 195.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 195.
 
 (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    ... okay on input line 195.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1601,8 +1676,8 @@ LaTeX Font Info:    ... okay on input line 168.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box78
-Package hyperref Info: Link coloring OFF on input line 168.
+\AtBeginShipoutBox=\box83
+Package hyperref Info: Link coloring OFF on input line 195.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1610,69 +1685,69 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count284
+\c@section@level=\count294
 )
-LaTeX Info: Redefining \ref on input line 168.
-LaTeX Info: Redefining \pageref on input line 168.
-LaTeX Info: Redefining \nameref on input line 168.
+LaTeX Info: Redefining \ref on input line 195.
+LaTeX Info: Redefining \pageref on input line 195.
+LaTeX Info: Redefining \nameref on input line 195.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 168.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 195.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 168.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 195.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmr/m/n on input line 168.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 168.
+(Font)                  OT1/cmss/m/n --> EU1/lmr/m/n on input line 195.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> EU1/LinBiolinum(0)/bx/n on input line 
-168.
+195.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  OT1/cmr/bx/n --> EU1/LinBiolinum(0)/bx/n on input line 
-168.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 168.
+195.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> EU1/LinBiolinum(0)/m/n on input line 1
-68.
+95.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> EU1/LinBiolinum(0)/m/n on input line 
-168.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 168.
+195.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> EU1/LinBiolinum(0)/m/it on input line 
-168.
+195.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> EU1/LinBiolinum(0)/m/it on input line
- 168.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 168.
+ 195.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 168.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 168.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 195.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
 (Font)                  EU1/LinBiolinum(0)/m/n --> EU1/LinBiolinum(0)/bx/n on i
-nput line 168.
+nput line 195.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  EU1/LinBiolinum(0)/m/it --> EU1/LinBiolinum(0)/bx/it on
- input line 168.
+ input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmr/bx/n on input line 168.
+(Font)                  OT1/cmss/bx/n --> EU1/lmr/bx/n on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  EU1/LinBiolinum(0)/bx/n --> EU1/LinBiolinum(0)/bx/n on 
-input line 168.
+input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  EU1/LinBiolinum(0)/m/n --> EU1/LinBiolinum(0)/bx/n on i
-nput line 168.
+nput line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  EU1/LinBiolinum(0)/m/it --> EU1/LinBiolinum(0)/bx/it on
- input line 168.
+ input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  EU1/lmtt/m/n --> EU1/lmtt/bx/n on input line 168.
+(Font)                  EU1/lmtt/m/n --> EU1/lmtt/bx/n on input line 195.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1698,7 +1773,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 168.
+LaTeX Info: Redefining \includegraphics on input line 195.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: Incompatible package detected (regarding \caption).
@@ -1724,95 +1799,95 @@ Package caption Info: End \AtBeginDocument code.
 .................................................
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 168.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 168.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 168.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 168.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 168.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 168.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 168.
-LaTeX Font Info:    Redeclaring math accent \check on input line 168.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 168.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 168.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 168.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 168.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 168.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 195.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 195.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 195.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 195.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 195.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 195.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 195.
+LaTeX Font Info:    Redeclaring math accent \check on input line 195.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 195.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 195.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 195.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 195.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 168.
+(Font)              `operators' in the math version `normal' on input line 195.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmr/m/n on input line 168.
+(Font)                  OT1/cmss/m/n --> EU1/lmr/m/n on input line 195.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 168.
+(Font)              `operators' in the math version `bold' on input line 195.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmr/m/n on input line 168.
+(Font)                  OT1/cmss/bx/n --> EU1/lmr/m/n on input line 195.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 168.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 168.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 195.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  EU1/LinBiolinum(0)/m/it --> EU1/lmr/m/it on input line 
-168.
+195.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  EU1/LinBiolinum(0)/bx/n --> EU1/lmr/bx/n on input line 
-168.
+195.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  EU1/LinBiolinum(0)/m/n --> EU1/LinBiolinum(0)/m/n on in
-put line 168.
+put line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  EU1/lmtt/m/n --> EU1/lmtt/m/n on input line 168.
+(Font)                  EU1/lmtt/m/n --> EU1/lmtt/m/n on input line 195.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 168.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  EU1/LinBiolinum(0)/bx/it --> EU1/lmr/bx/it on input lin
-e 168.
+e 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  EU1/LinBiolinum(0)/bx/n --> EU1/LinBiolinum(0)/bx/n on 
-input line 168.
+input line 195.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  EU1/lmtt/bx/n --> EU1/lmtt/bx/n on input line 168.
+(Font)                  EU1/lmtt/bx/n --> EU1/lmtt/bx/n on input line 195.
 (./main.nav)
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 168.
+(Font)              scaled to size 5.0pt on input line 195.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 168.
+(Font)              scaled to size 8.0pt on input line 195.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 168.
+(Font)              scaled to size 7.0pt on input line 195.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 7.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
 
-Overfull \hbox (1.25pt too wide) in paragraph at lines 168--168
+Overfull \hbox (1.25pt too wide) in paragraph at lines 195--195
 [][] 
  []
 
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 175.
+(Font)              scaled to size 10.95pt on input line 202.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 10.95pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 175.
+(Font)              scaled to size 6.0pt on input line 202.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -1834,7 +1909,14 @@ File: images/Tarkett-logo_red.jpg Graphic file (type QTm)
 
 <use  "images/Tarkett-logo_red.jpg" > [1
 
-] (./main.toc)
+]
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 219.
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
+xt;mapping=tex-text;+tnum;" at 10.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+.otf
+ (./main.toc)
 Requested font "[lmroman6-regular]:mapping=tex-text" at 6.0pt
  -> /usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf
 Requested font "[lmroman5-regular]:mapping=tex-text" at 5.0pt
@@ -1853,7 +1935,7 @@ Requested font "cmex7" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 Requested font "cmex7" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-LaTeX Font Info:    Try loading font information for U+msa on input line 189.
+LaTeX Font Info:    Try loading font information for U+msa on input line 219.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1864,7 +1946,7 @@ Requested font "msam7" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 Requested font "msam5" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-LaTeX Font Info:    Try loading font information for U+msb on input line 189.
+LaTeX Font Info:    Try loading font information for U+msb on input line 219.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1876,52 +1958,48 @@ Requested font "msbm7" at 6.0pt
 Requested font "msbm5" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 189.
+(Font)              scaled to size 9.0pt on input line 219.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 9.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 I.otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 189.
+(Font)              scaled to size 6.0pt on input line 219.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 I.otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 5.0pt on input line 189.
+(Font)              scaled to size 5.0pt on input line 219.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 I.otf
 Requested font "cmr6" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-
-Overfull \hbox (55.48062pt too wide) in paragraph at lines 189--189
-[]$[][][]$ 
- []
-
-[2
+ [2
 
 ]
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 9.0pt on input line 244.
+(Font)              scaled to size 9.0pt on input line 274.
 Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 9.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 B.otf
 File: ./images/Tarkett-logo_red.jpg Graphic file (type QTm)
- <use  "./images/Tarkett-logo_red.jpg" >
+
+<use  "./images/Tarkett-logo_red.jpg" >
 File: ./images/FIM.jpg Graphic file (type QTm)
  <use  "./images/FIM.jpg" >
 File: ./images/schema_fall_detector.pdf Graphic file (type QTm)
 
 <use  "./images/schema_fall_detector.pdf" >
-Overfull \hbox (1.5pt too wide) in paragraph at lines 244--244
+Overfull \hbox (1.5pt too wide) in paragraph at lines 274--274
 [][] [] 
  []
 
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 4.0pt on input line 244.
+(Font)              scaled to size 4.0pt on input line 274.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 4.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -1964,7 +2042,7 @@ Requested font "msam7" at 7.0pt
 Requested font "msbm7" at 7.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 7.0pt on input line 344.
+(Font)              scaled to size 7.0pt on input line 375.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 7.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -2033,6 +2111,20 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [9
 
 ]
+File: ./images/schema_piezo.pdf Graphic file (type QTm)
+ <use  "./images/schema_piezo.pdf" >
+File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_rouleau.png" >
+File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_connecteur.png" >
+File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_3.pdf" >
+File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_room_3.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2040,13 +2132,20 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [10
 
 ]
-File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
- QTm)
- <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
-File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
-QTm)
+File: ./images/schema_piezo.pdf Graphic file (type QTm)
+ <use  "./images/schema_piezo.pdf" >
+File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
 
-<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
+<use  "./images/photo_capteur_rouleau.png" >
+File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_connecteur.png" >
+File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_3.pdf" >
+File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_room_3.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2054,25 +2153,35 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [11
 
 ]
-File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
- QTm)
- <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
-File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
-QTm)
+File: ./images/schema_piezo.pdf Graphic file (type QTm)
+ <use  "./images/schema_piezo.pdf" >
+File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
 
-<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
+<use  "./images/photo_capteur_rouleau.png" >
+File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_connecteur.png" >
+File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_3.pdf" >
+File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_room_3.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [12
 
-] (./main.toc)
-Overfull \hbox (55.48062pt too wide) in paragraph at lines 455--455
-[]$[][][]$ 
- []
+]
+File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_raw_2.pdf" >
+File: ./images/ex_signal_preproc_2.pdf Graphic file (type QTm)
 
+<use  "./images/ex_signal_preproc_2.pdf" >
+File: ./images/ex_signal_chute_2.pdf Graphic file (type QTm)
 
+<use  "./images/ex_signal_chute_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2080,15 +2189,14 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [13
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_raw_2.pdf" >
+File: ./images/ex_signal_preproc_2.pdf Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
-Overfull \vbox (17.41978pt too high) detected at line 474
- []
+<use  "./images/ex_signal_preproc_2.pdf" >
+File: ./images/ex_signal_chute_2.pdf Graphic file (type QTm)
 
-
+<use  "./images/ex_signal_chute_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2096,15 +2204,14 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [14
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_raw_2.pdf" >
+File: ./images/ex_signal_preproc_2.pdf Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
-Overfull \vbox (17.41978pt too high) detected at line 474
- []
+<use  "./images/ex_signal_preproc_2.pdf" >
+File: ./images/ex_signal_chute_2.pdf Graphic file (type QTm)
 
-
+<use  "./images/ex_signal_chute_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2112,12 +2219,19 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [15
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_chute_2_epure.pdf" >
+Requested font "[lmroman6-bold]:mapping=tex-text" at 6.0pt
+ -> /usr/share/texmf/fonts/opentype/public/lm/lmroman6-bold.otf
+Requested font "[lmroman5-bold]:mapping=tex-text" at 5.0pt
+ -> /usr/share/texmf/fonts/opentype/public/lm/lmroman5-bold.otf
+File: ./images/schema_decision_tree_1.png Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
-Overfull \vbox (17.41978pt too high) detected at line 474
+<use  "./images/schema_decision_tree_1.png" >
+File: ./images/schema_decision_tree_3.png Graphic file (type QTm)
+
+<use  "./images/schema_decision_tree_3.png" >
+Overfull \vbox (0.1943pt too high) detected at line 592
  []
 
 
@@ -2128,15 +2242,6 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [16
 
 ]
-File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
- <use  "./images/faster_rnn_wholenetwork.png" >
-File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
-
-<use  "./images/faster_rnn_rpn.png" >
-Overfull \vbox (7.47806pt too high) detected at line 492
- []
-
-
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2144,27 +2249,20 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [17
 
 ]
-File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
- <use  "./images/faster_rnn_wholenetwork.png" >
-File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
-
-<use  "./images/faster_rnn_rpn.png" >
-Overfull \vbox (7.47806pt too high) detected at line 492
- []
-
-
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [18
 
-] (./main.toc)
-Overfull \hbox (55.48062pt too wide) in paragraph at lines 504--504
-[]$[][][]$ 
- []
+]
+File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
+ QTm)
+ <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
+File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
+QTm)
 
-
+<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2172,15 +2270,13 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [19
 
 ]
-File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
- <use  "./images/schema_cnn_rpn.pdf" >
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 532.
-Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
-xt;mapping=tex-text;+tnum;+smcp;+smcp;" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-.otf
+File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
+ QTm)
+ <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
+File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
+QTm)
 
+<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2188,17 +2284,28 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [20
 
 ]
-File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
- <use  "./images/schema_cnn_rpn.pdf" >
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \vbox (17.41978pt too high) detected at line 690
+ []
+
+
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [21
 
-] (./main.toc)
-Overfull \hbox (55.48062pt too wide) in paragraph at lines 544--544
-[]$[][][]$ 
+]
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \vbox (17.41978pt too high) detected at line 690
  []
 
 
@@ -2209,22 +2316,15 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [22
 
 ]
-Requested font "[lmroman6-bold]:mapping=tex-text" at 6.0pt
- -> /usr/share/texmf/fonts/opentype/public/lm/lmroman6-bold.otf
-Requested font "[lmroman5-bold]:mapping=tex-text" at 5.0pt
- -> /usr/share/texmf/fonts/opentype/public/lm/lmroman5-bold.otf
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
 
-Overfull \hbox (7.13138pt too wide) in paragraph at lines 573--573
-[] 
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \vbox (17.41978pt too high) detected at line 690
  []
 
 
-Overfull \hbox (1.54166pt too wide) in alignment at lines 573--573
-[] []
- []
-
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
-<use  "./images/cdl_example_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2232,17 +2332,15 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [23
 
 ]
-Overfull \hbox (7.13138pt too wide) in paragraph at lines 573--573
-[] 
+File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
+ <use  "./images/faster_rnn_wholenetwork.png" >
+File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn.png" >
+Overfull \vbox (7.47806pt too high) detected at line 708
  []
 
 
-Overfull \hbox (1.54166pt too wide) in alignment at lines 573--573
-[] []
- []
-
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
-<use  "./images/cdl_example_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2250,17 +2348,15 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [24
 
 ]
-Overfull \hbox (7.13138pt too wide) in paragraph at lines 573--573
-[] 
+File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
+ <use  "./images/faster_rnn_wholenetwork.png" >
+File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn.png" >
+Overfull \vbox (7.47806pt too high) detected at line 708
  []
 
 
-Overfull \hbox (1.54166pt too wide) in alignment at lines 573--573
-[] []
- []
-
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
-<use  "./images/cdl_example_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2268,20 +2364,14 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [25
 
 ]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (34.94249pt too high) detected at line 624
- []
-
+File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
+ <use  "./images/schema_cnn_rpn.pdf" >
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/sc' will be
+(Font)              scaled to size 8.0pt on input line 747.
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
+xt;mapping=tex-text;+tnum;+smcp;+smcp;" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+.otf
 
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
@@ -2290,21 +2380,8 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [26
 
 ]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (34.94249pt too high) detected at line 624
- []
-
-
+File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
+ <use  "./images/schema_cnn_rpn.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2312,21 +2389,17 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [27
 
 ]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (34.94249pt too high) detected at line 624
+Overfull \hbox (7.13138pt too wide) in paragraph at lines 787--787
+[] 
  []
 
 
+Overfull \hbox (1.54166pt too wide) in alignment at lines 787--787
+[] []
+ []
+
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+<use  "./images/cdl_example_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2334,6 +2407,42 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [28
 
 ]
+Overfull \hbox (7.13138pt too wide) in paragraph at lines 787--787
+[] 
+ []
+
+
+Overfull \hbox (1.54166pt too wide) in alignment at lines 787--787
+[] []
+ []
+
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+<use  "./images/cdl_example_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[29
+
+]
+Overfull \hbox (7.13138pt too wide) in paragraph at lines 787--787
+[] 
+ []
+
+
+Overfull \hbox (1.54166pt too wide) in alignment at lines 787--787
+[] []
+ []
+
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+<use  "./images/cdl_example_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[30
+
+]
 File: ./images/dictionary.pdf Graphic file (type QTm)
  <use  "./images/dictionary.pdf" >
 File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
@@ -2345,37 +2454,7 @@ File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
 File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
 
 <use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (34.94249pt too high) detected at line 624
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[29
-
-] (./main.toc)
-Overfull \hbox (55.48062pt too wide) in paragraph at lines 638--638
-[]$[][][]$ 
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[30
-
-]
-File: ./images/iou_scheme.pdf Graphic file (type QTm)
- <use  "./images/iou_scheme.pdf" >
-File: ./images/example_step.pdf Graphic file (type QTm)
- <use  "./images/example_step.pdf" >
-File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_stepboxes.pdf" >
-Overfull \vbox (44.18318pt too high) detected at line 674
+Overfull \vbox (34.94249pt too high) detected at line 838
  []
 
 
@@ -2386,14 +2465,18 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [31
 
 ]
-File: ./images/iou_scheme.pdf Graphic file (type QTm)
- <use  "./images/iou_scheme.pdf" >
-File: ./images/example_step.pdf Graphic file (type QTm)
- <use  "./images/example_step.pdf" >
-File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
 
-<use  "./images/signal_walk_young_female_stepboxes.pdf" >
-Overfull \vbox (44.18318pt too high) detected at line 674
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \vbox (34.94249pt too high) detected at line 838
  []
 
 
@@ -2402,6 +2485,86 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
  []
 
 [32
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \vbox (34.94249pt too high) detected at line 838
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[33
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \vbox (34.94249pt too high) detected at line 838
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[34
+
+]
+File: ./images/iou_scheme.pdf Graphic file (type QTm)
+ <use  "./images/iou_scheme.pdf" >
+File: ./images/example_step.pdf Graphic file (type QTm)
+ <use  "./images/example_step.pdf" >
+File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_stepboxes.pdf" >
+Overfull \vbox (44.18318pt too high) detected at line 887
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[35
+
+]
+File: ./images/iou_scheme.pdf Graphic file (type QTm)
+ <use  "./images/iou_scheme.pdf" >
+File: ./images/example_step.pdf Graphic file (type QTm)
+ <use  "./images/example_step.pdf" >
+File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_stepboxes.pdf" >
+Overfull \vbox (44.18318pt too high) detected at line 887
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[36
 
 ]
 Requested font "[lmroman8-regular]:mapping=tex-text" at 8.0pt
@@ -2419,14 +2582,14 @@ Requested font "msam10" at 8.0pt
 Requested font "msbm10" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 696.
+(Font)              scaled to size 8.0pt on input line 909.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 I.otf
 Requested font "cmr8" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-LaTeX Font Info:    Try loading font information for U+bbm on input line 696.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 909.
  (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
@@ -2441,91 +2604,13 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[33
-
-] (./main.toc)
-Overfull \hbox (55.48062pt too wide) in paragraph at lines 708--708
-[]$[][][]$ 
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[34
+[37
 
 ]
 Requested font "bbm8" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 File: ./images/spn_train_test_errors.pdf Graphic file (type QTm)
  <use  "./images/spn_train_test_errors.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[35
-
-]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (56.14531pt too high) detected at line 772
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[36
-
-]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (56.14531pt too high) detected at line 772
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[37
-
-]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (56.14531pt too high) detected at line 772
- []
-
-
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2544,7 +2629,7 @@ File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
  QTm)
 
 <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (56.14531pt too high) detected at line 772
+Overfull \vbox (56.14531pt too high) detected at line 984
  []
 
 
@@ -2555,12 +2640,20 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [39
 
 ]
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 804.
-Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
-xt;mapping=tex-text;+tnum;" at 10.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-.otf
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+ <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \vbox (56.14531pt too high) detected at line 984
+ []
+
 
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
@@ -2569,11 +2662,62 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [40
 
 ]
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+ <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \vbox (56.14531pt too high) detected at line 984
+ []
+
+
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [41
+
+]
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+ <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \vbox (56.14531pt too high) detected at line 984
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[42
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[43
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[44
 
 ] (./main.bbl
 File: beamericonarticle.pdf Graphic file (type QTm)
@@ -2587,12 +2731,15 @@ File: beamericonarticle.pdf Graphic file (type QTm)
 
 <use  "beamericonarticle.pdf" >
 File: beamericonarticle.pdf Graphic file (type QTm)
- <use  "beamericonarticle.pdf" >)
+ <use  "beamericonarticle.pdf" >
+File: beamericonarticle.pdf Graphic file (type QTm)
+
+<use  "beamericonarticle.pdf" >)
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[42
+[45
 
 ]
 \tf@nav=\write7
@@ -2604,24 +2751,20 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 818.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 818.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1030.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1030.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 818.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 818.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 818.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1030.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1030.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1030.
  ) 
 Here is how much of TeX's memory you used:
- 41097 strings out of 495631
- 805797 string characters out of 6186784
- 753064 words of memory out of 5000000
- 43627 multiletter control sequences out of 15000+600000
+ 44486 strings out of 495631
+ 892234 string characters out of 6186784
+ 820133 words of memory out of 5000000
+ 46959 multiletter control sequences out of 15000+600000
  12853 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 76i,17n,106p,10391b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,17n,106p,10391b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (42 pages).
+Output written on main.pdf (45 pages).

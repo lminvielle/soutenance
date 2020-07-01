@@ -14,6 +14,9 @@
 \usepackage{booktabs}  % for \specialrule
 \usepackage{pifont}  % symbols (like \ding)
 \usepackage{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathreplacing}
 
 
 % --------------------------------------------------------------------------------------------------
@@ -30,6 +33,7 @@
 \definecolor{myblue}{RGB}{31, 119, 180}
 \definecolor{myorange}{RGB}{245, 117, 4}
 \definecolor{mygreen}{RGB}{34, 150, 34}
+\definecolor{myred}{RGB}{214, 39, 40}
 
 \usecolortheme[named=myblue]{structure}
 \setbeamercolor{itemize subitem}{fg=myorange}
@@ -59,7 +63,7 @@
 
 % to have the section and subsection number in the table of contents
 \setbeamertemplate{section in toc}[sections numbered]
-\setbeamertemplate{subsection in head/foot}[sections numbered]
+% \setbeamertemplate{subsection in head/foot}[sections numbered]
 
 % Add bar with outline
 \setbeamertemplate{headline}{%
@@ -162,6 +166,29 @@
 \newcommand\mymidrule{\specialrule{0.4pt}{1.5pt}{1.5pt}} % thiner midrule than original
 \newcommand{\starw}{\ding{73}}%
 \newcommand{\starb}{\ding{72}}%
+\newcommand{\serr}{$\text{SER}_{\text{R}}$\xspace}
+\newcommand{\serll}{$\text{SER}_{\text{LL}}$\xspace}
+\newcommand{\strutnd}{$\text{STRUT}_{\text{IG}}$\xspace}
+\newcommand{\struthi}{$\text{STRUT}_{\text{HI}}$\xspace}
+\newcommand{\spm}{{\scriptsize $\pm$ }}  % smallesst +/- sign
+\newcommand{\cRM}[1]{\MakeUppercase{\romannumeral #1}}  % chiffre romain Capital
+\newcommand{\leaferr}{\varepsilon_{\text{leaf}}}  % leaf error
+\newcommand{\sterr}{\varepsilon_{\text{subtree}}}  % subtree error
+\newcommand{\IG}{\mathrm{IG}}
+\newcommand{\DG}{\mathrm{DG}}
+\newcommand{\JSD}{\mathrm{JSD}}
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\TPR}{\mathrm{TPR}}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\FP}{\mathrm{FP}}
+\newcommand{\TN}{\mathrm{TN}}
+\newcommand{\FN}{\mathrm{FN}}
+\newcommand{\FPR}{\mathrm{FPR}}
+\newcommand{\Acc}{\mathrm{Accuracy}}
+\newcommand{\AUC}{\mathrm{AUC}}
+\newcommand{\RR}{\mathbb{R}} % espace réel
+
+
 
 
 
@@ -179,13 +206,16 @@
 % ---------------------------------------------------------------
 \begingroup
 \setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\setcounter{tocdepth}{1}
 \begin{frame}[noframenumbering, plain]{Table of contents}
-\hfill
-\parbox[t]{.85\textwidth}{
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents
-  \end{minipage}
-}
+% \parbox[t]{.85\textwidth}{
+    \begin{minipage}[c][0.65\textheight]{\textwidth}
+    \centering
+    \vspace{1.0cm}
+    \large
+    \tableofcontents
+    \end{minipage}
+% }
 \end{frame}
 \endgroup
 
@@ -226,7 +256,7 @@
 %         \myemph{First aimed application: fall detection}
     \end{minipage}
     \begin{minipage}[t]{0.5\linewidth}
-        \begin{figure}[h]
+%         \begin{figure}[h]
                 \centering
                 \vspace{1cm}
                 \onslide<1->\includegraphics[width=0.4\linewidth]{Tarkett-logo_red.jpg}\\[5pt]
@@ -238,7 +268,7 @@
         %     \end{minipage}
         %     \caption{System installation in a nursing home.}
         %     \label{fig:schema_installation}
-        \end{figure}
+%         \end{figure}
     \end{minipage}
 \end{minipage}
 \end{frame}
@@ -262,25 +292,26 @@
     \end{itemize}
 \end{minipage}
 
+\vspace{1cm}
 \renewcommand{\ratio}{0.4}
-\begin{figure}[b]
+% \begin{figure}[b]
     \centering
     \begin{minipage}{\linewidth}
         \centering
         \begin{minipage}{\ratio\linewidth}
             \centering
             \includegraphics[width=0.91\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
-            {\small (a)\; Foot-attached accelerometer}
+            {\small Foot-attached accelerometer}
         \end{minipage}
         \begin{minipage}{\ratio\linewidth}
             \centering
             \includegraphics[width=\linewidth]{signal_marche_tarkett_epure.pdf}\\
-            {\small (b)\; Tarkett's floor sensor}
+            {\small Tarkett's floor sensor}
         \end{minipage}
     \end{minipage}
 %     \caption{Example of walk signals from different sensors.}
-    \label{fig:introduction_signals_walk}
-\end{figure}
+%     \label{fig:introduction_signals_walk}
+% \end{figure}
 
 \end{frame}
 
@@ -343,8 +374,8 @@ What makes a good monitoring system ?
 
 \end{frame}
 
-\subsection{Processing}
-\begin{frame}{A tour of monitoring systems}{Processing}
+\subsection{Information extraction}
+\begin{frame}{A tour of monitoring systems}{Information extraction}
 
 % \begin{minipage}[t]{\linewidth}
     \begin{minipage}[t]{0.49\linewidth}
@@ -385,7 +416,183 @@ What makes a good monitoring system ?
 % \end{minipage}
 \end{frame}
 
+\subsection{Tarkett sensor}
 \begin{frame}{A tour of monitoring systems}{Tarkett sensor}
+% \begin{figure}[ht]
+\begin{minipage}[t]{0.35\linewidth}
+    \vspace{0pt}
+    \begin{itemize}
+        \item Piezoelectric principle: $$d = \frac{Q}{F}\;,$$ (simple version) with d the \emph{piezoelectric constant}.\\
+        When stressed or squeezed, the material emits charges.\\
+        \pause
+        \item How does this look like ?\\
+            0.3 mm thick and 60 cm wide roll with customizable length
+        \pause
+        \item How is it installed ?\\
+            \begin{itemize}
+                \item Under the flooring
+                \item Several connected bands for each area, hence one area corresponds to one input
+            \end{itemize}
+
+    \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.64\linewidth}
+    \vspace{0pt}
+% \begin{minipage}{\linewidth}
+    \centering
+    % left bottom right top
+    \onslide<1->\includegraphics[width=0.9\linewidth, trim={20 220 60 170}, clip]{schema_piezo.pdf}\\
+% \caption{Piezoelectric sensor principle.
+%          When deformed, the piezoelectric material emits charges, hence a current can be measured in output.
+%          }
+% \label{fig:schema_piezoelectric}
+% \end{figure}
+%     \renewcommand{\ratio}{0.4}
+    \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \onslide<2->\includegraphics[width=\linewidth, height=1.9cm, keepaspectratio, trim={0 0 0 0}, clip]{photo_capteur_rouleau.png}\\
+        \small Roll of sensor
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \onslide<2->\includegraphics[width=\linewidth, height=1.9cm, keepaspectratio, trim={0 0 0 0}, clip]{photo_capteur_connecteur.png}\\
+        \small Connector
+    \end{minipage}
+    
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[b]{0.45\linewidth}
+    \centering
+    % left bottom right top
+    \onslide<3->\includegraphics[width=0.95\linewidth, trim={20 260 430 200}, clip]{schema_sensor_installation_3.pdf}
+    
+    \small Sensor set up
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.54\linewidth}
+    \centering
+    \onslide<3->\includegraphics[width=\linewidth, trim={360 240 5 160}, clip]{schema_sensor_installation_room_3.pdf}
+    
+    \small Room equipped with the system
+    \end{minipage}
+% \end{minipage}
+\end{minipage}
+
+\end{frame}
+
+\section{A fall detection system}
+\subsection{Data}
+\begin{frame}{Fall detection}{Data}
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+%     \begin{itemize}
+        \textbf{Preprocessing}
+        \begin{itemize}
+            \item linear detrending
+            \item low-pass filtering
+            \item zeroing low energy channels
+            \item sum over all channels
+        \end{itemize}
+%     \end{itemize}
+    \medskip
+    \begin{overprint}
+%         \begin{minipage}{0.49\linewidth}
+%         \centering
+            \onslide<1>\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_raw_2.pdf}
+%             {\small Raw signal}
+%         \medskip
+%         \end{minipage}
+%         \begin{minipage}{0.49\linewidth}
+%         \centering
+            \onslide<2->\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_preproc_2.pdf}
+%             {\small Preprocessed signal}
+%         \medskip
+%         \end{minipage}
+    \end{overprint}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\vspace{0pt}
+% \centering
+%     \begin{itemize}
+    \pause \pause
+    \textbf{Experimental dataset}
+    \begin{itemize}
+        \item 742 signals
+        \item 55\% \emph{fall}, 45\% \emph{non-fall}
+        \item varied fall events (forward, backward...) and activities of daily living (walking, sitting...)
+    \end{itemize}
+%     \end{itemize}
+    \medskip
+    \centering
+    \includegraphics[width=0.95\textwidth]{ex_signal_chute_2.pdf}
+\end{minipage}
+
+\end{frame}
+
+\subsection{Method}
+\begin{frame}{Fall detection}{Method}
+
+Time series as \emph{feature vector}. At every timestamp:
+
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    \begin{enumerate}
+        \item Window over the signal: 2.5 s
+        \item Compute feature vector: 29 statistical measures (Min, Max, Shannon energy, Percentile,...) over three representations of the signal
+    \end{enumerate}
+    \centering
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm]
+    \node[inner sep=0pt] at (0,0)
+        {\includegraphics[width=0.5\textwidth, trim= 0 0 250 0, clip]{ex_signal_chute_2_epure.pdf}};
+    \draw[color=gray!90,  line width=0.8pt] (-2.5,-2.1) rectangle (-0.5,2.2);
+    % \draw[<->, >=stealth] (-2, -2.2) -- (0.8, -2.2) ;
+    % \draw (-0.5,-2.5) node[below]{$2.5$ s};
+    \coordinate (A) at (-1.6,-2.5);
+    \draw[->, >=stealth] (A) -- (-4.4,-4);
+    \draw[->, >=stealth] (A) -- (-1.6,-4);
+    \draw[->, >=stealth] (A) -- (1.2,-4);
+    \draw (-5.5,-4.9) node[right]{$s$};
+    \draw (-3.5,-4.9) node[right]{$\frac{d}{dt}s$};
+    \draw (-0.5,-4.9) node[right]{$\mathcal{F}(s)$};
+%     \draw [decorate,decoration={brace,amplitude=2pt,mirror,raise=1ex}]
+%   (1,0) -- (5,0) node[midway,yshift=-3em]{$\mathbf{x}$};
+%     \path[draw,decorate,decoration=brace] (3,-6) -- (-6,-6)
+% node[midway,below,yshift=-3pt]{Min, Max,...};
+    \draw[->, >=stealth] (-1.6,-5.8) -- (-1.6,-6.5)
+node[midway,below,yshift=-3pt]{Min, Max, Energy...};
+    \path[draw,decorate,decoration=brace] (6,-8) -- (-9,-8)
+node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
+%     \draw (-5,-6) node[right]{$\mathbf{x}$};
+    \end{tikzpicture}
+
+\end{minipage}
+\begin{minipage}[t]{0.49\linewidth}
+%     \textbf{Decision tree}\\
+    \vspace{0pt}
+%     \begin{minipage}[t]{\linewidth}
+    \begin{enumerate}
+        \item[3.] Classification model: Random Forest \cite{Breiman2001}
+    \end{enumerate}
+
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
+        \centering
+        % left bottom right top
+        \includegraphics[width=0.7\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_1.png}\\
+    {\small Tree}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
+        \centering
+        \includegraphics[width=0.95\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_3.png}\\
+    {\small Regions}
+    \end{minipage}
+%     \end{minipage}
+\end{minipage}
+    
+\end{frame}
+
+\begin{frame}{Fall detection}{Learning}
+
 \end{frame}
 
 
@@ -396,6 +603,16 @@ What makes a good monitoring system ?
 
 
 
+
+
+
+
+
+\section{Transfer learning}
+\subsection{Operational data}
+\begin{frame}{Model-based transfer learning}{}
+
+\end{frame}
 
 \begin{frame}{Introduction}{}
 \begin{itemize}
@@ -427,7 +644,7 @@ What makes a good monitoring system ?
         \end{minipage}
     \end{minipage}
     \caption{Healthy individual walking on the sensor.}
-    \label{fig:walk_class_ex_preprocessing}
+%     \label{fig:walk_class_ex_preprocessing}
 \end{figure}
 \begin{itemize}
     \item Signals are complex
@@ -444,15 +661,14 @@ What makes a good monitoring system ?
 
 \subsection{Region proposal network}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Region proposal network}{Object detection}
@@ -493,15 +709,14 @@ What makes a good monitoring system ?
 
 \subsection{Main architecture}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 \begin{frame}{Step proposal network}{Main architecture}
 
@@ -519,7 +734,7 @@ What makes a good monitoring system ?
         \centering
         \includegraphics[width=\linewidth, trim= 0 340 120 40, clip]{schema_cnn_rpn}
         \caption{Architecture of \subalgo.}
-        \label{fig:walk_class_cnn_spn}
+%         \label{fig:walk_class_cnn_spn}
     \end{minipage}
 \end{figure}
 
@@ -533,15 +748,14 @@ What makes a good monitoring system ?
 
 \subsection{Signal embedding}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Signal embedding}{Convolutional dictionary learning}
@@ -566,7 +780,7 @@ What makes a good monitoring system ?
         \centering
         \includegraphics[width=0.9\linewidth]{cdl_example_2.pdf}\\
         \caption{Convolutional dictionary learning.}
-        \label{fig:walk_class_ex_stepboxes}
+%         \label{fig:walk_class_ex_stepboxes}
     \end{figure}
 \end{minipage}
 
@@ -627,15 +841,14 @@ What makes a good monitoring system ?
 
 \subsection{Step proposal network}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Step proposal network}{Principle}
@@ -669,7 +882,7 @@ What makes a good monitoring system ?
         {\small (b)\; Step labels over a walk signal}
     \end{minipage}
     \caption{Example of a typical step (a) and true steps delimiting boxes in a walk signal (b).}
-    \label{fig:walk_class_ex_stepboxes}
+%     \label{fig:walk_class_ex_stepboxes}
 \end{figure}
 \end{frame}
 
@@ -697,15 +910,14 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
 \subsection{Results}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Results}

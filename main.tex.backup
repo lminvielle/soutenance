@@ -13,6 +13,10 @@
 \usepackage{biolinum} % new font
 \usepackage{booktabs}  % for \specialrule
 \usepackage{pifont}  % symbols (like \ding)
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
 
 % --------------------------------------------------------------------------------------------------
 % Template
@@ -28,6 +32,7 @@
 \definecolor{myblue}{RGB}{31, 119, 180}
 \definecolor{myorange}{RGB}{245, 117, 4}
 \definecolor{mygreen}{RGB}{34, 150, 34}
+\definecolor{myred}{RGB}{214, 39, 40}
 
 \usecolortheme[named=myblue]{structure}
 \setbeamercolor{itemize subitem}{fg=myorange}
@@ -224,7 +229,7 @@
 %         \myemph{First aimed application: fall detection}
     \end{minipage}
     \begin{minipage}[t]{0.5\linewidth}
-        \begin{figure}[h]
+%         \begin{figure}[h]
                 \centering
                 \vspace{1cm}
                 \onslide<1->\includegraphics[width=0.4\linewidth]{Tarkett-logo_red.jpg}\\[5pt]
@@ -236,7 +241,7 @@
         %     \end{minipage}
         %     \caption{System installation in a nursing home.}
         %     \label{fig:schema_installation}
-        \end{figure}
+%         \end{figure}
     \end{minipage}
 \end{minipage}
 \end{frame}
@@ -260,25 +265,26 @@
     \end{itemize}
 \end{minipage}
 
+\vspace{1cm}
 \renewcommand{\ratio}{0.4}
-\begin{figure}[b]
+% \begin{figure}[b]
     \centering
     \begin{minipage}{\linewidth}
         \centering
         \begin{minipage}{\ratio\linewidth}
             \centering
             \includegraphics[width=0.91\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
-            {\small (a)\; Foot-attached accelerometer}
+            {\small Foot-attached accelerometer}
         \end{minipage}
         \begin{minipage}{\ratio\linewidth}
             \centering
             \includegraphics[width=\linewidth]{signal_marche_tarkett_epure.pdf}\\
-            {\small (b)\; Tarkett's floor sensor}
+            {\small Tarkett's floor sensor}
         \end{minipage}
     \end{minipage}
 %     \caption{Example of walk signals from different sensors.}
-    \label{fig:introduction_signals_walk}
-\end{figure}
+%     \label{fig:introduction_signals_walk}
+% \end{figure}
 
 \end{frame}
 
@@ -288,28 +294,34 @@
     
 
 
+
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
 What makes a good monitoring system ?
+        \begin{itemize}
+            \item coverage and occlusion
+            \item intrusiveness
+            \item signal quality / information
+            \item robustness
+            \item ease of installation / use
+            \item scalability
+        \end{itemize}
 
-\begin{minipage}[t]{0.49\linewidth}
-    \begin{itemize}
-        \item coverage and occlusion
-        \item intrusiveness
-        \item signal quality / information
-        \item robustness
-        \item ease of installation / use
-        \item scalability
-    \end{itemize}
-\end{minipage}
-\begin{minipage}[t]{0.49\linewidth}
-    \begin{overprint}
-        \onslide<2>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_1-14.pdf}
-        \onslide<3>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_2-14.pdf}
-        \onslide<4>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_3-14.pdf}
-        \onslide<5>\includegraphics[width=0.9\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
-    \end{overprint}
-\end{minipage}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
+        \begin{overprint}
+            \onslide<2>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_1-14.pdf}
+            \onslide<3>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_2-14.pdf}
+            \onslide<4>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_3-14.pdf}
+        \end{overprint}
+    \end{minipage}
+% \end{minipage}
 
-\renewcommand{\arraystretch}{1.2}
+\vspace{-0.8cm}
+% \onslide<1>{
+\renewcommand{\arraystretch}{1.1}
 \newcommand{\myvar}{45}
 \begin{table}[]
 \centering
@@ -317,26 +329,218 @@ What makes a good monitoring system ?
 % \small
     \begin{tabular}{l c c c c c c c}
 %     \hline
-    Criteria & \rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam} & \rotatebox{\myvar}{Wearable} & \rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor} \\
+    Criteria & \onslide<2->{\rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam}} & \onslide<3->{\rotatebox{\myvar}{Wearable}} & \onslide<4->{\rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor}} \\
     \midrule
-    Coverage/Occlusion & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starb & \starb\starb\starw & \starb\starw\starw & \starb\starb\starb & \starb\starb\starb \\
-    Intrusiveness & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb & \starb\starb\starb \\
-    Signal quality / info &\onslide<2->{\starb\starb\starb & \starb\starb\starb} & \starb\starb\starw & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starw \\
-    Robustness & \onslide<2->{\starb\starb\starw & \starb\starb\starb} & \starb\starb\starb & \starb\starw\starw & \starb\starw\starw & \starb\starw\starw & \starb\starb\starw \\
-    Ease of instal. / use & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starw & \starb\starb\starw & \starb\starb\starw & \starb\starb\starb & \starb\starw\starw \\
-    Scalability & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \starb\starb\starb & \starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb \\
+    Coverage/Occlusion & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starb & \starb\starb\starb} \\
+    Intrusiveness & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starw\starw & \starb\starb\starw & \starb\starb\starb & \starb\starb\starb} \\
+    Signal quality / info &\onslide<2->{\starb\starb\starb & \starb\starb\starb} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starw} \\
+    Robustness & \onslide<2->{\starb\starb\starw & \starb\starb\starb} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starw\starw & \starb\starw\starw & \starb\starw\starw & \starb\starb\starw} \\
+    Ease of instal. / use & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starb\starw & \starb\starb\starw & \starb\starb\starb & \starb\starw\starw} \\
+    Scalability & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb} \\
     \midrule
     \end{tabular}
 % \caption{Sensors evaluation over key criteria for patient monitoring systems.}
 \label{tab:fall_detection_sensors_comparison}
 \end{table}
 \renewcommand{\arraystretch}{1.0}
+% }
 
 \end{frame}
 
-\subsection{Processing}
-\begin{frame}{A tour of monitoring systems}{Processing}
+\subsection{Information extraction}
+\begin{frame}{A tour of monitoring systems}{Information extraction}
+
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    How to process the inputs ?
+    \begin{itemize}
+        \item All systems use feature extraction
+        \item The ``level'' of feature engineering depends on the complexity / dimensionality of the input signal
+    \end{itemize}
+    How to deal with processed signals ?
+    \begin{tcolorbox}[height=4.2cm]
+        \textbf{Time series classification}\\[-5pt]
+        \begin{enumerate}
+            \item Series as \emph{sequences}
+            \begin{itemize}
+                \item Distance-based methods
+            \end{itemize}
+            \item Series as \emph{feature vectors}
+            \begin{itemize}
+                \item Computing several measures over a fixed size
+                \item Classification models
+                (Anomaly detection, classical supervised models...)
+            \end{itemize}
+        \end{enumerate}
+    \end{tcolorbox}
+%     \vfill
+%     \vspace{10cm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+        \begin{overprint}
+%             \onslide<3>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_2-14.pdf}
+%             \onslide<4>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_3-14.pdf}
+            \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
+        \end{overprint}
+    \end{minipage}
+% \end{minipage}
 \end{frame}
+
+\subsection{Tarkett sensor}
+\begin{frame}{A tour of monitoring systems}{Tarkett sensor}
+% \begin{figure}[ht]
+\begin{minipage}[t]{0.35\linewidth}
+    \vspace{0pt}
+    \begin{itemize}
+        \item Piezoelectric principle: $$d = \frac{Q}{F}\;,$$ (simple version) with d the \emph{piezoelectric constant}.\\
+        When stressed or squeezed, the material emits charges.\\
+        \pause
+        \item How does this look like ?\\
+            0.3 mm thick and 60 cm wide roll with customizable length
+        \pause
+        \item How is it installed ?\\
+            \begin{itemize}
+                \item Under the flooring
+                \item Several connected bands for each area, hence one area corresponds to one input
+            \end{itemize}
+
+    \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.64\linewidth}
+    \vspace{0pt}
+% \begin{minipage}{\linewidth}
+    \centering
+    % left bottom right top
+    \onslide<1->\includegraphics[width=0.9\linewidth, trim={20 220 60 170}, clip]{schema_piezoelectric_2.pdf}\\
+% \caption{Piezoelectric sensor principle.
+%          When deformed, the piezoelectric material emits charges, hence a current can be measured in output.
+%          }
+% \label{fig:schema_piezoelectric}
+% \end{figure}
+%     \renewcommand{\ratio}{0.4}
+    \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \onslide<2->\includegraphics[width=\linewidth, height=1.9cm, keepaspectratio, trim={0 0 0 0}, clip]{photo_capteur_rouleau.png}\\
+        \small Roll of sensor
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \onslide<2->\includegraphics[width=\linewidth, height=1.9cm, keepaspectratio, trim={0 0 0 0}, clip]{photo_capteur_connecteur.png}\\
+        \small Connector
+    \end{minipage}
+    
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[b]{0.45\linewidth}
+    \centering
+    % left bottom right top
+    \onslide<3->\includegraphics[width=0.95\linewidth, trim={20 260 430 200}, clip]{schema_sensor_installation_3.pdf}
+    
+    \small Sensor set up
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.54\linewidth}
+    \centering
+    \onslide<3->\includegraphics[width=\linewidth, trim={360 240 5 160}, clip]{schema_sensor_installation_room_3.pdf}
+    
+    \small Room equipped with the system
+    \end{minipage}
+% \end{minipage}
+\end{minipage}
+
+\end{frame}
+
+\section{A fall detection system}
+\subsection{Data}
+\begin{frame}{Fall detection}{Data}
+\begin{minipage}[t]{0.49\linewidth}
+\begin{itemize}
+    \item Preprocessing
+        \begin{itemize}
+            \item linear detrending
+            \item low-pass filtering
+            \item zeroing low energy channels
+            \item sum over all channels
+        \end{itemize}
+    \item \textbf{Experimental dataset}
+        \begin{itemize}
+            \item 742 signals
+            \item 55\% \emph{fall}, 45\% \emph{non-fall}
+            \item varied fall events (forward, backward...) and activities of daily living (walking, sitting...)
+        \end{itemize}
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.49\linewidth}
+\vspace{0pt}
+\centering
+    \begin{overprint}
+%         \begin{minipage}{0.49\linewidth}
+%         \centering
+            \onslide<1>\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_raw_2.pdf}
+%             {\small Raw signal}
+%         \medskip
+%         \end{minipage}
+%         \begin{minipage}{0.49\linewidth}
+%         \centering
+            \onslide<2>\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_preproc_2.pdf}
+%             {\small Preprocessed signal}
+%         \medskip
+%         \end{minipage}
+    \end{overprint}
+\end{minipage}
+
+\centering
+\includegraphics[width=0.5\textwidth]{ex_signal_chute_2.pdf}
+
+\end{frame}
+\begin{frame}{Fall detection}{Method}
+At every timestamp:
+\begin{enumerate}
+    \item Select window over the signal: 2.5 s
+    \item Compute feature vector
+    \item Classification model
+\end{enumerate}
+
+\begin{minipage}[t]{0.49\linewidth}
+
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm]
+    \node[inner sep=0pt] at (0,0)
+        {\includegraphics[width=0.5\textwidth]{ex_signal_chute_2_epure.pdf}};
+    \draw[color=mygreen,  line width=1.0pt] (-9,-2.5) rectangle (-7,2.6);
+    % \draw[<->, >=stealth] (-2, -2.2) -- (0.8, -2.2) ;
+    % \draw (-0.5,-2.5) node[below]{$2.5$ s};
+    \draw[->, >=stealth] (-8,-3) -- (-8,-5);
+    \draw[->, >=stealth] (-8,-3) -- (-11,-5);
+    \draw[->, >=stealth] (-8,-3) -- (-5,-5);
+    \draw (-11.5,-5.5) node[right]{$s$};
+    \draw (-8.5,-5.5) node[right]{$s$};
+    \draw (-5.5,-5.5) node[right]{$\mathcal{F}(s)$};
+    \end{tikzpicture}
+    $s$ \hspace{0.4cm} $\frac{d}{dt}s$ \hspace{0.4cm}  $\mathcal{F}(s)$
+
+\end{minipage}
+\begin{minipage}[t]{0.49\linewidth}
+    \begin{minipage}[b]{0.49\linewidth}
+        \centering
+        % left bottom right top
+        \includegraphics[width=0.6\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_1.png}\\[0.8cm]
+    {\small Tree}
+    \end{minipage}
+    \begin{minipage}[b]{0.49\linewidth}
+        \centering
+        \includegraphics[width=0.9\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_3.png}\\
+    {\small Regions}
+    \end{minipage}
+\end{minipage}
+
+    
+\end{frame}
+
+
+
+
 
 
 
