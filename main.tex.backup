@@ -1,4 +1,4 @@
-\documentclass[9pt,t,aspectratio=1610]{beamer} 
+\documentclass[8pt,t,aspectratio=1610]{beamer} 
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -16,6 +16,7 @@
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathreplacing}
 
 
 % --------------------------------------------------------------------------------------------------
@@ -62,7 +63,7 @@
 
 % to have the section and subsection number in the table of contents
 \setbeamertemplate{section in toc}[sections numbered]
-\setbeamertemplate{subsection in head/foot}[sections numbered]
+% \setbeamertemplate{subsection in head/foot}[sections numbered]
 
 % Add bar with outline
 \setbeamertemplate{headline}{%
@@ -102,6 +103,13 @@
 % \tcbset{top=55mm, bottom=10mm, % marge haut et bas.
 % left=0mm, right=0mm}
 
+% \tcbset{colback=myblue!5!white,colframe=myblue!75!black}
+% \tcbset{colback=white!95!gray,colframe=gray!95}
+\newtcolorbox{mybox}[2][]{colback=white!95!gray,
+colframe=gray!95,fonttitle=\bfseries,
+colbacktitle=red!85!black,enhanced,
+attach boxed title to top center={yshift=-2mm},
+title=#2,#1}
 
 % --------------------------------------------------------------------------------------------------
 %Information to be included in the title page:
@@ -165,6 +173,29 @@
 \newcommand\mymidrule{\specialrule{0.4pt}{1.5pt}{1.5pt}} % thiner midrule than original
 \newcommand{\starw}{\ding{73}}%
 \newcommand{\starb}{\ding{72}}%
+\newcommand{\serr}{$\text{SER}_{\text{R}}$\xspace}
+\newcommand{\serll}{$\text{SER}_{\text{LL}}$\xspace}
+\newcommand{\strutnd}{$\text{STRUT}_{\text{IG}}$\xspace}
+\newcommand{\struthi}{$\text{STRUT}_{\text{HI}}$\xspace}
+\newcommand{\spm}{{\scriptsize $\pm$ }}  % smallesst +/- sign
+\newcommand{\cRM}[1]{\MakeUppercase{\romannumeral #1}}  % chiffre romain Capital
+\newcommand{\leaferr}{\varepsilon_{\text{leaf}}}  % leaf error
+\newcommand{\sterr}{\varepsilon_{\text{subtree}}}  % subtree error
+\newcommand{\IG}{\mathrm{IG}}
+\newcommand{\DG}{\mathrm{DG}}
+\newcommand{\JSD}{\mathrm{JSD}}
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\TPR}{\mathrm{TPR}}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\FP}{\mathrm{FP}}
+\newcommand{\TN}{\mathrm{TN}}
+\newcommand{\FN}{\mathrm{FN}}
+\newcommand{\FPR}{\mathrm{FPR}}
+\newcommand{\Acc}{\mathrm{Accuracy}}
+\newcommand{\AUC}{\mathrm{AUC}}
+\newcommand{\RR}{\mathbb{R}} % espace réel
+
+
 
 
 
@@ -182,13 +213,16 @@
 % ---------------------------------------------------------------
 \begingroup
 \setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\setcounter{tocdepth}{1}
 \begin{frame}[noframenumbering, plain]{Table of contents}
-\hfill
-\parbox[t]{.85\textwidth}{
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents
-  \end{minipage}
-}
+% \parbox[t]{.85\textwidth}{
+    \begin{minipage}[c][0.65\textheight]{\textwidth}
+    \centering
+    \vspace{1.0cm}
+    \large
+    \tableofcontents
+    \end{minipage}
+% }
 \end{frame}
 \endgroup
 
@@ -414,7 +448,7 @@ What makes a good monitoring system ?
 % \begin{minipage}{\linewidth}
     \centering
     % left bottom right top
-    \onslide<1->\includegraphics[width=0.9\linewidth, trim={20 220 60 170}, clip]{schema_piezoelectric_2.pdf}\\
+    \onslide<1->\includegraphics[width=0.9\linewidth, trim={20 220 60 170}, clip]{schema_piezo.pdf}\\
 % \caption{Piezoelectric sensor principle.
 %          When deformed, the piezoelectric material emits charges, hence a current can be measured in output.
 %          }
@@ -456,25 +490,17 @@ What makes a good monitoring system ?
 \subsection{Data}
 \begin{frame}{Fall detection}{Data}
 \begin{minipage}[t]{0.49\linewidth}
-\begin{itemize}
-    \item Preprocessing
+    \vspace{0pt}
+%     \begin{itemize}
+        \textbf{Preprocessing}
         \begin{itemize}
             \item linear detrending
             \item low-pass filtering
             \item zeroing low energy channels
             \item sum over all channels
         \end{itemize}
-    \item \textbf{Experimental dataset}
-        \begin{itemize}
-            \item 742 signals
-            \item 55\% \emph{fall}, 45\% \emph{non-fall}
-            \item varied fall events (forward, backward...) and activities of daily living (walking, sitting...)
-        \end{itemize}
-\end{itemize}
-\end{minipage}
-\begin{minipage}[t]{0.49\linewidth}
-\vspace{0pt}
-\centering
+%     \end{itemize}
+    \medskip
     \begin{overprint}
 %         \begin{minipage}{0.49\linewidth}
 %         \centering
@@ -484,60 +510,108 @@ What makes a good monitoring system ?
 %         \end{minipage}
 %         \begin{minipage}{0.49\linewidth}
 %         \centering
-            \onslide<2>\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_preproc_2.pdf}
+            \onslide<2->\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_preproc_2.pdf}
 %             {\small Preprocessed signal}
 %         \medskip
 %         \end{minipage}
     \end{overprint}
-\end{minipage}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\vspace{0pt}
+% \centering
+%     \begin{itemize}
+    \pause \pause
+    \textbf{Experimental dataset}
+    \begin{itemize}
+        \item 742 signals
+        \item 55\% \emph{fall}, 45\% \emph{non-fall}
+        \item varied fall events (forward, backward...) and activities of daily living (walking, sitting...)
+    \end{itemize}
+%     \end{itemize}
+    \medskip
+    \centering
+    \includegraphics[width=0.85\textwidth]{ex_signal_chute_2.pdf}\\
+    \includegraphics[width=0.8\linewidth]{exp_database_epure_2.pdf}
 
-\centering
-\includegraphics[width=0.5\textwidth]{ex_signal_chute_2.pdf}
+\end{minipage}
 
 \end{frame}
+
+\subsection{Method}
 \begin{frame}{Fall detection}{Method}
-At every timestamp:
-\begin{enumerate}
-    \item Select window over the signal: 2.5 s
-    \item Compute feature vector
-    \item Classification model
-\end{enumerate}
+
+Time series as \emph{feature vector}. At every timestamp:
 
 \begin{minipage}[t]{0.49\linewidth}
-
+    \vspace{0pt}
+    \begin{enumerate}
+        \item Window over the signal: 2.5 s
+        \item Compute feature vector: 29 statistical measures (Min, Max, Shannon energy, Percentile,...) over three representations of the signal
+    \end{enumerate}
+    \centering
     \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm]
     \node[inner sep=0pt] at (0,0)
-        {\includegraphics[width=0.5\textwidth]{ex_signal_chute_2_epure.pdf}};
-    \draw[color=mygreen,  line width=1.0pt] (-9,-2.5) rectangle (-7,2.6);
+        {\includegraphics[width=0.5\textwidth, trim= 0 0 250 0, clip]{ex_signal_chute_2_epure.pdf}};
+    \draw[color=gray!90,  line width=0.8pt] (-2.5,-2.1) rectangle (-0.5,2.2);
     % \draw[<->, >=stealth] (-2, -2.2) -- (0.8, -2.2) ;
     % \draw (-0.5,-2.5) node[below]{$2.5$ s};
-    \draw[->, >=stealth] (-8,-3) -- (-8,-5);
-    \draw[->, >=stealth] (-8,-3) -- (-11,-5);
-    \draw[->, >=stealth] (-8,-3) -- (-5,-5);
-    \draw (-11.5,-5.5) node[right]{$s$};
-    \draw (-8.5,-5.5) node[right]{$s$};
-    \draw (-5.5,-5.5) node[right]{$\mathcal{F}(s)$};
+    \coordinate (A) at (-1.6,-2.5);
+    \draw[->, >=stealth] (A) -- (-4.4,-4);
+    \draw[->, >=stealth] (A) -- (-1.6,-4);
+    \draw[->, >=stealth] (A) -- (1.2,-4);
+    \draw (-5.5,-4.9) node[right]{$s$};
+    \draw (-3.5,-4.9) node[right]{$\frac{d}{dt}s$};
+    \draw (-0.5,-4.9) node[right]{$\mathcal{F}(s)$};
+%     \draw [decorate,decoration={brace,amplitude=2pt,mirror,raise=1ex}]
+%   (1,0) -- (5,0) node[midway,yshift=-3em]{$\mathbf{x}$};
+%     \path[draw,decorate,decoration=brace] (3,-6) -- (-6,-6)
+% node[midway,below,yshift=-3pt]{Min, Max,...};
+    \draw[->, >=stealth] (-1.6,-5.8) -- (-1.6,-6.5)
+node[midway,below,yshift=-3pt]{Min, Max, Energy...};
+    \path[draw,decorate,decoration=brace] (6,-8) -- (-9,-8)
+node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
+%     \draw (-5,-6) node[right]{$\mathbf{x}$};
     \end{tikzpicture}
-    $s$ \hspace{0.4cm} $\frac{d}{dt}s$ \hspace{0.4cm}  $\mathcal{F}(s)$
 
-\end{minipage}
+\end{minipage}\hfill
 \begin{minipage}[t]{0.49\linewidth}
-    \begin{minipage}[b]{0.49\linewidth}
+%     \textbf{Decision tree}\\
+    \vspace{0pt}
+%     \begin{minipage}[t]{\linewidth}
+    \begin{enumerate}
+        \item[3.] Classification model: Random Forest \cite{Breiman2001}
+    \end{enumerate}
+    \textbf{Random Forest}: Aggregation of $N_T$ \textbf{decision trees}.
+%     \begin{tcolorbox}[height=4.2cm]
+    \begin{mybox}{Decision tree}
+    \textbf{Decision tree}\\[-5pt]
+    \begin{gather*}
+        \IG(X_{q}, \tau) = I(n) - \frac{N_{l}}{N_n}I(l) - \frac{N_{r}}{N_{n}}I(r)\\
+        I(n) = \mathrm{Gini}(n) = \sum_{k}p_{nk}(1-p_{nk})
+    \end{gather*}
+%     \end{tcolorbox}
+    \end{mybox}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
         \centering
         % left bottom right top
-        \includegraphics[width=0.6\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_1.png}\\[0.8cm]
+        \includegraphics[width=0.7\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_1.png}\\
     {\small Tree}
     \end{minipage}
-    \begin{minipage}[b]{0.49\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
         \centering
-        \includegraphics[width=0.9\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_3.png}\\
+        \includegraphics[width=0.95\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_3.png}\\
     {\small Regions}
     \end{minipage}
+%     \end{minipage}
 \end{minipage}
-
     
 \end{frame}
 
+\begin{frame}{Fall detection}{Learning}
+
+\end{frame}
 
 
 
@@ -550,6 +624,13 @@ At every timestamp:
 
 
 
+
+
+\section{Transfer learning}
+\subsection{Operational data}
+\begin{frame}{Model-based transfer learning}{}
+
+\end{frame}
 
 \begin{frame}{Introduction}{}
 \begin{itemize}
@@ -581,7 +662,7 @@ At every timestamp:
         \end{minipage}
     \end{minipage}
     \caption{Healthy individual walking on the sensor.}
-    \label{fig:walk_class_ex_preprocessing}
+%     \label{fig:walk_class_ex_preprocessing}
 \end{figure}
 \begin{itemize}
     \item Signals are complex
@@ -598,15 +679,14 @@ At every timestamp:
 
 \subsection{Region proposal network}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Region proposal network}{Object detection}
@@ -647,15 +727,14 @@ At every timestamp:
 
 \subsection{Main architecture}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 \begin{frame}{Step proposal network}{Main architecture}
 
@@ -673,7 +752,7 @@ At every timestamp:
         \centering
         \includegraphics[width=\linewidth, trim= 0 340 120 40, clip]{schema_cnn_rpn}
         \caption{Architecture of \subalgo.}
-        \label{fig:walk_class_cnn_spn}
+%         \label{fig:walk_class_cnn_spn}
     \end{minipage}
 \end{figure}
 
@@ -687,15 +766,14 @@ At every timestamp:
 
 \subsection{Signal embedding}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Signal embedding}{Convolutional dictionary learning}
@@ -720,7 +798,7 @@ At every timestamp:
         \centering
         \includegraphics[width=0.9\linewidth]{cdl_example_2.pdf}\\
         \caption{Convolutional dictionary learning.}
-        \label{fig:walk_class_ex_stepboxes}
+%         \label{fig:walk_class_ex_stepboxes}
     \end{figure}
 \end{minipage}
 
@@ -781,15 +859,14 @@ At every timestamp:
 
 \subsection{Step proposal network}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Step proposal network}{Principle}
@@ -823,7 +900,7 @@ At every timestamp:
         {\small (b)\; Step labels over a walk signal}
     \end{minipage}
     \caption{Example of a typical step (a) and true steps delimiting boxes in a walk signal (b).}
-    \label{fig:walk_class_ex_stepboxes}
+%     \label{fig:walk_class_ex_stepboxes}
 \end{figure}
 \end{frame}
 
@@ -851,15 +928,14 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
 \subsection{Results}
 
-\begin{frame}[noframenumbering]{\ }
-\hfill
-\parbox[t]{.85\textwidth}{
-%   \large
-  \begin{minipage}[c][0.65\textheight]{\textwidth}
-  \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-  \end{minipage}
-}
-\end{frame}
+% \begin{frame}[noframenumbering]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
 
 
 \begin{frame}{Results}

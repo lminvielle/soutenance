@@ -5,6 +5,11 @@ Breiman, L. (2001).
 \newblock {Random forests}.
 \newblock {\em Machine Learning}, 45(1):5--32.
 
+\bibitem[Breiman et~al., 1984]{breiman84}
+Breiman, L., Friedman, J.~H., Olshen, R.~A., and Stone, C.~J. (1984).
+\newblock {\em Classification and regression trees}.
+\newblock Monterey, CA: Wadsworth \& Brooks/Cole Advanced Books \& Software.
+
 \bibitem[Bristow et~al., 2013]{bristow2013fast}
 Bristow, H., Eriksson, A., and Lucey, S. (2013).
 \newblock Fast convolutional sparse coding.

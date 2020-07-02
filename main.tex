@@ -1,4 +1,4 @@
-\documentclass[9pt,t,aspectratio=1610]{beamer} 
+\documentclass[8pt,t,aspectratio=1610]{beamer} 
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -103,6 +103,13 @@
 % \tcbset{top=55mm, bottom=10mm, % marge haut et bas.
 % left=0mm, right=0mm}
 
+% \tcbset{colback=myblue!5!white,colframe=myblue!75!black}
+\tcbset{colback=white!95!gray,colframe=gray!100,fonttitle=\bfseries,center title,boxrule=0.2pt}
+% \newtcolorbox{mybox}[2][]{colback=white!95!gray,
+% colframe=gray!95,fonttitle=\bfseries,
+% colbacktitle=myblue!85!black,enhanced,
+% attach boxed title to top center={yshift=-5},
+% title=#2,#1}
 
 % --------------------------------------------------------------------------------------------------
 %Information to be included in the title page:
@@ -187,6 +194,8 @@
 \newcommand{\Acc}{\mathrm{Accuracy}}
 \newcommand{\AUC}{\mathrm{AUC}}
 \newcommand{\RR}{\mathbb{R}} % espace réel
+\newcommand{\XX}{\mathcal{X}}
+
 
 
 
@@ -386,8 +395,8 @@ What makes a good monitoring system ?
         \item The ``level'' of feature engineering depends on the complexity / dimensionality of the input signal
     \end{itemize}
     How to deal with processed signals ?
-    \begin{tcolorbox}[height=4.2cm]
-        \textbf{Time series classification}\\[-5pt]
+    \begin{tcolorbox}[title=Time series classification]
+%         \textbf{Time series classification}\\[-5pt]
         \begin{enumerate}
             \item Series as \emph{sequences}
             \begin{itemize}
@@ -523,7 +532,9 @@ What makes a good monitoring system ?
 %     \end{itemize}
     \medskip
     \centering
-    \includegraphics[width=0.95\textwidth]{ex_signal_chute_2.pdf}
+    \includegraphics[width=0.85\textwidth]{ex_signal_chute_2.pdf}\\
+    \includegraphics[width=0.8\linewidth]{exp_database_epure_2.pdf}
+
 \end{minipage}
 
 \end{frame}
@@ -531,10 +542,10 @@ What makes a good monitoring system ?
 \subsection{Method}
 \begin{frame}{Fall detection}{Method}
 
-Time series as \emph{feature vector}. At every timestamp:
 
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
+Time series as \emph{feature vector}. At every timestamp:
     \begin{enumerate}
         \item Window over the signal: 2.5 s
         \item Compute feature vector: 29 statistical measures (Min, Max, Shannon energy, Percentile,...) over three representations of the signal
@@ -559,12 +570,12 @@ Time series as \emph{feature vector}. At every timestamp:
 % node[midway,below,yshift=-3pt]{Min, Max,...};
     \draw[->, >=stealth] (-1.6,-5.8) -- (-1.6,-6.5)
 node[midway,below,yshift=-3pt]{Min, Max, Energy...};
-    \path[draw,decorate,decoration=brace] (6,-8) -- (-9,-8)
+    \path[draw,decorate,decoration=brace] (6,-7.5) -- (-9,-7.5)
 node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 %     \draw (-5,-6) node[right]{$\mathbf{x}$};
     \end{tikzpicture}
 
-\end{minipage}
+\end{minipage}\hfill
 \begin{minipage}[t]{0.49\linewidth}
 %     \textbf{Decision tree}\\
     \vspace{0pt}
@@ -572,7 +583,22 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     \begin{enumerate}
         \item[3.] Classification model: Random Forest \cite{Breiman2001}
     \end{enumerate}
-
+    \textbf{Random Forest}: Aggregation of $N_T$ \textbf{decision trees}.
+    \begin{tcolorbox}[title=Decision tree]
+    \small
+%     \begin{mybox}{Decision tree}
+%     \textbf{Decision tree}\\[-5pt]
+    Feature space $\XX = \RR^Q$.
+    Division of $\XX$ into non-overlapping regions $R_1,...,R_J$.
+    Algorithm CART that use recursive binary splits \cite{breiman84}
+    \begin{gather*}
+        \argmin_{X_{q}, \tau} \IG \\
+        \IG(X_{q}, \tau) = I(n) - \frac{N_{l}}{N_n}I(l) - \frac{N_{r}}{N_{n}}I(r)\\
+        I(n) = \mathrm{Gini}(n) = \sum_{k}p_{nk}(1-p_{nk})\\
+        f(x) = \sum_{j=1}^{J}c_{j}\mathbbm{1}(x\in R_{j})
+    \end{gather*}
+    \end{tcolorbox}
+%     \end{mybox}
     \begin{minipage}[t]{0.49\linewidth}
         \vspace{0pt}
         \centering
