@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  3 JUL 2020 20:20
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  3 JUL 2020 20:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2335,7 +2335,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (2.33073pt too high) detected at line 497
+Overfull \vbox (3.75345pt too high) detected at line 497
  []
 
 
@@ -2348,7 +2348,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (2.33073pt too high) detected at line 497
+Overfull \vbox (3.75345pt too high) detected at line 497
  []
 
 
@@ -2361,7 +2361,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (2.33073pt too high) detected at line 497
+Overfull \vbox (3.75345pt too high) detected at line 497
  []
 
 
@@ -2374,11 +2374,11 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (2.52277pt too high) detected at line 497
+Overfull \vbox (1.10005pt too high) detected at line 497
  []
 
 
-Overfull \vbox (2.33073pt too high) detected at line 497
+Overfull \vbox (3.75345pt too high) detected at line 497
  []
 
 
