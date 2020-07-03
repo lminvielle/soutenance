@@ -454,7 +454,7 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 %     \draw (-2.5,-2.5) node[right]{$\mathbf{x} \in \RR^{87}$};
     \end{tikzpicture}
 
-    \begin{overlayarea}{\linewidth}{1.0cm}
+    \begin{overlayarea}{\linewidth}{1.2cm}
     \only<1-3>{
     $\left[
     \begin{array}{ccc}
@@ -478,9 +478,10 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     \end{overlayarea}
     
     \textbf{Feature reduction}
-    $$
- I(T, X_{q}) = \sum_{t\in T}p(t)\Delta i(t)\mathbbm{1}(v(t)=X_{q})\;,
-    $$
+    \begin{gather*}
+    \text{Tree: } I(T, X_{q}) = \sum_{t\in T}p(t)\Delta i(t)\mathbbm{1}(v(t)=X_{q})\\
+    \text{Random forest: }I(X_{q}) = \frac{1}{N_{T}}\sum_{n=1}^{N_T}I(T_n, X_{q})
+    \end{gather*}
     \begin{tcolorbox}[title=Recursive feature elimination,size=title,boxrule=0.2pt]
         \begin{enumerate}
             \item 
