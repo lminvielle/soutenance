@@ -1,0 +1,498 @@
+\section{Introduction}
+% Empty subsection to make a blank space in headline
+\subsection{}
+
+% \begingroup
+% \setbeamertemplate{navigation symbols}{}  % remove page number within the group
+% \begin{frame}[noframenumbering, plain]{\ }
+% \hfill
+% \parbox[t]{.85\textwidth}{
+%   \begin{minipage}[c][0.65\textheight]{\textwidth}
+%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
+%   \end{minipage}
+% }
+% \end{frame}
+% \endgroup
+
+\begin{frame}{Introduction}
+\begin{minipage}[t]{\linewidth}
+    \begin{minipage}[t]{0.5\linewidth}
+        \textbf{Context}
+        \begin{itemize}
+            \item Elderly population is growing
+            \item Higher levels of frailty globally
+            \item Increasing demand for reliable monitoring devices
+            \item Tarkett, French company with 12,500 employees, 13 industrial sites, sells 1.3 millions m$^2$ of flooring every day
+            \item \emph{Floor in Motion}: a floor-based sensor for elderly care
+            \item \textbf{Objective}: providing tools for elderly monitoring in nursing homes
+        %     \cite{minvielle2019nursenet}
+            \begin{itemize}
+                \item First aimed application: fall detection
+            \end{itemize}
+        \end{itemize}
+%         \centering
+%         \myemph{First aimed application: fall detection}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+%         \begin{figure}[h]
+                \centering
+                \vspace{1cm}
+                \onslide<1->\includegraphics[width=0.4\linewidth]{Tarkett-logo_red.jpg}\\[5pt]
+                \onslide<1->\includegraphics[width=0.4\linewidth]{FIM.jpg}\\[15pt]
+                \onslide<1->\includegraphics[width=0.95\linewidth]{schema_fall_detector.pdf}\\
+        %         \onslide<1->\includegraphics[width=0.4\linewidth, trim={20 230 430 200}, clip]{schema_sensor_installation_3.pdf}\\[5pt]
+%                 \onslide<2->\includegraphics[width=0.4\linewidth, trim={360 230 5 160}, clip]{schema_sensor_installation_room_3.pdf}
+        %         \onslide<2->\includegraphics[width=0.6\linewidth, trim= 50 150 50 210, clip]{schema_couloir_plan_blue.pdf}
+        %     \end{minipage}
+        %     \caption{System installation in a nursing home.}
+        %     \label{fig:schema_installation}
+%         \end{figure}
+    \end{minipage}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Introduction}{}
+% \hspace{4cm}
+\begin{minipage}[t]{\linewidth}
+%     \centering
+    \textbf{Motivation}
+    \begin{itemize}
+        \item Processing and understanding time series
+        \begin{itemize}
+            \item Proliferation of sensor-based systems
+            \item Redundancy, interpretability, external pertubations
+        \end{itemize}
+        \item Real world application
+        \begin{itemize}
+            \item Real-time processing in a limited system
+            \item Convenient hypotheses not granted
+        \end{itemize}
+    \end{itemize}
+\end{minipage}
+
+\vspace{1cm}
+\renewcommand{\ratio}{0.4}
+% \begin{figure}[b]
+    \centering
+    \begin{minipage}{\linewidth}
+        \centering
+        \begin{minipage}{\ratio\linewidth}
+            \centering
+            \includegraphics[width=0.91\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
+            {\small Foot-attached accelerometer}
+        \end{minipage}
+        \begin{minipage}{\ratio\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{signal_marche_tarkett_epure.pdf}\\
+            {\small Tarkett's floor sensor}
+        \end{minipage}
+    \end{minipage}
+%     \caption{Example of walk signals from different sensors.}
+%     \label{fig:introduction_signals_walk}
+% \end{figure}
+
+\end{frame}
+
+\section{A tour of monitoring systems}
+\subsection{Systems}
+\begin{frame}{A tour of monitoring systems}{Systems}
+    
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
+What makes a good monitoring system ?
+        \begin{itemize}
+            \item coverage and occlusion
+            \item intrusiveness
+            \item signal quality / information
+            \item robustness
+            \item ease of installation / use
+            \item scalability
+        \end{itemize}
+
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{0pt}
+        \begin{overprint}
+            \onslide<2>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_1-14.pdf}
+            \onslide<3>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_2-14.pdf}
+            \onslide<4>\includegraphics[width=\linewidth, trim={190 250 150 60}, clip]{fall_systems_1_3-14.pdf}
+        \end{overprint}
+    \end{minipage}
+% \end{minipage}
+
+\vspace{-0.8cm}
+% \onslide<1>{
+\renewcommand{\arraystretch}{1.1}
+\newcommand{\myvar}{45}
+\begin{table}[]
+\centering
+\footnotesize
+% \small
+    \begin{tabular}{l c c c c c c c}
+%     \hline
+    Criteria & \onslide<2->{\rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam}} & \onslide<3->{\rotatebox{\myvar}{Wearable}} & \onslide<4->{\rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor}} \\
+    \midrule
+    Coverage/Occlusion & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starb & \starb\starb\starb} \\
+    Intrusiveness & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starw\starw & \starb\starb\starw & \starb\starb\starb & \starb\starb\starb} \\
+    Signal quality / info &\onslide<2->{\starb\starb\starb & \starb\starb\starb} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starw} \\
+    Robustness & \onslide<2->{\starb\starb\starw & \starb\starb\starb} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starw\starw & \starb\starw\starw & \starb\starw\starw & \starb\starb\starw} \\
+    Ease of instal. / use & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starb\starw & \starb\starb\starw & \starb\starb\starb & \starb\starw\starw} \\
+    Scalability & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starw & \starb\starb\starb} \\
+    \midrule
+    \end{tabular}
+% \caption{Sensors evaluation over key criteria for patient monitoring systems.}
+\label{tab:fall_detection_sensors_comparison}
+\end{table}
+\renewcommand{\arraystretch}{1.0}
+% }
+
+\end{frame}
+
+\subsection{Information extraction}
+\begin{frame}{A tour of monitoring systems}{Information extraction}
+
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    How to process the inputs ?
+    \begin{itemize}
+        \item All systems use feature extraction
+        \item The ``level'' of feature engineering depends on the complexity / dimensionality of the input signal
+    \end{itemize}
+    How to deal with processed signals ?
+    \begin{tcolorbox}[title=Time series classification]
+%         \textbf{Time series classification}\\[-5pt]
+        \begin{enumerate}
+            \item Series as \emph{sequences}
+            \begin{itemize}
+                \item Distance-based methods
+            \end{itemize}
+            \item Series as \emph{feature vectors}
+            \begin{itemize}
+                \item Computing several measures over a fixed size
+                \item Classification models
+                (Anomaly detection, classical supervised models...)
+            \end{itemize}
+        \end{enumerate}
+    \end{tcolorbox}
+%     \vfill
+%     \vspace{10cm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+        \begin{overprint}
+%             \onslide<3>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_2-14.pdf}
+%             \onslide<4>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_3-14.pdf}
+            \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
+        \end{overprint}
+    \end{minipage}
+% \end{minipage}
+\end{frame}
+
+\subsection{Tarkett sensor}
+\begin{frame}{A tour of monitoring systems}{Tarkett sensor}
+% \begin{figure}[ht]
+\begin{minipage}[t]{0.35\linewidth}
+    \vspace{0pt}
+    \begin{itemize}
+        \item Piezoelectric principle: $$d = \frac{Q}{F}\;,$$ (simple version) with d the \emph{piezoelectric constant}.\\
+        When stressed or squeezed, the material emits charges.\\
+        \pause
+        \item How does this look like ?\\
+            0.3 mm thick and 60 cm wide roll with customizable length
+        \pause
+        \item How is it installed ?\\
+            \begin{itemize}
+                \item Under the flooring
+                \item Several connected bands for each area, hence one area corresponds to one input
+            \end{itemize}
+
+    \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.64\linewidth}
+    \vspace{0pt}
+% \begin{minipage}{\linewidth}
+    \centering
+    % left bottom right top
+    \onslide<1->\includegraphics[width=0.9\linewidth, trim={20 220 60 170}, clip]{schema_piezo.pdf}\\
+% \caption{Piezoelectric sensor principle.
+%          When deformed, the piezoelectric material emits charges, hence a current can be measured in output.
+%          }
+% \label{fig:schema_piezoelectric}
+% \end{figure}
+%     \renewcommand{\ratio}{0.4}
+    \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \onslide<2->\includegraphics[width=\linewidth, height=1.9cm, keepaspectratio, trim={0 0 0 0}, clip]{photo_capteur_rouleau.png}\\
+%         \small Roll of sensor
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \onslide<2->\includegraphics[width=\linewidth, height=1.9cm, keepaspectratio, trim={0 0 0 0}, clip]{photo_capteur_connecteur.png}\\
+%         \small Connector
+    \end{minipage}
+    
+% \begin{minipage}[t]{\linewidth}
+    \begin{minipage}[b]{0.45\linewidth}
+    \centering
+    % left bottom right top
+    \onslide<3->\includegraphics[width=0.95\linewidth, trim={20 260 430 200}, clip]{schema_sensor_installation_3.pdf}
+    
+%     \small Sensor set up
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.54\linewidth}
+    \centering
+    \onslide<3->\includegraphics[width=\linewidth, trim={360 240 5 160}, clip]{schema_sensor_installation_room_3.pdf}
+    
+%     \small Room equipped with the system
+    \end{minipage}
+% \end{minipage}
+\end{minipage}
+
+\end{frame}
+
+\section{A fall detection system}
+\subsection{Data}
+\begin{frame}{Fall detection}{Data}
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+%     \begin{itemize}
+        \textbf{Preprocessing}
+        \begin{itemize}
+            \item linear detrending
+            \item low-pass filtering
+            \item zeroing low energy channels
+            \item sum over all channels
+        \end{itemize}
+%     \end{itemize}
+    \medskip
+    \begin{overprint}
+%         \begin{minipage}{0.49\linewidth}
+%         \centering
+            \onslide<1>\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_raw_2.pdf}
+%             {\small Raw signal}
+%         \medskip
+%         \end{minipage}
+%         \begin{minipage}{0.49\linewidth}
+%         \centering
+            \onslide<2->\includegraphics[trim= 0 0 0 0, width=0.8\linewidth, clip]{ex_signal_preproc_2.pdf}
+%             {\small Preprocessed signal}
+%         \medskip
+%         \end{minipage}
+    \end{overprint}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\vspace{0pt}
+% \centering
+%     \begin{itemize}
+    \pause \pause
+    \textbf{Experimental dataset}
+    \begin{itemize}
+        \item 742 signals
+        \item 55\% \emph{fall}, 45\% \emph{non-fall}
+        \item varied fall events (forward, backward...) and activities of daily living (walking, sitting...)
+    \end{itemize}
+%     \end{itemize}
+    \medskip
+    \centering
+    \includegraphics[width=0.85\textwidth]{ex_signal_chute_2.pdf}\\
+    \includegraphics[width=0.8\linewidth]{exp_database_epure_2.pdf}
+
+\end{minipage}
+
+\end{frame}
+
+\subsection{Method}
+\begin{frame}{Fall detection}{Method}
+
+
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+Time series as \emph{feature vector}. At every timestamp:
+    \begin{enumerate}
+        \item Window over the signal: 2.5 s
+        \item Compute feature vector: 29 statistical measures (Min, Max, Shannon energy, Percentile,...) over three representations of the signal
+    \end{enumerate}
+    \centering
+    \begin{overlayarea}{\linewidth}{0cm}
+    \centering
+    \only<1>{%
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm]
+    \node[inner sep=0pt] at (0,0)
+        {\includegraphics[width=0.55\linewidth, trim= 0 0 250 0, clip]{ex_signal_chute_2_epure.pdf}};
+    \draw[color=gray!90,  line width=0.5pt] (-2.5,-2.1) rectangle (-0.5,2.2);
+    \coordinate (A) at (-1.6,-2.5);
+    \draw[->, >=stealth] (A) -- (-4.4,-4);
+    \draw[->, >=stealth] (A) -- (-1.6,-4);
+    \draw[->, >=stealth] (A) -- (1.2,-4);
+    \draw (-5.5,-4.9) node[right]{$s$};
+    \draw (-3.5,-4.9) node[right]{$\frac{d}{dt}s$};
+    \draw (-0.5,-4.9) node[right]{$\mathcal{F}(s)$};
+    \draw[->, >=stealth] (-1.6,-5.8) -- (-1.6,-6.5)
+node[midway,below,yshift=-3pt]{\small Min, Max, Energy...};
+    \path[draw,decorate,decoration=brace] (4.5,-7.5) -- (-7.5,-7.5)
+node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
+    \end{tikzpicture}%
+    }%
+    \only<2->{%
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm]
+    \node[inner sep=0pt] at (0,0)
+        {\includegraphics[width=0.55\linewidth, trim= 0 0 250 0, clip]{ex_signal_chute_2_epure.pdf}};
+    \draw[color=gray!90,  line width=0.5pt] (-2.5,-2.1) rectangle (-0.5,2.2);
+    \coordinate (A) at (-1.6,-2.5);
+    \draw[->, >=stealth] (A) -- (-1.6,-3.5);
+    \draw (-3.5,-4) node[right]{$x \in \RR^{87}$};
+    \end{tikzpicture}
+    }%
+    \end{overlayarea}
+    
+    \vspace{3cm}
+    \pause[3]
+    \begin{enumerate}
+        \item[3.] Classification model: Random Forest \cite{Breiman2001}, based on \textbf{decision trees}
+        
+%     \textbf{Random Forest}: Aggregation of \textbf{decision trees}.
+    \end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    \begin{tcolorbox}[title=Decision tree,size=title,boxrule=0.2pt]
+    \small
+    Feature space $\XX = \RR^Q$.
+    Division of $\XX$ into non-overlapping regions $R_1,...,R_J$.
+    Algorithm CART: recursive binary splits \cite{breiman84} that solve:
+    \begin{gather*}
+        \argmin_{X_{q}, \tau} \IG\;, \\
+        \text{with} \quad \IG(X_{q}, \tau) = I(n) - \frac{N_{l}}{N_n}I(l) - \frac{N_{r}}{N_{n}}I(r)\;,\\
+        \text{and} \quad I(n) = \mathrm{Gini}(n) = \sum_{k}p_{nk}(1-p_{nk})\;.
+    \end{gather*}
+    \end{tcolorbox}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{-5pt}
+        \centering
+        \includegraphics[width=0.65\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_1.png}\\
+%     {\small Tree}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vspace{-5pt}
+        \centering
+        \includegraphics[width=0.9\linewidth, trim= 0 0 0 0, clip]{schema_decision_tree_3.png}\\
+%     {\small Regions}
+    \end{minipage}
+    \centering
+    \small
+    Predicion function:\;
+    $f(x) = \sum_{j=1}^{J}c_{j}\mathbbm{1}(x\in R_{j})$
+
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Fall detection}{Method}
+\begin{minipage}[t]{0.4\linewidth}
+    \vspace{0pt}
+    \begin{tcolorbox}[title=Random forest,size=title,boxrule=0.2pt]
+        Decision trees $d_1,...,d_{N_T}$ grown with two rules:
+        \begin{itemize}
+            \item Each tree is trained with a \emph{bootstrap} of the training set
+            \item At each split, access to a random subset of pool of features
+        \end{itemize}
+        Each tree is a ``vote'' for a class.
+        The prediction function is then
+        \begin{gather*}
+        f(x) = \argmax_{k}f_{k}(x)\;,\\
+        \text{with} \quad f_{k}(x) = \frac{1}{N_T}\sum_{i=1}^{N_T}\mathbbm{1}(d_i(x)=k)
+        \end{gather*}
+    \end{tcolorbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.58\linewidth}
+    \vspace{0pt}
+%     \medskip
+    \renewcommand{\ratio}{0.5}
+    \begin{overlayarea}{\linewidth}{3.4cm} %{width}{height}
+%     \begin{overprint}
+        \only<1>{\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP_beforebuff.pdf}}
+        \only<1>{\includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN_beforebuff_noleg.pdf}}
+        \only<2->{\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP.pdf}}
+        \only<2->{\includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN.pdf}}
+    \end{overlayarea}
+%     \end{overprint}
+    
+    \textbf{Time aggregation}
+    
+    $N_f(t)$ : number of trees voting for \emph{fall}\\
+    Use a buffer $B_s \in \NN$ and a threshold $T_h \in [0, 1]$
+    \begin{gather*}
+    g(t) = \frac{\sum\limits_{u=t-B_{s}+1}^{t}N_{f}(u)}{B_{s}\times N_{T}}\\
+    \text{New binary classification function:} \quad
+    d(t) = 
+    \begin{cases}
+    1, & \textit{if}\ g(t) > T_{h} \\
+    0, & \textit{otherwise}
+    \end{cases}
+    \end{gather*}
+\end{minipage}
+
+
+
+\end{frame}
+
+\begin{frame}{Fall detection}{Method}
+
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    \textbf{Data augmentation}\\
+    Select $r$ windows in training signals
+
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm]
+    \node[inner sep=0pt] at (0,0)
+        {\includegraphics[width=0.55\linewidth, trim= 0 0 250 0, clip]{ex_signal_chute_2_epure.pdf}};
+    \onslide<1>\draw[color=gray!90,  line width=0.5pt] (-3.3,-2.1) rectangle (-0.5,2.2);
+    \onslide<2>\draw[color=gray!90,  line width=0.5pt] (-2.5,-2.1) rectangle (0.3,2.2);
+    \onslide<3->\draw[color=gray!90,  line width=0.5pt] (-2.9,-2.1) rectangle (-0.1,2.2);
+%     \draw (-2.5,-2.5) node[right]{$\mathbf{x} \in \RR^{87}$};
+    \end{tikzpicture}
+
+    \begin{overlayarea}{\linewidth}{1.0cm}
+    \only<1-3>{
+    $\left[
+    \begin{array}{ccc}
+        x_{1,1} & ... & x_{1,Q} \\
+        \onslide<2-3>{x_{2,1} & ... & x_{2,Q}} \\
+        \onslide<3>{x_{3,1} & ... & x_{3,Q}} \\
+    \end{array}
+    \right]
+    $
+    }
+    \only<4->{
+    $\left[
+    \begin{array}{ccc}
+        x_{1,1} & ... & x_{1,Q} \\
+        \vdots & & \vdots \\
+        x_{r,1} & ... & x_{r,Q} \\
+    \end{array}
+    \right]
+    $
+    }
+    \end{overlayarea}
+    
+    \textbf{Feature reduction}
+    $$
+ I(T, X_{q}) = \sum_{t\in T}p(t)\Delta i(t)\mathbbm{1}(v(t)=X_{q})\;,
+    $$
+    \begin{tcolorbox}[title=Recursive feature elimination,size=title,boxrule=0.2pt]
+        \begin{enumerate}
+            \item 
+        \end{enumerate}
+    \end{tcolorbox}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+
+\end{minipage}
+
+\end{frame}
+\begin{frame}{Fall detection}{Results}
+\end{frame}

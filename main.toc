@@ -7,12 +7,12 @@
 \beamer@sectionintoc {3}{A fall detection system}{13}{0}{3}
 \beamer@subsectionintoc {3}{1}{Data}{13}{0}{3}
 \beamer@subsectionintoc {3}{2}{Method}{16}{0}{3}
-\beamer@sectionintoc {4}{Transfer learning}{18}{0}{4}
-\beamer@subsectionintoc {4}{1}{Operational data}{18}{0}{4}
-\beamer@sectionintoc {5}{Step proposal network}{21}{0}{5}
-\beamer@subsectionintoc {5}{1}{Region proposal network}{21}{0}{5}
-\beamer@subsectionintoc {5}{2}{Main architecture}{26}{0}{5}
-\beamer@subsectionintoc {5}{3}{Signal embedding}{28}{0}{5}
-\beamer@subsectionintoc {5}{4}{Step proposal network}{35}{0}{5}
-\beamer@subsectionintoc {5}{5}{Results}{38}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{43}{0}{6}
+\beamer@sectionintoc {4}{Transfer learning}{26}{0}{4}
+\beamer@subsectionintoc {4}{1}{Operational data}{26}{0}{4}
+\beamer@sectionintoc {5}{Step proposal network}{29}{0}{5}
+\beamer@subsectionintoc {5}{1}{Region proposal network}{29}{0}{5}
+\beamer@subsectionintoc {5}{2}{Main architecture}{34}{0}{5}
+\beamer@subsectionintoc {5}{3}{Signal embedding}{36}{0}{5}
+\beamer@subsectionintoc {5}{4}{Step proposal network}{43}{0}{5}
+\beamer@subsectionintoc {5}{5}{Results}{46}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{51}{0}{6}

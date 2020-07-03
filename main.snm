@@ -1,5 +1,5 @@
 \beamer@slide {tab:fall_detection_sensors_comparison}{5}
-\beamer@slide {eq:cdl_baseform}{28}
-\beamer@slide {eq: convolutional embedding}{31}
-\beamer@slide {eq: def IOU}{35}
-\beamer@slide {eq: loss training CNN}{37}
+\beamer@slide {eq:cdl_baseform}{36}
+\beamer@slide {eq: convolutional embedding}{39}
+\beamer@slide {eq: def IOU}{43}
+\beamer@slide {eq: loss training CNN}{45}
