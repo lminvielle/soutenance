@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  3 JUL 2020 20:21
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  6 JUL 2020 04:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2335,7 +2335,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (3.75345pt too high) detected at line 497
+Overfull \vbox (45.94293pt too high) detected at line 517
  []
 
 
@@ -2348,7 +2348,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (3.75345pt too high) detected at line 497
+Overfull \vbox (45.94293pt too high) detected at line 517
  []
 
 
@@ -2361,7 +2361,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (3.75345pt too high) detected at line 497
+Overfull \vbox (45.94293pt too high) detected at line 517
  []
 
 
@@ -2374,11 +2374,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (1.10005pt too high) detected at line 497
- []
-
-
-Overfull \vbox (3.75345pt too high) detected at line 497
+Overfull \vbox (45.94293pt too high) detected at line 517
  []
 
 
@@ -2389,13 +2385,31 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [24
 
 ]
+File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_chute_2_epure.pdf" >
+File: ./images/plot_feature_importance_all_epure.pdf Graphic file (type QTm)
+
+<use  "./images/plot_feature_importance_all_epure.pdf" >
+Overfull \vbox (45.94293pt too high) detected at line 517
+ []
+
+
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [25
 
-])
+]
+File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_chute_2_epure.pdf" >
+File: ./images/plot_rf_feat_reduc_AUC_epure.pdf Graphic file (type QTm)
+
+<use  "./images/plot_rf_feat_reduc_AUC_epure.pdf" >
+Overfull \vbox (45.94293pt too high) detected at line 517
+ []
+
+
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2403,27 +2417,50 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [26
 
 ]
-File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
- QTm)
- <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
-File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
-QTm)
+File: ./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_TPR_view2.pd
+f Graphic file (type QTm)
 
-<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
+<use  "./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_TPR_view2.p
+df" >
+File: ./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_FPR_view2.pd
+f Graphic file (type QTm)
+
+<use  "./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_FPR_view2.p
+df" >
+File: ./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_Accuracy.pdf
+ Graphic file (type QTm)
+
+<use  "./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_Accuracy.pd
+f" >
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
+(Font)              scaled to size 7.0pt on input line 576.
+Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;mapping=tex-text;+tnum;" at 7.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+B.otf
+
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [27
 
-]
-File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
- QTm)
- <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
-File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
-QTm)
+]) (./fileB_transfer_nursenet_concl.tex
+File: ./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Source_
+On_Source_ROC.pdf Graphic file (type QTm)
 
-<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
+<use  "./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Source
+_On_Source_ROC.pdf" >
+File: ./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Source_
+On_Target_ROC.pdf Graphic file (type QTm)
+
+<use  "./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Source
+_On_Target_ROC.pdf" >
+File: ./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Target_
+On_Target_ROC.pdf Graphic file (type QTm)
+
+<use  "./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Target
+_On_Target_ROC.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2431,15 +2468,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [28
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
-Overfull \vbox (5.7408pt too high) detected at line 299
- []
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
 
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
 
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2447,15 +2499,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [29
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
-Overfull \vbox (5.7408pt too high) detected at line 299
- []
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
 
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
 
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2463,15 +2530,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [30
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
-Overfull \vbox (5.7408pt too high) detected at line 299
- []
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
 
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
 
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2479,11 +2561,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [31
 
 ]
-File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
- <use  "./images/faster_rnn_wholenetwork.png" >
-File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn.png" >
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
+
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
+
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2491,11 +2592,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [32
 
 ]
-File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
- <use  "./images/faster_rnn_wholenetwork.png" >
-File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
 
-<use  "./images/faster_rnn_rpn.png" >
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
+
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
+
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2503,15 +2623,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [33
 
 ]
-File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
- <use  "./images/schema_cnn_rpn.pdf" >
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/sc' will be
-(Font)              scaled to size 7.0pt on input line 356.
-Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
-xt;mapping=tex-text;+tnum;+smcp;+smcp;" at 7.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-.otf
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
 
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
+
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
+
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2519,8 +2654,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [34
 
 ]
-File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
- <use  "./images/schema_cnn_rpn.pdf" >
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
+
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
+
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
+
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2528,8 +2685,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [35
 
 ]
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
- <use  "./images/cdl_example_2.pdf" >
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
+
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
+
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
+
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2537,8 +2716,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [36
 
 ]
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
- <use  "./images/cdl_example_2.pdf" >
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
+
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
+
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
+
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2546,8 +2747,30 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [37
 
 ]
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
- <use  "./images/cdl_example_2.pdf" >
+File: ./images/ser_0.pdf Graphic file (type QTm)
+ <use  "./images/ser_0.pdf" >
+File: ./images/ser_1.pdf Graphic file (type QTm)
+ <use  "./images/ser_1.pdf" >
+File: ./images/ser_2.pdf Graphic file (type QTm)
+
+<use  "./images/ser_2.pdf" >
+File: ./images/ser_3.pdf Graphic file (type QTm)
+ <use  "./images/ser_3.pdf" >
+File: ./images/ser_4.pdf Graphic file (type QTm)
+
+<use  "./images/ser_4.pdf" >
+File: ./images/strut_0.pdf Graphic file (type QTm)
+ <use  "./images/strut_0.pdf" >
+File: ./images/strut_1.pdf Graphic file (type QTm)
+
+<use  "./images/strut_1.pdf" >
+File: ./images/strut_2.pdf Graphic file (type QTm)
+ <use  "./images/strut_2.pdf" >
+File: ./images/strut_3.pdf Graphic file (type QTm)
+
+<use  "./images/strut_3.pdf" >
+File: ./images/strut_4.pdf Graphic file (type QTm)
+ <use  "./images/strut_4.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2555,21 +2778,6 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [38
 
 ]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (24.9465pt too high) detected at line 447
- []
-
-
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2577,21 +2785,6 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [39
 
 ]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (24.9465pt too high) detected at line 447
- []
-
-
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2599,21 +2792,13 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [40
 
 ]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
+ QTm)
+ <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
+File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
+QTm)
 
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (24.9465pt too high) detected at line 447
- []
-
-
+<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2621,21 +2806,13 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [41
 
 ]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
+ QTm)
+ <use  "./images/signal_walk_young_female_before_preproc_2.pdf" >
+File: ./images/signal_walk_young_female_after_preproc_2.pdf Graphic file (type 
+QTm)
 
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \vbox (24.9465pt too high) detected at line 447
- []
-
-
+<use  "./images/signal_walk_young_female_after_preproc_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2643,14 +2820,12 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [42
 
 ]
-File: ./images/iou_scheme.pdf Graphic file (type QTm)
- <use  "./images/iou_scheme.pdf" >
-File: ./images/example_step.pdf Graphic file (type QTm)
- <use  "./images/example_step.pdf" >
-File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
 
-<use  "./images/signal_walk_young_female_stepboxes.pdf" >
-Overfull \vbox (39.00117pt too high) detected at line 496
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \vbox (5.7408pt too high) detected at line 194
  []
 
 
@@ -2661,14 +2836,12 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [43
 
 ]
-File: ./images/iou_scheme.pdf Graphic file (type QTm)
- <use  "./images/iou_scheme.pdf" >
-File: ./images/example_step.pdf Graphic file (type QTm)
- <use  "./images/example_step.pdf" >
-File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
 
-<use  "./images/signal_walk_young_female_stepboxes.pdf" >
-Overfull \vbox (39.00117pt too high) detected at line 496
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \vbox (5.7408pt too high) detected at line 194
  []
 
 
@@ -2679,6 +2852,15 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [44
 
 ]
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \vbox (5.7408pt too high) detected at line 194
+ []
+
+
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2686,8 +2868,11 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [45
 
 ]
-File: ./images/spn_train_test_errors.pdf Graphic file (type QTm)
- <use  "./images/spn_train_test_errors.pdf" >
+File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
+ <use  "./images/faster_rnn_wholenetwork.png" >
+File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn.png" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2695,21 +2880,11 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [46
 
 ]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
+File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
+ <use  "./images/faster_rnn_wholenetwork.png" >
+File: ./images/faster_rnn_rpn.png Graphic file (type QTm)
 
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (48.32132pt too high) detected at line 593
- []
-
-
+<use  "./images/faster_rnn_rpn.png" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2717,20 +2892,14 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [47
 
 ]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (48.32132pt too high) detected at line 593
- []
-
+File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
+ <use  "./images/schema_cnn_rpn.pdf" >
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/sc' will be
+(Font)              scaled to size 7.0pt on input line 251.
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
+xt;mapping=tex-text;+tnum;+smcp;+smcp;" at 7.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+.otf
 
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
@@ -2739,21 +2908,8 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [48
 
 ]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (48.32132pt too high) detected at line 593
- []
-
-
+File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
+ <use  "./images/schema_cnn_rpn.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2761,6 +2917,173 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [49
 
 ]
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+ <use  "./images/cdl_example_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[50
+
+]
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+ <use  "./images/cdl_example_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[51
+
+]
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+ <use  "./images/cdl_example_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[52
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \vbox (24.9465pt too high) detected at line 342
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[53
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \vbox (24.9465pt too high) detected at line 342
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[54
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \vbox (24.9465pt too high) detected at line 342
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[55
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \vbox (24.9465pt too high) detected at line 342
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[56
+
+]
+File: ./images/iou_scheme.pdf Graphic file (type QTm)
+ <use  "./images/iou_scheme.pdf" >
+File: ./images/example_step.pdf Graphic file (type QTm)
+ <use  "./images/example_step.pdf" >
+File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_stepboxes.pdf" >
+Overfull \vbox (39.00117pt too high) detected at line 391
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[57
+
+]
+File: ./images/iou_scheme.pdf Graphic file (type QTm)
+ <use  "./images/iou_scheme.pdf" >
+File: ./images/example_step.pdf Graphic file (type QTm)
+ <use  "./images/example_step.pdf" >
+File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_stepboxes.pdf" >
+Overfull \vbox (39.00117pt too high) detected at line 391
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[58
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[59
+
+]
+File: ./images/spn_train_test_errors.pdf Graphic file (type QTm)
+ <use  "./images/spn_train_test_errors.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[60
+
+]
 File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
 e QTm)
  <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
@@ -2772,7 +3095,7 @@ File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
  QTm)
 
 <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \vbox (48.32132pt too high) detected at line 593
+Overfull \vbox (48.32132pt too high) detected at line 488
  []
 
 
@@ -2780,23 +3103,89 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[50
+[61
+
+]
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+ <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \vbox (48.32132pt too high) detected at line 488
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[62
+
+]
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+ <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \vbox (48.32132pt too high) detected at line 488
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[63
+
+]
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+ <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \vbox (48.32132pt too high) detected at line 488
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[64
 
 ]
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[51
+[65
 
 ]
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[52
+[66
 
-] (./main.bbl
+]) (./main.bbl
 File: beamericonarticle.pdf Graphic file (type QTm)
  <use  "beamericonarticle.pdf" >
 File: beamericonarticle.pdf Graphic file (type QTm)
@@ -2818,7 +3207,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[53
+[67
 
 ]
 \tf@nav=\write8
@@ -2830,20 +3219,20 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 \tf@snm=\write10
 \openout10 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 639.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 639.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 639.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 639.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 639.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 214.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 214.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 214.
  ) 
 Here is how much of TeX's memory you used:
- 44629 strings out of 495631
- 896490 string characters out of 6186784
- 829865 words of memory out of 5000000
- 47102 multiletter control sequences out of 15000+600000
- 11267 words of font info for 72 fonts, out of 8000000 for 9000
+ 44678 strings out of 495631
+ 898157 string characters out of 6186784
+ 830109 words of memory out of 5000000
+ 47129 multiletter control sequences out of 15000+600000
+ 11275 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  76i,20n,106p,10391b,957s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (53 pages).
+Output written on main.pdf (67 pages).
