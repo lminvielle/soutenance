@@ -1,6 +1,6 @@
 \section{Transfer learning}
 \subsection{Operational data}
-\begin{frame}{Transfer learning on decision tree}{}
+\begin{frame}{Transfer learning on decision tree}{Experimental vs. operational}
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
     \begin{itemize}
@@ -42,19 +42,26 @@
 
 \end{frame}
 
-\begin{frame}{Transfer learning on decision tree}
+\begin{frame}{Transfer learning on decision tree}{Model-based transfer}
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
     \centering
     \textbf{Structure Expansion / Reduction (SER)}
     
     \renewcommand{\ratio}{0.65}
+%     \begin{overprint}
+%         \onslide<1>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_0.pdf}
+%         \onslide<2>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_1.pdf}
+%         \onslide<3>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_2.pdf}
+%         \onslide<4>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_3.pdf}
+%         \onslide<5->\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_4.pdf}
+%     \end{overprint}
     \begin{overprint}
-        \onslide<1>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_0.pdf}
-        \onslide<2>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_1.pdf}
-        \onslide<3>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_2.pdf}
-        \onslide<4>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_3.pdf}
-        \onslide<5->\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{ser_4.pdf}
+        \onslide<1>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{schemas_ser_1.pdf}
+        \onslide<2>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{schemas_ser_2.pdf}
+        \onslide<3>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{schemas_ser_3.pdf}
+        \onslide<4>\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{schemas_ser_4.pdf}
+        \onslide<5->\includegraphics[width=\ratio\linewidth, trim={100 150 430 200}, clip]{schemas_ser_5.pdf}
     \end{overprint}
     
     \textcolor{myblue}{1. Expansion}\\
@@ -67,17 +74,22 @@
     \centering
     \textbf{Structure Transfer}
     
-%     \begin{overlayarea}{\linewidth}{0cm}
     \renewcommand{\ratio}{0.65}
+%     \begin{overprint}
+%         \onslide<6>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_0.pdf}
+%         \onslide<7>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_1.pdf}
+%         \onslide<8>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_2.pdf}
+%         \onslide<9>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_3.pdf}
+%         \onslide<10->\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_4.pdf}
+%     \end{overprint}
     \begin{overprint}
-%         \centering
-        \onslide<6>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_0.pdf}
-        \onslide<7>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_1.pdf}
-        \onslide<8>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_2.pdf}
-        \onslide<9>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_3.pdf}
-        \onslide<10->\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{strut_4.pdf}
-%     \end{overlayarea}
+        \onslide<6>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{schemas_strut_1_15.pdf}
+        \onslide<7>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{schemas_strut_2_15.pdf}
+        \onslide<8>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{schemas_strut_3_15.pdf}
+        \onslide<9>\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{schemas_strut_4_15.pdf}
+        \onslide<10->\includegraphics[width=\ratio\linewidth, trim={100 180 430 200}, clip]{schemas_strut_5_15.pdf}
     \end{overprint}
+
     \textcolor{myblue}{1. Pruning}\\
     \textcolor{myorange}{2. Threshold update}\\
     Drifts
@@ -87,36 +99,184 @@
 
 \begin{frame}{Transfer learning on decision tree}{Leaf loss risk}
 
-\begin{align}
-      & p^T(x/y) = p^S(x/y) \\
-      & p^T(y/x) = \lambda_y \frac{p^S(y/x)}{\int{\lambda_y p^S(y/x)dy}}
-%       & \textrm{with} \quad \lambda_y = \frac{P_y^T}{P_y^S} 
-\end{align}
-      $\textrm{with} \quad \lambda_y = \frac{P_y^T}{P_y^S}$
-     
-         Leaf $l$ that conserves the minority class $k_{min}$ after Target update
-    \begin{equation*}
-    \forall k \neq k_{min},\quad {p}^T(y = k_{min} / x \in l) > {p}^T(y = k / x \in l) 
-    \label{eqF_rep_targ}
-    \end{equation*}
-    Risk of losing the leaf:
-    \begin{equation*}
-    R_{n_{k_{min}}}(l)={p}^T(x \notin l / y = k_{min})^{n_{k_{min}}} 
-    \label{eq_risk_value}
-    \end{equation*}
+\begin{minipage}[t]{0.38\textwidth}
+    \vspace{0pt}
+    \begin{tcolorbox}[title=Homogeneous class imbalance,size=title,boxrule=0.2pt]
+    \begin{align*}
+        & p^T(x/y) = p^S(x/y) \\
+        & p^T(y/x) = \lambda_y \frac{p^S(y/x)}{\int{\lambda_y p^S(y/x)dy}}
+    %       & \textrm{with} \quad \lambda_y = \frac{P_y^T}{P_y^S} 
+    \end{align*}
+        $\textrm{with} \quad \lambda_y = \frac{P_y^T}{P_y^S}$
+    \end{tcolorbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.59\textwidth}
+    \vspace{0pt}
     \pause
-    In homogeneous class imbalance:
-    \begin{equation*}
-      \forall k \neq k_{min}, \quad \lambda_{k_{min}}  {p}^S(y = k_{min} / x \in l) > \lambda_k  {p}^S(y = k / x \in l)
-    \end{equation*}
-    \begin{equation*}
-    R_{n_{k_{min}}}(l)={p}^S(x \notin l / y = k_{min})^{n_{k_{min}}}
-      \end{equation*}
+    \begin{tcolorbox}[title=Leaf loss risk,size=title,boxrule=0.2pt]
+            Leaf $l$ that conserves the minority class $k_{min}$ after Target update
+        \begin{equation*}
+        \forall k \neq k_{min},\quad {p}^T(y = k_{min} / x \in l) > {p}^T(y = k / x \in l) 
+        \label{eqF_rep_targ}
+        \end{equation*}
+        Risk of losing the leaf:
+        \begin{equation*}
+        R_{n_{k_{min}}}(l)={p}^T(x \notin l / y = k_{min})^{n_{k_{min}}} 
+        \label{eq_risk_value}
+        \end{equation*}
+        \pause
+        In homogeneous class imbalance:
+        \begin{equation*}
+        \forall k \neq k_{min}, \quad \lambda_{k_{min}}  {p}^S(y = k_{min} / x \in l) > \lambda_k  {p}^S(y = k / x \in l)
+        \end{equation*}
+        \begin{equation*}
+        R_{n_{k_{min}}}(l)={p}^S(x \notin l / y = k_{min})^{n_{k_{min}}}
+        \end{equation*}
+    \end{tcolorbox}
+\end{minipage}
 
 \end{frame}
 
+\begin{frame}{Transfer learning on decision tree}{Leaf loss risk}
+\renewcommand{\ratio}{0.78}
+\renewcommand{\ratiob}{0.45}
+    \centering
+    \begin{minipage}[t]{0.8\linewidth}\vspace{0pt}
+        \centering
+        \begin{minipage}[t]{\ratiob\linewidth}\vspace{0pt}
+            \centering
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget200_Lambda1.pdf}\\
+            {\small(a)\; Balanced data with 200 instances}
+        \end{minipage}\vspace{0.2cm}
+        \begin{minipage}[t]{\ratiob\linewidth}\vspace{0pt}
+            \centering
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget100_Lambda1.pdf}\\
+            {\small(b)\; Balanced data with 100 instances }
+        \end{minipage}
+        % \hfill
+        \\
+        \begin{minipage}[t]{\ratiob\linewidth}\vspace{0pt}
+            \centering
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget200_Lambda01.pdf}\\
+            {\small (c)\; Imbalanced data (10\% ratio) with 200 instances}
+        \end{minipage}
+        \centering
+        \begin{minipage}[t]{\ratiob\linewidth}\vspace{0pt}
+            \centering
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget100_Lambda01.pdf}\\
+            {\small (d)\; Imbalanced data (10\% ratio) with 100 instances}
+        \end{minipage}\vspace{0.1cm}
+    \end{minipage}
+
+\end{frame}
+
+\begin{frame}{Transfer learning on decision tree}{SER for class imbalance}
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    
+    \centering
+    \textbf{Structure Expansion/Reduction}\\
+        
+    \renewcommand{\ratio}{0.8}
+    \begin{overprint}
+        \onslide<1>\includegraphics[width=\ratio\linewidth, trim={100 120 390 200}, clip]{schemas_ser_1.pdf}
+        \onslide<2>\includegraphics[width=\ratio\linewidth, trim={100 120 390 200}, clip]{schemas_sernr_1_15.pdf}
+        \onslide<3>\includegraphics[width=\ratio\linewidth, trim={100 120 390 200}, clip]{schemas_sernr_2_15.pdf}
+        \onslide<4>\includegraphics[width=\ratio\linewidth, trim={100 120 390 200}, clip]{schemas_sernr_3_15.pdf}
+        \onslide<5>\includegraphics[width=\ratio\linewidth, trim={100 120 390 200}, clip]{schemas_sernr_4_15.pdf}
+        \onslide<6>\includegraphics[width=\ratio\linewidth, trim={100 120 390 200}, clip]{schemas_sernr_5_15.pdf}
+        \onslide<7->\includegraphics[width=\ratio\linewidth, trim={100 120 390 200}, clip]{schemas_sernr_6_15.pdf}
+    \end{overprint}
+    \textcolor{mygreen}{\textbf{Minority class}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\linewidth}
+    \vspace{0pt}
+    \vspace{1.5cm}
+    \begin{itemize}
+    \item Extension left unchanged
+    \item Reduction constrained
+    \end{itemize}
+%     \begin{tcolorbox}
+%         
+%     \end{tcolorbox}
+
+    
+
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}{Transfer learning on decision tree}{STRUT optimization}
+
+\begin{minipage}[t]{0.4\linewidth}
+    \vspace{0pt}
+    
+    \centering
+    \textbf{STRUT}\\
+
+    \renewcommand{\ratio}{1.0}
+    \begin{overprint}
+        \onslide<1>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_0_15.pdf}
+        \onslide<2>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_1_15.pdf}
+        \onslide<3>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_2_15.pdf}
+    \end{overprint}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.55\linewidth}
+    \vspace{0pt}
+    \pause \pause
+    $Q_{l}^{S}$, $Q_{r}^{S}$: class proportions of source data in children w.r.t.\ the \emph{original} split\\
+    \pause
+    $S_{v,l}^{T}$, $S_{v,r}^{T}$: subsets of $S_{v}^{T}$ that fall in the children nodes of $v$\\
+    $Q_{l}^{T}(\tau)$, $Q_{r}^{T}(\tau)$: class proportions of target data in children w.r.t.\ the \emph{new} split\\
+    \pause
+    \textbf{Divergence Gain}: similarity between the original label distributions and the new ones
+    $$
+    DG\left(\tau\right) = 1 - \frac{|S_{v,l}^{T}|}{|S_{v}^{T}|}JSD(Q_{l}^{S}, Q_{l}^{T})
+    - \frac{|S_{v,r}^{T}|}{|S_{v}^{T}|}JSD(Q_{r}^{S}, Q_{r}^{T})
+    $$
+%     \footnotesize
+    Jensen-Shannon divergence:
+    $$JSD(P, Q) = \frac{1}{2}\left(D_{KL}(P||M) + D_{KL}(Q||M)\right) $$
+    \begin{flushright}
+    $M = \frac{1}{2} \left(P +Q\right) $
+    \end{flushright}
+    Kullback-Leibler divergence:
+    $$D_{KL}(P||Q) = \sum_{k}{P(k)\ln\left(\frac{P(k)}{Q(k)}\right)}$$
 
 
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}{Transfer learning on decision tree}{STRUT optimization}
+\begin{minipage}[t]{0.4\linewidth}
+    \vspace{0pt}
+    \renewcommand{\ratio}{1.0}
+    \begin{overprint}
+        \onslide<1>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_3_15.pdf}
+        \onslide<2>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_4_15.pdf}
+        \onslide<3->\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_5_15.pdf}
+    \end{overprint}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.55\linewidth}
+    \vspace{0pt}
+    
+    \textbf{Goal: } Maximize DG while being in a local maximum of Information Gain (IG) (here IG = Gini gain)
+    \pause \pause \pause
+    \begin{align*}
+        &\tau_{m} = \argmax_{\tau \in \mathrm{T}_{v}}\left(DG\left(  \tau ,  Q_{l}^{T}(\tau), Q_{r}^{T}(\tau)\right)\right) \\
+        &\text{s.t.\ } IG(\tau_{m-1}) < IG(\tau_{m}) \text{ and } IG(\tau_{m}) > IG(\tau_{m+1})
+    \end{align*}
+    \vspace{1cm}
+
+    \pause
+    \begin{itemize}
+        \item  $Q^S$ have less meaning when going deeper
+        \item  Do we really want to keep $Q^S$ and $Q^T$ close ?
+    \end{itemize}
+\end{minipage}
+
+\end{frame}
 
 \begin{frame}{Introduction}{}
 \begin{itemize}
@@ -488,6 +648,7 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 \end{frame}
 
 \section{Conclusion}
+\subsection{}
 
 \begin{frame}{Conclusion}
 

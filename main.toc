@@ -10,10 +10,10 @@
 \beamer@subsectionintoc {3}{3}{Results}{27}{0}{3}
 \beamer@sectionintoc {4}{Transfer learning}{28}{0}{4}
 \beamer@subsectionintoc {4}{1}{Operational data}{28}{0}{4}
-\beamer@sectionintoc {5}{Step proposal network}{43}{0}{5}
-\beamer@subsectionintoc {5}{1}{Region proposal network}{43}{0}{5}
-\beamer@subsectionintoc {5}{2}{Main architecture}{48}{0}{5}
-\beamer@subsectionintoc {5}{3}{Signal embedding}{50}{0}{5}
-\beamer@subsectionintoc {5}{4}{Step proposal network}{57}{0}{5}
-\beamer@subsectionintoc {5}{5}{Results}{60}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{65}{0}{6}
+\beamer@sectionintoc {5}{Step proposal network}{62}{0}{5}
+\beamer@subsectionintoc {5}{1}{Region proposal network}{62}{0}{5}
+\beamer@subsectionintoc {5}{2}{Main architecture}{67}{0}{5}
+\beamer@subsectionintoc {5}{3}{Signal embedding}{69}{0}{5}
+\beamer@subsectionintoc {5}{4}{Step proposal network}{76}{0}{5}
+\beamer@subsectionintoc {5}{5}{Results}{79}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{84}{0}{6}
