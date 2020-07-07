@@ -29,11 +29,38 @@ Bristow, H., Eriksson, A., and Lucey, S. (2013).
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   38(4):814--830.
 
+\bibitem[{Minvielle} et~al., 2019]{minvielle2019transfer}
+{Minvielle}, L., {Atiq}, M., {Peignier}, S., and {Mougeot}, M. (2019).
+\newblock Transfer learning on decision tree with class imbalance.
+\newblock In {\em 2019 IEEE 31st International Conference on Tools with
+  Artificial Intelligence (ICTAI)}, pages 1003--1010.
+
+\bibitem[{Minvielle} et~al., 2017]{minvielle2017fall}
+{Minvielle}, L., {Atiq}, M., {Serra}, R., {Mougeot}, M., and {Vayatis}, N.
+  (2017).
+\newblock Fall detection using smart floor sensor and supervised learning.
+\newblock In {\em 2017 39th Annual International Conference of the IEEE
+  Engineering in Medicine and Biology Society (EMBC)}, pages 3445--3448.
+
+\bibitem[Minvielle and Audiffren, 2019]{minvielle2019nursenet}
+Minvielle, L. and Audiffren, J. (2019).
+\newblock Nursenet: Monitoring elderly levels of activity with a piezoelectric
+  floor.
+\newblock {\em Sensors}, 19(18).
+
 \bibitem[Ren et~al., 2015]{ren2015faster}
 Ren, S., He, K., Girshick, R., and Sun, J. (2015).
 \newblock Faster r-cnn: Towards real-time object detection with region proposal
   networks.
 \newblock In {\em Advances in neural information processing systems}, pages
   91--99.
+
+\bibitem[{Segev} et~al., 2017]{segev2017learn}
+{Segev}, N., {Harel}, M., {Mannor}, S., {Crammer}, K., and {El-Yaniv}, R.
+  (2017).
+\newblock Learn on source, refine on target: A model transfer learning
+  framework with random forests.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  39(9):1811--1824.
 
 \end{thebibliography}

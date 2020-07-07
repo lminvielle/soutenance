@@ -8,6 +8,7 @@
 % \usepackage{amsthm,amssymb}
 % \usepackage[numbers]{natbib}
 \usepackage{bibentry}  % bibtex elements into text
+\nobibliography*
 % \usepackage{animate}
 
 \usepackage{biolinum} % new font
@@ -46,8 +47,10 @@
     \normalsize{\insertframenumber/\inserttotalframenumber}
 }
 
-% pour ne pas compter toutes les frames de biblio
+% pour ne pas compter toutes les frames de biblio (Ref I, Ref II...)
 \setbeamertemplate{frametitle continuation}{}
+% Symbole devant chaque entree de la bilbio
+\setbeamertemplate{bibliography item}[triangle]
 
 % margins
 \setbeamersize{text margin left=15mm,text margin right=15mm} % left and right
@@ -143,10 +146,10 @@
 \newcommand\mymidrule{\specialrule{0.4pt}{1.5pt}{1.5pt}} % thiner midrule than original
 \newcommand{\starw}{\ding{73}}%
 \newcommand{\starb}{\ding{72}}%
-\newcommand{\serr}{$\text{SER}_{\text{R}}$\xspace}
-\newcommand{\serll}{$\text{SER}_{\text{LL}}$\xspace}
-\newcommand{\strutnd}{$\text{STRUT}_{\text{IG}}$\xspace}
-\newcommand{\struthi}{$\text{STRUT}_{\text{HI}}$\xspace}
+\newcommand{\serr}{$\text{SER}_{\text{R}}$}
+\newcommand{\serll}{$\text{SER}_{\text{LL}}$}
+\newcommand{\strutnd}{$\text{STRUT}_{\text{IG}}$}
+\newcommand{\struthi}{$\text{STRUT}_{\text{HI}}$}
 \newcommand{\spm}{{\scriptsize $\pm$ }}  % smallesst +/- sign
 \newcommand{\cRM}[1]{\MakeUppercase{\romannumeral #1}}  % chiffre romain Capital
 \newcommand{\leaferr}{\varepsilon_{\text{leaf}}}  % leaf error
@@ -205,10 +208,22 @@
 
 \input{fileB_transfer_nursenet_concl.tex}
 
+\begin{frame}[noframenumbering]{Publications and communications}
+% \centering
+% \begin{minipage}{0.9\linewidth}
+    \begin{itemize}
+        \item \bibentry{minvielle2017fall}
+        \item \bibentry{minvielle2019transfer}
+        \item \bibentry{minvielle2019nursenet}
+    \end{itemize}
+% \end{minipage}
+\end{frame}
 
-\begin{frame}[allowframebreaks]
+\begin{frame}[allowframebreaks, noframenumbering]
+        \small
         \frametitle{References}
         \bibliographystyle{apalike}
+%         \bibliographystyle{abbrv}
         \bibliography{biblio.bib}
 \end{frame}
 
