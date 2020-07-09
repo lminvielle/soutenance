@@ -6,7 +6,7 @@
 \usepackage{amsmath}
 \usepackage{bbm}            % mathbb vs mathds
 % \usepackage{amsthm,amssymb}
-% \usepackage[numbers]{natbib}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{bibentry}  % bibtex elements into text
 \nobibliography*
 % \usepackage{animate}
@@ -65,7 +65,7 @@
 \leavevmode%
   \hbox{%
     \begin{beamercolorbox}[wd=\paperwidth,ht=0.78cm,dp=1.125ex]{section in head/foot}%
-    \small
+    \normalsize
 %     \insertsectionnumber
     \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
     \footnotesize
@@ -88,14 +88,15 @@
 \title{Détection d'événements à partir de capteurs sols -- application au suivi de personnes fragiles}
 \subtitle{Soutenance de thèse}
 \author{Ludovic Minvielle\\[0.4cm]
-    Directeur: Nicolas Vayatis, Centre Borelli, ENS Paris-Saclay\\
-    Co-encadrante: Mathilde Mougeot, Centre Borelli, ENS Paris-Saclay}
-\institute[VFU] % (optional)
-{
+        Thèse industrielle entre le Centre Borelli (ENS Paris-Saclay) et Tarkett
+%     Co-encadrante: Mathilde Mougeot, Centre Borelli, ENS Paris-Saclay
+    }
+% \institute[VFU] % (optional)
+% {
 %     $^1$Centre Borelli, ENS Paris-Saclay\\
 %     $^2$Tarkett
-        Thèse industrielle entre l'ENS Paris-Saclay et Tarkett
-}
+%         Thèse industrielle entre l'ENS Paris-Saclay et Tarkett
+% }
 \date{Mercredi 15 Juillet 2020}
 
 \titlegraphic{
@@ -208,21 +209,61 @@
 
 \input{fileB_transfer_nursenet_concl.tex}
 
+% pour désilluminer le 'conclusion' dans la barre de navigation
+\section{}
+\subsection{}
+
 \begin{frame}[noframenumbering]{Publications and communications}
-% \centering
-% \begin{minipage}{0.9\linewidth}
-    \begin{itemize}
-        \item \bibentry{minvielle2017fall}
-        \item \bibentry{minvielle2019transfer}
-        \item \bibentry{minvielle2019nursenet}
-    \end{itemize}
-% \end{minipage}
+
+\small
+\centering
+\textbf{Publications}
+\begin{itemize}
+%     \item \bibentry{minvielle2017fall}
+%     \item \bibentry{minvielle2019transfer}
+%     \item \bibentry{minvielle2019nursenet}
+    \item L. Minvielle, M. Atiq, R. Serra, M. Mougeot, and N. Vayatis. \textcolor{myblue}{Fall detection using smart floor sensor and supervised learning.}
+\textit{In 2017 39th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)}, pages
+3445–3448, July 2017
+    \item L. Minvielle, M. Atiq, S. Peignier, and M. Mougeot. \textcolor{myblue}{Transfer learning on decision tree with class imbalance.}
+\textit{In 2019 IEEE 31st International Conference on Tools with Artificial Intelligence (ICTAI)}, pages 1003–1010, Nov 2019
+    \item Ludovic Minvielle and Julien Audiffren. \textcolor{myblue}{Nursenet: Monitoring elderly levels of activity with a piezoelectric floor.}
+\textit{Sensors}, 19(18), 2019
+    \item P. Humbert, B. Le Bars, B. and L. Minvielle. \textcolor{myblue}{Robust Kernel Density Estimation with Median-of-Means principle}. \textit{Submitted to Neural Information Processing Systems 2020 (NeurIPS)}, 2020
+\end{itemize}
+\medskip
+\centering
+\textbf{Communications}
+\begin{itemize}
+    \item Transfer learning on decision tree with imbalanced data, 3$^{\text{rd}}$ Summer school on transfer learning, 2019, Passau, Germany
+    \item Step detection with proposal network. 4$^{\text{th}}$ French-German Summer School on Artificial Intelligence, 2020, Online.
+\end{itemize}
+
 \end{frame}
 
-\begin{frame}[allowframebreaks, noframenumbering]
+% eneleve la bilbio de la barre de navigation au-dessus
+\appendix
+
+% enleve la navigation dans la headline de fin
+\setbeamertemplate{headline}{
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.78cm,dp=1.125ex]{section in head/foot}%
+    \small
+%     \insertsectionnumber
+%     \insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
+%     \footnotesize
+%     \insertsubsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
+%     \vfill
+    \end{beamercolorbox}
+  }
+}
+  
+\begin{frame}[noframenumbering, allowframebreaks]
         \small
         \frametitle{References}
-        \bibliographystyle{apalike}
+%         \bibliographystyle{apalike}
+        \bibliographystyle{plainnat}
 %         \bibliographystyle{abbrv}
         \bibliography{biblio.bib}
 \end{frame}

@@ -4,16 +4,22 @@
 \beamer@subsectionintoc {2}{1}{Systems}{5}{0}{2}
 \beamer@subsectionintoc {2}{2}{Information extraction}{9}{0}{2}
 \beamer@subsectionintoc {2}{3}{Tarkett sensor}{10}{0}{2}
-\beamer@sectionintoc {3}{A fall detection system}{13}{0}{3}
+\beamer@sectionintoc {3}{Fall detection}{13}{0}{3}
 \beamer@subsectionintoc {3}{1}{Data}{13}{0}{3}
 \beamer@subsectionintoc {3}{2}{Method}{16}{0}{3}
 \beamer@subsectionintoc {3}{3}{Results}{27}{0}{3}
 \beamer@sectionintoc {4}{Transfer learning}{28}{0}{4}
-\beamer@subsectionintoc {4}{1}{Operational data}{28}{0}{4}
-\beamer@sectionintoc {5}{Step proposal network}{66}{0}{5}
-\beamer@subsectionintoc {5}{1}{Region proposal network}{66}{0}{5}
-\beamer@subsectionintoc {5}{2}{Main architecture}{71}{0}{5}
-\beamer@subsectionintoc {5}{3}{Signal embedding}{73}{0}{5}
-\beamer@subsectionintoc {5}{4}{Step proposal network}{80}{0}{5}
-\beamer@subsectionintoc {5}{5}{Results}{83}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{88}{0}{6}
+\beamer@subsectionintoc {4}{1}{Context}{28}{0}{4}
+\beamer@subsectionintoc {4}{2}{Model-based transfer}{29}{0}{4}
+\beamer@subsectionintoc {4}{3}{Leaf loss risk}{40}{0}{4}
+\beamer@subsectionintoc {4}{4}{SER for class imbalance}{44}{0}{4}
+\beamer@subsectionintoc {4}{5}{STRUT for class imbalance}{56}{0}{4}
+\beamer@subsectionintoc {4}{6}{Results}{64}{0}{4}
+\beamer@sectionintoc {5}{Elderly activity recognition}{68}{0}{5}
+\beamer@subsectionintoc {5}{1}{Motivation}{68}{0}{5}
+\beamer@subsectionintoc {5}{2}{Main architecture}{70}{0}{5}
+\beamer@subsectionintoc {5}{3}{Signal embedding}{71}{0}{5}
+\beamer@subsectionintoc {5}{4}{Region proposal network}{77}{0}{5}
+\beamer@subsectionintoc {5}{5}{Step proposal network}{83}{0}{5}
+\beamer@subsectionintoc {5}{6}{Classification}{90}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{92}{0}{6}
