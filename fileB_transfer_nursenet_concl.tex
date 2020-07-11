@@ -1,7 +1,15 @@
 \section{Transfer learning}
+
+\begin{frame}{}
+    \centering
+    \vspace{3cm}
+    \Huge
+    \textcolor{myblue}{Transfer learning on decision tree}
+\end{frame}
+
 \subsection{Context}
 
-\begin{frame}{Transfer learning on decision tree}{Experimental vs. operational}
+\begin{frame}{Experimental vs. operational}
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
     \textbf{Transfer learning}
@@ -49,7 +57,7 @@
 
 \subsection{Model-based transfer}
 
-\begin{frame}{Transfer learning on decision tree}{Model-based transfer}
+\begin{frame}{Model-based transfer}
 
 \centering\citet{segev2017learn}
 
@@ -116,7 +124,7 @@
 
 \subsection{Leaf loss risk}
 
-\begin{frame}{Transfer learning on decision tree}{Leaf loss risk}
+\begin{frame}{Leaf loss risk}
 
 \begin{minipage}[t]{0.38\textwidth}
     \vspace{0pt}
@@ -157,7 +165,7 @@
 
 \end{frame}
 
-\begin{frame}{Transfer learning on decision tree}{Leaf loss risk}
+\begin{frame}{Leaf loss risk}
 
 \renewcommand{\ratio}{0.78}
 \renewcommand{\ratiob}{0.45}
@@ -193,7 +201,7 @@
 
 \subsection{SER for class imbalance}
 
-\begin{frame}{Transfer learning on decision tree}{SER for class imbalance}
+\begin{frame}{SER for class imbalance}{\serr, \serll}
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
     
@@ -242,7 +250,9 @@
 
 \end{frame}
 
-\begin{frame}{Transfer learning on decision tree}{STRUT optimization}
+\subsection{STRUT for class imbalance}
+
+\begin{frame}{STRUT for class imbalance}{STRUT optimization}
 
 \begin{minipage}[t]{0.4\linewidth}
     \vspace{0pt}
@@ -283,9 +293,9 @@
 
 \end{frame}
 
-\subsection{STRUT for class imbalance}
+% \subsection{STRUT for class imbalance}
 
-\begin{frame}{Transfer learning on decision tree}{STRUT optimization}
+\begin{frame}{STRUT for class imbalance}{STRUT optimization}
 \begin{minipage}[t]{0.4\linewidth}
     \vspace{0pt}
     \centering
@@ -317,7 +327,7 @@
 
 \end{frame}
 
-\begin{frame}{Transfer learning on decision tree}{STRUT for class imbalance}
+\begin{frame}{STRUT for class imbalance}{\strutnd, \struthi}
 
     \begin{tcolorbox}[title=\strutnd,size=title,boxrule=0.2pt]
     STRUT without DG: maximization of IG
@@ -348,7 +358,7 @@
 
 \subsection{Results}
 
-\begin{frame}{Transfer learning on decision tree}{Data}
+\begin{frame}{Data}
     
 \textbf{Gaussian Generator}\\
 Each dataset consists of a combination of several Gaussian cluster.
@@ -390,7 +400,7 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
 
 \end{frame}
 
-\begin{frame}{Transfer learning on decision tree}{Results}
+\begin{frame}{Results}
 
 \centering
 \textbf{Synthetic data}
@@ -434,7 +444,7 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
     
 \end{frame}
 
-\begin{frame}{Transfer learning on decision tree}{Results}
+\begin{frame}{Results}
 
 \centering
 \textbf{Real data}
@@ -477,7 +487,7 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
     
 \end{frame}
 
-\begin{frame}{Transfer learning on decision tree}{Results}
+\begin{frame}{Results}
 
 \centering
 \textbf{Fall data}
@@ -514,6 +524,14 @@ k-fold testing with varying $k$
 \end{frame}
 
 \section{Elderly activity recognition}
+
+\begin{frame}{}
+    \centering
+    \vspace{3cm}
+    \Huge
+    \textcolor{myblue}{Elderly activity recognition with convolutional representations}
+\end{frame}
+
 
 \subsection{Motivation}
 
@@ -599,7 +617,7 @@ k-fold testing with varying $k$
         \centering
         \includegraphics[width=0.9\linewidth]{cdl_example_2.pdf}\\
         \smallskip
-        {\small Convolutional dictionary learning}
+        {\small Convolutional representation}
 %         \label{fig:walk_class_ex_stepboxes}
 %     \end{figure}
 \end{minipage}
@@ -796,14 +814,17 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
 
 \begin{frame}{Step proposal network}{Results}
-\begin{minipage}[t]{0.4\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
     \vspace{0pt}
-    Data
+    \centering\textbf{Data}
     \begin{itemize}
         \item 43 signals recorded in a nursing home
         \item Manually labeled steps
     \end{itemize}
-    Training
+    \includegraphics[width=0.95\linewidth, trim= 110 150 130 210, clip]{schema_couloir_plan_blue.pdf}
+
+    \pause
+    \centering\textbf{Training}
     \begin{itemize}
         \item \subalgo is trained using classical gradient descent
         \item Training time: < 5 minutes
@@ -816,8 +837,10 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
         \end{itemize}
     \end{itemize}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.54\linewidth}
+\begin{minipage}[t]{0.51\linewidth}
     \vspace{0pt}
+    \pause
+    \centering\textbf{Results}
     \begin{itemize}
         \item Object detection use the mean Average Precision (mAP): area under the Precision-Recall curve
         \item \textbf{Without} embedding, mAP = 72,5\%
@@ -829,11 +852,12 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 %         \caption{\subalgo training and testing errors.}
 %     \end{figure}
 \pause
+\vspace{-0.1cm}
 \renewcommand{\ratio}{1.00}
     \begin{overprint}
-        \onslide<2>\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf}
-        \onslide<3>\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf}
-        \onslide<4>\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf}
+        \onslide<+>\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf}
+        \onslide<+>\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf}
+        \onslide<+->\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf}
     \end{overprint}
 \end{minipage}
 \end{frame}

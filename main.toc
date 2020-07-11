@@ -1,25 +1,24 @@
 \beamer@endinputifotherversion {3.33pt}
-\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{A tour of monitoring systems}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{Systems}{5}{0}{2}
-\beamer@subsectionintoc {2}{2}{Information extraction}{9}{0}{2}
-\beamer@subsectionintoc {2}{3}{Tarkett sensor}{10}{0}{2}
-\beamer@sectionintoc {3}{Fall detection}{13}{0}{3}
-\beamer@subsectionintoc {3}{1}{Data}{13}{0}{3}
-\beamer@subsectionintoc {3}{2}{Method}{16}{0}{3}
-\beamer@subsectionintoc {3}{3}{Results}{27}{0}{3}
-\beamer@sectionintoc {4}{Transfer learning}{28}{0}{4}
-\beamer@subsectionintoc {4}{1}{Context}{28}{0}{4}
-\beamer@subsectionintoc {4}{2}{Model-based transfer}{29}{0}{4}
-\beamer@subsectionintoc {4}{3}{Leaf loss risk}{40}{0}{4}
-\beamer@subsectionintoc {4}{4}{SER for class imbalance}{44}{0}{4}
-\beamer@subsectionintoc {4}{5}{STRUT for class imbalance}{56}{0}{4}
-\beamer@subsectionintoc {4}{6}{Results}{64}{0}{4}
-\beamer@sectionintoc {5}{Elderly activity recognition}{68}{0}{5}
-\beamer@subsectionintoc {5}{1}{Motivation}{68}{0}{5}
-\beamer@subsectionintoc {5}{2}{Main architecture}{70}{0}{5}
-\beamer@subsectionintoc {5}{3}{Signal embedding}{71}{0}{5}
-\beamer@subsectionintoc {5}{4}{Region proposal network}{77}{0}{5}
-\beamer@subsectionintoc {5}{5}{Step proposal network}{83}{0}{5}
-\beamer@subsectionintoc {5}{6}{Classification}{90}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{92}{0}{6}
+\beamer@sectionintoc {1}{Monitoring systems}{7}{0}{1}
+\beamer@subsectionintoc {1}{1}{Sensors}{8}{0}{1}
+\beamer@subsectionintoc {1}{2}{Information extraction}{12}{0}{1}
+\beamer@sectionintoc {2}{Fall detection}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Tarkett sensor}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Data}{17}{0}{2}
+\beamer@subsectionintoc {2}{3}{Method}{20}{0}{2}
+\beamer@subsectionintoc {2}{4}{Results}{31}{0}{2}
+\beamer@sectionintoc {3}{Transfer learning}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{Context}{33}{0}{3}
+\beamer@subsectionintoc {3}{2}{Model-based transfer}{34}{0}{3}
+\beamer@subsectionintoc {3}{3}{Leaf loss risk}{45}{0}{3}
+\beamer@subsectionintoc {3}{4}{SER for class imbalance}{49}{0}{3}
+\beamer@subsectionintoc {3}{5}{STRUT for class imbalance}{56}{0}{3}
+\beamer@subsectionintoc {3}{6}{Results}{69}{0}{3}
+\beamer@sectionintoc {4}{Elderly activity recognition}{73}{0}{4}
+\beamer@subsectionintoc {4}{1}{Motivation}{74}{0}{4}
+\beamer@subsectionintoc {4}{2}{Main architecture}{76}{0}{4}
+\beamer@subsectionintoc {4}{3}{Signal embedding}{77}{0}{4}
+\beamer@subsectionintoc {4}{4}{Region proposal network}{83}{0}{4}
+\beamer@subsectionintoc {4}{5}{Step proposal network}{89}{0}{4}
+\beamer@subsectionintoc {4}{6}{Classification}{98}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{100}{0}{5}

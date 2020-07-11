@@ -1,131 +1,133 @@
 \beamer@endinputifotherversion {3.33pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
-\headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {1}{Introduction}{3}{Introduction}{0}}
-\headcommand {\beamer@sectionpages {1}{2}}
-\headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{}}\headcommand {\beamer@subsectionpages {3}{2}}
-\headcommand {\slideentry {1}{1}{1}{3/3}{}{0}}
-\headcommand {\beamer@framepages {3}{3}}
-\headcommand {\slideentry {1}{1}{2}{4/4}{}{0}}
-\headcommand {\beamer@framepages {4}{4}}
-\headcommand {\sectionentry {2}{A tour of monitoring systems}{5}{A tour of monitoring systems}{0}}
-\headcommand {\beamer@sectionpages {3}{4}}
-\headcommand {\beamer@subsectionpages {3}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{Systems}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\slideentry {2}{1}{1}{5/8}{Systems}{0}}
-\headcommand {\beamer@framepages {5}{8}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{9}{Information extraction}}\headcommand {\beamer@subsectionpages {5}{8}}
-\headcommand {\slideentry {2}{2}{1}{9/9}{Information extraction}{0}}
-\headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{10}{Tarkett sensor}}\headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\slideentry {2}{3}{1}{10/12}{Tarkett sensor}{0}}
-\headcommand {\beamer@framepages {10}{12}}
-\headcommand {\sectionentry {3}{Fall detection}{13}{Fall detection}{0}}
-\headcommand {\beamer@sectionpages {5}{12}}
-\headcommand {\beamer@subsectionpages {10}{12}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{13}{Data}}\headcommand {\beamer@subsectionpages {13}{12}}
-\headcommand {\slideentry {3}{1}{1}{13/15}{Data}{0}}
-\headcommand {\beamer@framepages {13}{15}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{16}{Method}}\headcommand {\beamer@subsectionpages {13}{15}}
-\headcommand {\slideentry {3}{2}{1}{16/18}{Method}{0}}
-\headcommand {\beamer@framepages {16}{18}}
-\headcommand {\slideentry {3}{2}{2}{19/20}{Method}{0}}
-\headcommand {\beamer@framepages {19}{20}}
-\headcommand {\slideentry {3}{2}{3}{21/26}{Method}{0}}
-\headcommand {\beamer@framepages {21}{26}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{27}{Results}}\headcommand {\beamer@subsectionpages {16}{26}}
-\headcommand {\slideentry {3}{3}{1}{27/27}{Results}{0}}
-\headcommand {\beamer@framepages {27}{27}}
-\headcommand {\sectionentry {4}{Transfer learning}{28}{Transfer learning}{0}}
-\headcommand {\beamer@sectionpages {13}{27}}
-\headcommand {\beamer@subsectionpages {27}{27}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{28}{Context}}\headcommand {\beamer@subsectionpages {28}{27}}
-\headcommand {\slideentry {4}{1}{1}{28/28}{Context}{0}}
-\headcommand {\beamer@framepages {28}{28}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{29}{Model-based transfer}}\headcommand {\beamer@subsectionpages {28}{28}}
-\headcommand {\slideentry {4}{2}{1}{29/39}{Model-based transfer}{0}}
-\headcommand {\beamer@framepages {29}{39}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{40}{Leaf loss risk}}\headcommand {\beamer@subsectionpages {29}{39}}
-\headcommand {\slideentry {4}{3}{1}{40/42}{Leaf loss risk}{0}}
-\headcommand {\beamer@framepages {40}{42}}
-\headcommand {\slideentry {4}{3}{2}{43/43}{Leaf loss risk}{0}}
-\headcommand {\beamer@framepages {43}{43}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{44}{SER for class imbalance}}\headcommand {\beamer@subsectionpages {40}{43}}
-\headcommand {\slideentry {4}{4}{1}{44/50}{SER for class imbalance}{0}}
-\headcommand {\beamer@framepages {44}{50}}
-\headcommand {\slideentry {4}{4}{2}{51/55}{SER for class imbalance}{0}}
-\headcommand {\beamer@framepages {51}{55}}
-\headcommand {\beamer@subsectionentry {0}{4}{5}{56}{STRUT for class imbalance}}\headcommand {\beamer@subsectionpages {44}{55}}
-\headcommand {\slideentry {4}{5}{1}{56/60}{STRUT for class imbalance}{0}}
+\headcommand {\slideentry {0}{0}{2}{2/5}{}{0}}
+\headcommand {\beamer@framepages {2}{5}}
+\headcommand {\slideentry {0}{0}{3}{6/6}{}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\sectionentry {1}{Monitoring systems}{7}{Monitoring systems}{0}}
+\headcommand {\beamer@sectionpages {1}{6}}
+\headcommand {\beamer@subsectionpages {1}{6}}
+\headcommand {\slideentry {1}{0}{4}{7/7}{}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{8}{Sensors}}\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {1}{1}{1}{8/11}{Sensors}{0}}
+\headcommand {\beamer@framepages {8}{11}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{12}{Information extraction}}\headcommand {\beamer@subsectionpages {8}{11}}
+\headcommand {\slideentry {1}{2}{1}{12/12}{Information extraction}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\sectionentry {2}{Fall detection}{13}{Fall detection}{0}}
+\headcommand {\beamer@sectionpages {7}{12}}
+\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\slideentry {2}{0}{2}{13/13}{}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{14}{Tarkett sensor}}\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\slideentry {2}{1}{1}{14/16}{Tarkett sensor}{0}}
+\headcommand {\beamer@framepages {14}{16}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{17}{Data}}\headcommand {\beamer@subsectionpages {14}{16}}
+\headcommand {\slideentry {2}{2}{1}{17/19}{Data}{0}}
+\headcommand {\beamer@framepages {17}{19}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{20}{Method}}\headcommand {\beamer@subsectionpages {17}{19}}
+\headcommand {\slideentry {2}{3}{1}{20/22}{Method}{0}}
+\headcommand {\beamer@framepages {20}{22}}
+\headcommand {\slideentry {2}{3}{2}{23/24}{Method}{0}}
+\headcommand {\beamer@framepages {23}{24}}
+\headcommand {\slideentry {2}{3}{3}{25/30}{Method}{0}}
+\headcommand {\beamer@framepages {25}{30}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{31}{Results}}\headcommand {\beamer@subsectionpages {20}{30}}
+\headcommand {\slideentry {2}{4}{1}{31/31}{Results}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\sectionentry {3}{Transfer learning}{32}{Transfer learning}{0}}
+\headcommand {\beamer@sectionpages {13}{31}}
+\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\slideentry {3}{0}{2}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{33}{Context}}\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\slideentry {3}{1}{1}{33/33}{Context}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{34}{Model-based transfer}}\headcommand {\beamer@subsectionpages {33}{33}}
+\headcommand {\slideentry {3}{2}{1}{34/44}{Model-based transfer}{0}}
+\headcommand {\beamer@framepages {34}{44}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{45}{Leaf loss risk}}\headcommand {\beamer@subsectionpages {34}{44}}
+\headcommand {\slideentry {3}{3}{1}{45/47}{Leaf loss risk}{0}}
+\headcommand {\beamer@framepages {45}{47}}
+\headcommand {\slideentry {3}{3}{2}{48/48}{Leaf loss risk}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{49}{SER for class imbalance}}\headcommand {\beamer@subsectionpages {45}{48}}
+\headcommand {\slideentry {3}{4}{1}{49/55}{SER for class imbalance}{0}}
+\headcommand {\beamer@framepages {49}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{56}{STRUT for class imbalance}}\headcommand {\beamer@subsectionpages {49}{55}}
+\headcommand {\slideentry {3}{5}{1}{56/60}{STRUT for class imbalance}{0}}
 \headcommand {\beamer@framepages {56}{60}}
-\headcommand {\slideentry {4}{5}{2}{61/63}{STRUT for class imbalance}{0}}
-\headcommand {\beamer@framepages {61}{63}}
-\headcommand {\beamer@subsectionentry {0}{4}{6}{64}{Results}}\headcommand {\beamer@subsectionpages {56}{63}}
-\headcommand {\slideentry {4}{6}{1}{64/64}{Results}{0}}
-\headcommand {\beamer@framepages {64}{64}}
-\headcommand {\slideentry {4}{6}{2}{65/65}{Results}{0}}
-\headcommand {\beamer@framepages {65}{65}}
-\headcommand {\slideentry {4}{6}{3}{66/66}{Results}{0}}
-\headcommand {\beamer@framepages {66}{66}}
-\headcommand {\slideentry {4}{6}{4}{67/67}{Results}{0}}
-\headcommand {\beamer@framepages {67}{67}}
-\headcommand {\sectionentry {5}{Elderly activity recognition}{68}{Elderly activity recognition}{0}}
-\headcommand {\beamer@sectionpages {28}{67}}
-\headcommand {\beamer@subsectionpages {64}{67}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{68}{Motivation}}\headcommand {\beamer@subsectionpages {68}{67}}
-\headcommand {\slideentry {5}{1}{1}{68/69}{Motivation}{0}}
-\headcommand {\beamer@framepages {68}{69}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{70}{Main architecture}}\headcommand {\beamer@subsectionpages {68}{69}}
-\headcommand {\slideentry {5}{2}{1}{70/70}{Main architecture}{0}}
+\headcommand {\slideentry {3}{5}{2}{61/65}{STRUT for class imbalance}{0}}
+\headcommand {\beamer@framepages {61}{65}}
+\headcommand {\slideentry {3}{5}{3}{66/68}{STRUT for class imbalance}{0}}
+\headcommand {\beamer@framepages {66}{68}}
+\headcommand {\beamer@subsectionentry {0}{3}{6}{69}{Results}}\headcommand {\beamer@subsectionpages {56}{68}}
+\headcommand {\slideentry {3}{6}{1}{69/69}{Results}{0}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\slideentry {3}{6}{2}{70/70}{Results}{0}}
 \headcommand {\beamer@framepages {70}{70}}
-\headcommand {\beamer@subsectionentry {0}{5}{3}{71}{Signal embedding}}\headcommand {\beamer@subsectionpages {70}{70}}
-\headcommand {\slideentry {5}{3}{1}{71/73}{Signal embedding}{0}}
-\headcommand {\beamer@framepages {71}{73}}
-\headcommand {\slideentry {5}{3}{2}{74/76}{Signal embedding}{0}}
-\headcommand {\beamer@framepages {74}{76}}
-\headcommand {\beamer@subsectionentry {0}{5}{4}{77}{Region proposal network}}\headcommand {\beamer@subsectionpages {71}{76}}
-\headcommand {\slideentry {5}{4}{1}{77/79}{Region proposal network}{0}}
+\headcommand {\slideentry {3}{6}{3}{71/71}{Results}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\slideentry {3}{6}{4}{72/72}{Results}{0}}
+\headcommand {\beamer@framepages {72}{72}}
+\headcommand {\sectionentry {4}{Elderly activity recognition}{73}{Elderly activity recognition}{0}}
+\headcommand {\beamer@sectionpages {32}{72}}
+\headcommand {\beamer@subsectionpages {69}{72}}
+\headcommand {\slideentry {4}{0}{5}{73/73}{}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{74}{Motivation}}\headcommand {\beamer@subsectionpages {73}{73}}
+\headcommand {\slideentry {4}{1}{1}{74/75}{Motivation}{0}}
+\headcommand {\beamer@framepages {74}{75}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{76}{Main architecture}}\headcommand {\beamer@subsectionpages {74}{75}}
+\headcommand {\slideentry {4}{2}{1}{76/76}{Main architecture}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{77}{Signal embedding}}\headcommand {\beamer@subsectionpages {76}{76}}
+\headcommand {\slideentry {4}{3}{1}{77/79}{Signal embedding}{0}}
 \headcommand {\beamer@framepages {77}{79}}
-\headcommand {\slideentry {5}{4}{2}{80/81}{Region proposal network}{0}}
-\headcommand {\beamer@framepages {80}{81}}
-\headcommand {\slideentry {5}{4}{3}{82/82}{Region proposal network}{0}}
-\headcommand {\beamer@framepages {82}{82}}
-\headcommand {\beamer@subsectionentry {0}{5}{5}{83}{Step proposal network}}\headcommand {\beamer@subsectionpages {77}{82}}
-\headcommand {\slideentry {5}{5}{1}{83/84}{Step proposal network}{0}}
-\headcommand {\beamer@framepages {83}{84}}
-\headcommand {\slideentry {5}{5}{2}{85/85}{Step proposal network}{0}}
-\headcommand {\beamer@framepages {85}{85}}
-\headcommand {\slideentry {5}{5}{3}{86/89}{Step proposal network}{0}}
-\headcommand {\beamer@framepages {86}{89}}
-\headcommand {\beamer@subsectionentry {0}{5}{6}{90}{Classification}}\headcommand {\beamer@subsectionpages {83}{89}}
-\headcommand {\slideentry {5}{6}{1}{90/90}{Classification}{0}}
-\headcommand {\beamer@framepages {90}{90}}
-\headcommand {\slideentry {5}{6}{2}{91/91}{Classification}{0}}
+\headcommand {\slideentry {4}{3}{2}{80/82}{Signal embedding}{0}}
+\headcommand {\beamer@framepages {80}{82}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{83}{Region proposal network}}\headcommand {\beamer@subsectionpages {77}{82}}
+\headcommand {\slideentry {4}{4}{1}{83/85}{Region proposal network}{0}}
+\headcommand {\beamer@framepages {83}{85}}
+\headcommand {\slideentry {4}{4}{2}{86/87}{Region proposal network}{0}}
+\headcommand {\beamer@framepages {86}{87}}
+\headcommand {\slideentry {4}{4}{3}{88/88}{Region proposal network}{0}}
+\headcommand {\beamer@framepages {88}{88}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{89}{Step proposal network}}\headcommand {\beamer@subsectionpages {83}{88}}
+\headcommand {\slideentry {4}{5}{1}{89/90}{Step proposal network}{0}}
+\headcommand {\beamer@framepages {89}{90}}
+\headcommand {\slideentry {4}{5}{2}{91/91}{Step proposal network}{0}}
 \headcommand {\beamer@framepages {91}{91}}
-\headcommand {\sectionentry {6}{Conclusion}{92}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {68}{91}}
-\headcommand {\beamer@subsectionpages {90}{91}}
-\headcommand {\beamer@subsectionentry {0}{6}{1}{92}{}}\headcommand {\beamer@subsectionpages {92}{91}}
-\headcommand {\slideentry {6}{1}{1}{92/92}{}{0}}
-\headcommand {\beamer@framepages {92}{92}}
-\headcommand {\beamer@subsectionentry {0}{7}{1}{93}{}}\headcommand {\beamer@subsectionpages {93}{92}}
-\headcommand {\slideentry {7}{1}{1}{93/93}{}{0}}
-\headcommand {\beamer@framepages {93}{93}}
+\headcommand {\slideentry {4}{5}{3}{92/97}{Step proposal network}{0}}
+\headcommand {\beamer@framepages {92}{97}}
+\headcommand {\beamer@subsectionentry {0}{4}{6}{98}{Classification}}\headcommand {\beamer@subsectionpages {89}{97}}
+\headcommand {\slideentry {4}{6}{1}{98/98}{Classification}{0}}
+\headcommand {\beamer@framepages {98}{98}}
+\headcommand {\slideentry {4}{6}{2}{99/99}{Classification}{0}}
+\headcommand {\beamer@framepages {99}{99}}
+\headcommand {\sectionentry {5}{Conclusion}{100}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {73}{99}}
+\headcommand {\beamer@subsectionpages {98}{99}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{100}{}}\headcommand {\beamer@subsectionpages {100}{99}}
+\headcommand {\slideentry {5}{1}{1}{100/100}{}{0}}
+\headcommand {\beamer@framepages {100}{100}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{101}{}}\headcommand {\beamer@subsectionpages {101}{100}}
+\headcommand {\slideentry {6}{1}{1}{101/101}{}{0}}
+\headcommand {\beamer@framepages {101}{101}}
 \headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{93}}
-\headcommand {\beamer@sectionpages {93}{93}}
-\headcommand {\beamer@subsectionpages {93}{93}}
-\headcommand {\beamer@appendixpages {94}}
-\headcommand {\sectionentry {8}{\translate {References}}{94}{\translate {References}}{1}}
-\headcommand {\beamer@sectionpages {94}{93}}
-\headcommand {\beamer@subsectionpages {94}{93}}
-\headcommand {\slideentry {8}{0}{2}{94/94}{}{1}}
-\headcommand {\beamer@framepages {94}{94}}
-\headcommand {\beamer@partpages {94}{94}}
-\headcommand {\beamer@subsectionpages {94}{94}}
-\headcommand {\beamer@sectionpages {94}{94}}
-\headcommand {\beamer@documentpages {94}}
-\headcommand {\def \inserttotalframenumber {35}}
+\headcommand {\beamer@partpages {1}{101}}
+\headcommand {\beamer@sectionpages {101}{101}}
+\headcommand {\beamer@subsectionpages {101}{101}}
+\headcommand {\beamer@appendixpages {102}}
+\headcommand {\sectionentry {7}{\translate {References}}{102}{\translate {References}}{1}}
+\headcommand {\beamer@sectionpages {102}{101}}
+\headcommand {\beamer@subsectionpages {102}{101}}
+\headcommand {\slideentry {7}{0}{2}{102/102}{}{1}}
+\headcommand {\beamer@framepages {102}{102}}
+\headcommand {\beamer@partpages {102}{102}}
+\headcommand {\beamer@subsectionpages {102}{102}}
+\headcommand {\beamer@sectionpages {102}{102}}
+\headcommand {\beamer@documentpages {102}}
+\headcommand {\def \inserttotalframenumber {38}}

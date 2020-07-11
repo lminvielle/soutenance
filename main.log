@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  9 JUL 2020 03:03
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2020.6.2)  11 JUL 2020 20:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1868,6 +1868,12 @@ xt;mapping=tex-text;+tnum;" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 179.
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
+xt;mapping=tex-text;+tnum;" at 10.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+.otf
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 179.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 6.0pt
@@ -1901,18 +1907,39 @@ File: images/Tarkett-logo_red.jpg Graphic file (type QTm)
 
 <use  "images/Tarkett-logo_red.jpg" > [1
 
-]
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
-Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
-xt;mapping=tex-text;+tnum;" at 10.0pt
+] (./fileA_intro_biblio_fall.tex
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
+(Font)              scaled to size 8.0pt on input line 87.
+Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;mapping=tex-text;+tnum;" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-.otf
- (./main.toc)
-Requested font "[lmroman6-regular]:mapping=tex-text" at 6.0pt
- -> /usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf
+B.otf
 Requested font "[lmroman5-regular]:mapping=tex-text" at 5.0pt
  -> /usr/share/texmf/fonts/opentype/public/lm/lmroman5-regular.otf
+Requested font "cmex7" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+Requested font "msam5" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Requested font "msbm5" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
+(Font)              scaled to size 5.0pt on input line 87.
+Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;mapping=tex-text;+tnum;" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+I.otf
+Requested font "[lmroman6-regular]:mapping=tex-text" at 6.0pt
+ -> /usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf
 Requested font "cmmi8" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 Requested font "cmmi6" at 6.0pt
@@ -1925,81 +1952,103 @@ Requested font "cmex8" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 Requested font "cmex7" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-Requested font "cmex7" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-LaTeX Font Info:    Try loading font information for U+msa on input line 205.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
 Requested font "msam10" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 Requested font "msam7" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-Requested font "msam5" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-LaTeX Font Info:    Try loading font information for U+msb on input line 205.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Requested font "msbm10" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 Requested font "msbm7" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-Requested font "msbm5" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 205.
+(Font)              scaled to size 8.0pt on input line 87.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 I.otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 205.
+(Font)              scaled to size 6.0pt on input line 87.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 I.otf
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 5.0pt on input line 205.
-Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;mapping=tex-text;+tnum;" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-I.otf
 Requested font "cmr6" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
- [2
-
-]
-(./fileA_intro_biblio_fall.tex
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 8.0pt on input line 52.
-Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;mapping=tex-text;+tnum;" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-B.otf
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 52.
-Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
-xt;mapping=tex-text;+tnum;" at 7.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-.otf
-File: ./images/Tarkett-logo_red.jpg Graphic file (type QTm)
- <use  "./images/Tarkett-logo_red.jpg" >
 File: ./images/FIM.jpg Graphic file (type QTm)
 
 <use  "./images/FIM.jpg" >
 File: ./images/schema_fall_detector.pdf Graphic file (type QTm)
  <use  "./images/schema_fall_detector.pdf" >
-Overfull \hbox (1.33334pt too wide) in paragraph at lines 52--52
-[][] [] 
- []
+File: ./images/signal_marche_accelerometre_left_right_epure.pdf Graphic file (t
+ype QTm)
 
+<use  "./images/signal_marche_accelerometre_left_right_epure.pdf" >
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 4.0pt on input line 52.
+(Font)              scaled to size 7.0pt on input line 87.
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
+xt;mapping=tex-text;+tnum;" at 7.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+.otf
+File: ./images/signal_marche_tarkett_epure.pdf Graphic file (type QTm)
+
+<use  "./images/signal_marche_tarkett_epure.pdf" >
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 4.0pt on input line 87.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 4.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+.otf
+ [2
+
+]
+File: ./images/FIM.jpg Graphic file (type QTm)
+
+<use  "./images/FIM.jpg" >
+File: ./images/schema_fall_detector.pdf Graphic file (type QTm)
+ <use  "./images/schema_fall_detector.pdf" >
+File: ./images/signal_marche_accelerometre_left_right_epure.pdf Graphic file (t
+ype QTm)
+
+<use  "./images/signal_marche_accelerometre_left_right_epure.pdf" >
+File: ./images/signal_marche_tarkett_epure.pdf Graphic file (type QTm)
+
+<use  "./images/signal_marche_tarkett_epure.pdf" > [3
+
+]
+File: ./images/FIM.jpg Graphic file (type QTm)
+
+<use  "./images/FIM.jpg" >
+File: ./images/schema_fall_detector.pdf Graphic file (type QTm)
+ <use  "./images/schema_fall_detector.pdf" >
+File: ./images/signal_marche_accelerometre_left_right_epure.pdf Graphic file (t
+ype QTm)
+
+<use  "./images/signal_marche_accelerometre_left_right_epure.pdf" >
+File: ./images/signal_marche_tarkett_epure.pdf Graphic file (type QTm)
+
+<use  "./images/signal_marche_tarkett_epure.pdf" > [4
+
+]
+File: ./images/FIM.jpg Graphic file (type QTm)
+
+<use  "./images/FIM.jpg" >
+File: ./images/schema_fall_detector.pdf Graphic file (type QTm)
+ <use  "./images/schema_fall_detector.pdf" >
+File: ./images/signal_marche_accelerometre_left_right_epure.pdf Graphic file (t
+ype QTm)
+
+<use  "./images/signal_marche_accelerometre_left_right_epure.pdf" >
+File: ./images/signal_marche_tarkett_epure.pdf Graphic file (type QTm)
+
+<use  "./images/signal_marche_tarkett_epure.pdf" > [5
+
+] (./main.toc) [6
+
+]
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 115.
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
+xt;mapping=tex-text;+tnum;" at 17.28pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
 
@@ -2007,20 +2056,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[3
-
-]
-File: ./images/signal_marche_accelerometre_left_right_epure.pdf Graphic file (t
-ype QTm)
- <use  "./images/signal_marche_accelerometre_left_right_epure.pdf" >
-File: ./images/signal_marche_tarkett_epure.pdf Graphic file (type QTm)
-
-<use  "./images/signal_marche_tarkett_epure.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[4
+[7
 
 ]
 File: ./images/fall_systems_1_1-14.pdf Graphic file (type QTm)
@@ -2038,52 +2074,52 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[5
-
-]
-File: ./images/fall_systems_1_1-14.pdf Graphic file (type QTm)
- <use  "./images/fall_systems_1_1-14.pdf" >
-File: ./images/fall_systems_1_2-14.pdf Graphic file (type QTm)
-
-<use  "./images/fall_systems_1_2-14.pdf" >
-File: ./images/fall_systems_1_3-14.pdf Graphic file (type QTm)
-
-<use  "./images/fall_systems_1_3-14.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[6
-
-]
-File: ./images/fall_systems_1_1-14.pdf Graphic file (type QTm)
- <use  "./images/fall_systems_1_1-14.pdf" >
-File: ./images/fall_systems_1_2-14.pdf Graphic file (type QTm)
-
-<use  "./images/fall_systems_1_2-14.pdf" >
-File: ./images/fall_systems_1_3-14.pdf Graphic file (type QTm)
-
-<use  "./images/fall_systems_1_3-14.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[7
-
-]
-File: ./images/fall_systems_1_1-14.pdf Graphic file (type QTm)
- <use  "./images/fall_systems_1_1-14.pdf" >
-File: ./images/fall_systems_1_2-14.pdf Graphic file (type QTm)
-
-<use  "./images/fall_systems_1_2-14.pdf" >
-File: ./images/fall_systems_1_3-14.pdf Graphic file (type QTm)
-
-<use  "./images/fall_systems_1_3-14.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
 [8
+
+]
+File: ./images/fall_systems_1_1-14.pdf Graphic file (type QTm)
+ <use  "./images/fall_systems_1_1-14.pdf" >
+File: ./images/fall_systems_1_2-14.pdf Graphic file (type QTm)
+
+<use  "./images/fall_systems_1_2-14.pdf" >
+File: ./images/fall_systems_1_3-14.pdf Graphic file (type QTm)
+
+<use  "./images/fall_systems_1_3-14.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[9
+
+]
+File: ./images/fall_systems_1_1-14.pdf Graphic file (type QTm)
+ <use  "./images/fall_systems_1_1-14.pdf" >
+File: ./images/fall_systems_1_2-14.pdf Graphic file (type QTm)
+
+<use  "./images/fall_systems_1_2-14.pdf" >
+File: ./images/fall_systems_1_3-14.pdf Graphic file (type QTm)
+
+<use  "./images/fall_systems_1_3-14.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[10
+
+]
+File: ./images/fall_systems_1_1-14.pdf Graphic file (type QTm)
+ <use  "./images/fall_systems_1_1-14.pdf" >
+File: ./images/fall_systems_1_2-14.pdf Graphic file (type QTm)
+
+<use  "./images/fall_systems_1_2-14.pdf" >
+File: ./images/fall_systems_1_3-14.pdf Graphic file (type QTm)
+
+<use  "./images/fall_systems_1_3-14.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[11
 
 ]
 File: ./images/fall_systems_3-14.pdf Graphic file (type QTm)
@@ -2092,83 +2128,9 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[9
-
-]
-File: ./images/schema_piezo.pdf Graphic file (type QTm)
- <use  "./images/schema_piezo.pdf" >
-File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
-
-<use  "./images/photo_capteur_rouleau.png" >
-File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
-
-<use  "./images/photo_capteur_connecteur.png" >
-File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
-
-<use  "./images/schema_sensor_installation_3.pdf" >
-File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
-
-<use  "./images/schema_sensor_installation_room_3.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[10
-
-]
-File: ./images/schema_piezo.pdf Graphic file (type QTm)
- <use  "./images/schema_piezo.pdf" >
-File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
-
-<use  "./images/photo_capteur_rouleau.png" >
-File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
-
-<use  "./images/photo_capteur_connecteur.png" >
-File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
-
-<use  "./images/schema_sensor_installation_3.pdf" >
-File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
-
-<use  "./images/schema_sensor_installation_room_3.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[11
-
-]
-File: ./images/schema_piezo.pdf Graphic file (type QTm)
- <use  "./images/schema_piezo.pdf" >
-File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
-
-<use  "./images/photo_capteur_rouleau.png" >
-File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
-
-<use  "./images/photo_capteur_connecteur.png" >
-File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
-
-<use  "./images/schema_sensor_installation_3.pdf" >
-File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
-
-<use  "./images/schema_sensor_installation_room_3.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
 [12
 
 ]
-File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
- <use  "./images/ex_signal_raw_2.pdf" >
-File: ./images/ex_signal_preproc_2.pdf Graphic file (type QTm)
-
-<use  "./images/ex_signal_preproc_2.pdf" >
-File: ./images/ex_signal_chute_2.pdf Graphic file (type QTm)
-
-<use  "./images/ex_signal_chute_2.pdf" >
-File: ./images/exp_database_epure_2.pdf Graphic file (type QTm)
-
-<use  "./images/exp_database_epure_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2176,22 +2138,67 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [13
 
 ]
-File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
- <use  "./images/ex_signal_raw_2.pdf" >
-File: ./images/ex_signal_preproc_2.pdf Graphic file (type QTm)
+File: ./images/schema_piezo.pdf Graphic file (type QTm)
+ <use  "./images/schema_piezo.pdf" >
+File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
 
-<use  "./images/ex_signal_preproc_2.pdf" >
-File: ./images/ex_signal_chute_2.pdf Graphic file (type QTm)
+<use  "./images/photo_capteur_rouleau.png" >
+File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
 
-<use  "./images/ex_signal_chute_2.pdf" >
-File: ./images/exp_database_epure_2.pdf Graphic file (type QTm)
+<use  "./images/photo_capteur_connecteur.png" >
+File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
 
-<use  "./images/exp_database_epure_2.pdf" >
+<use  "./images/schema_sensor_installation_3.pdf" >
+File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_room_3.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [14
+
+]
+File: ./images/schema_piezo.pdf Graphic file (type QTm)
+ <use  "./images/schema_piezo.pdf" >
+File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_rouleau.png" >
+File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_connecteur.png" >
+File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_3.pdf" >
+File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_room_3.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[15
+
+]
+File: ./images/schema_piezo.pdf Graphic file (type QTm)
+ <use  "./images/schema_piezo.pdf" >
+File: ./images/photo_capteur_rouleau.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_rouleau.png" >
+File: ./images/photo_capteur_connecteur.png Graphic file (type QTm)
+
+<use  "./images/photo_capteur_connecteur.png" >
+File: ./images/schema_sensor_installation_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_3.pdf" >
+File: ./images/schema_sensor_installation_room_3.pdf Graphic file (type QTm)
+
+<use  "./images/schema_sensor_installation_room_3.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[16
 
 ]
 File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
@@ -2209,7 +2216,43 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[15
+[17
+
+]
+File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_raw_2.pdf" >
+File: ./images/ex_signal_preproc_2.pdf Graphic file (type QTm)
+
+<use  "./images/ex_signal_preproc_2.pdf" >
+File: ./images/ex_signal_chute_2.pdf Graphic file (type QTm)
+
+<use  "./images/ex_signal_chute_2.pdf" >
+File: ./images/exp_database_epure_2.pdf Graphic file (type QTm)
+
+<use  "./images/exp_database_epure_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[18
+
+]
+File: ./images/ex_signal_raw_2.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_raw_2.pdf" >
+File: ./images/ex_signal_preproc_2.pdf Graphic file (type QTm)
+
+<use  "./images/ex_signal_preproc_2.pdf" >
+File: ./images/ex_signal_chute_2.pdf Graphic file (type QTm)
+
+<use  "./images/ex_signal_chute_2.pdf" >
+File: ./images/exp_database_epure_2.pdf Graphic file (type QTm)
+
+<use  "./images/exp_database_epure_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[19
 
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
@@ -2219,7 +2262,7 @@ Requested font "[lmroman6-bold]:mapping=tex-text" at 6.0pt
 Requested font "[lmroman5-bold]:mapping=tex-text" at 5.0pt
  -> /usr/share/texmf/fonts/opentype/public/lm/lmroman5-bold.otf
 
-Overfull \vbox (129.22264pt too high) detected at line 390
+Overfull \vbox (129.22264pt too high) detected at line 424
  []
 
 Requested font "[lmroman7-regular]:mapping=tex-text" at 7.0pt
@@ -2233,7 +2276,7 @@ Requested font "msam7" at 7.0pt
 Requested font "msbm7" at 7.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 7.0pt on input line 390.
+(Font)              scaled to size 7.0pt on input line 424.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 7.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -2243,7 +2286,7 @@ File: ./images/schema_decision_tree_1.png Graphic file (type QTm)
 File: ./images/schema_decision_tree_3.png Graphic file (type QTm)
 
 <use  "./images/schema_decision_tree_3.png" >
-LaTeX Font Info:    Try loading font information for U+bbm on input line 390.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 424.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
@@ -2257,7 +2300,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[16
+[20
 
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
@@ -2267,7 +2310,7 @@ Requested font "bbm8" at 8.0pt
 Requested font "bbm6" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/bbm/bbm6.tfm
 
-Overfull \vbox (79.92555pt too high) detected at line 390
+Overfull \vbox (79.92555pt too high) detected at line 424
  []
 
 File: ./images/schema_decision_tree_1.png Graphic file (type QTm)
@@ -2279,12 +2322,12 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[17
+[21
 
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (79.92555pt too high) detected at line 390
+Overfull \vbox (79.92555pt too high) detected at line 424
  []
 
 File: ./images/schema_decision_tree_1.png Graphic file (type QTm)
@@ -2296,7 +2339,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[18
+[22
 
 ]
 File: ./images/20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549
@@ -2309,7 +2352,7 @@ pdf Graphic file (type QTm)
 
 <use  "./images/20140925a-0905-0943-Jump1-Yamina_RFresponse_TN_beforebuff_noleg
 .pdf" >
-Overfull \vbox (4.76111pt too high) detected at line 439
+Overfull \vbox (4.76111pt too high) detected at line 473
  []
 
 
@@ -2317,7 +2360,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[19
+[23
 
 ]
 File: ./images/20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549
@@ -2333,67 +2376,12 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[20
-
-]
-File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
- <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (45.94293pt too high) detected at line 517
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[21
-
-]
-File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
- <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (45.94293pt too high) detected at line 517
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[22
-
-]
-File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
- <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (45.94293pt too high) detected at line 517
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[23
-
-]
-File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
- <use  "./images/ex_signal_chute_2_epure.pdf" >
-Overfull \vbox (45.94293pt too high) detected at line 517
- []
-
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
 [24
 
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-File: ./images/plot_feature_importance_all_epure.pdf Graphic file (type QTm)
-
-<use  "./images/plot_feature_importance_all_epure.pdf" >
-Overfull \vbox (45.94293pt too high) detected at line 517
+Overfull \vbox (37.94293pt too high) detected at line 551
  []
 
 
@@ -2406,10 +2394,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 ]
 File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
  <use  "./images/ex_signal_chute_2_epure.pdf" >
-File: ./images/plot_rf_feat_reduc_AUC_epure.pdf Graphic file (type QTm)
-
-<use  "./images/plot_rf_feat_reduc_AUC_epure.pdf" >
-Overfull \vbox (45.94293pt too high) detected at line 517
+Overfull \vbox (37.94293pt too high) detected at line 551
  []
 
 
@@ -2418,6 +2403,64 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
  []
 
 [26
+
+]
+File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_chute_2_epure.pdf" >
+Overfull \vbox (37.94293pt too high) detected at line 551
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[27
+
+]
+File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_chute_2_epure.pdf" >
+Overfull \vbox (37.94293pt too high) detected at line 551
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[28
+
+]
+File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_chute_2_epure.pdf" >
+File: ./images/plot_feature_importance_all_epure.pdf Graphic file (type QTm)
+
+<use  "./images/plot_feature_importance_all_epure.pdf" >
+Overfull \vbox (37.94293pt too high) detected at line 551
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[29
+
+]
+File: ./images/ex_signal_chute_2_epure.pdf Graphic file (type QTm)
+ <use  "./images/ex_signal_chute_2_epure.pdf" >
+File: ./images/plot_rf_feat_reduc_AUC_epure.pdf Graphic file (type QTm)
+
+<use  "./images/plot_rf_feat_reduc_AUC_epure.pdf" >
+Overfull \vbox (37.94293pt too high) detected at line 551
+ []
+
+
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[30
 
 ]
 File: ./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_TPR_view2.pd
@@ -2436,7 +2479,7 @@ File: ./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_Accuracy.pdf
 <use  "./images/plot3d_compare_methods_buff_2019_12_05_14h51m35s_rf_Accuracy.pd
 f" >
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 7.0pt on input line 576.
+(Font)              scaled to size 7.0pt on input line 610.
 Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 7.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -2446,9 +2489,16 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[27
+[31
 
 ]) (./fileB_transfer_nursenet_concl.tex
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[32
+
+]
 File: ./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Source_
 On_Source_ROC.pdf Graphic file (type QTm)
 
@@ -2464,171 +2514,6 @@ On_Target_ROC.pdf Graphic file (type QTm)
 
 <use  "./images/kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Target
 _On_Target_ROC.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[28
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_2.pdf" >
-File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_3.pdf" >
-File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_4.pdf" >
-File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_5.pdf" >
-File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strut_1_15.pdf" >
-File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_2_15.pdf" >
-File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_3_15.pdf" >
-File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_4_15.pdf" >
-File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_5_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[29
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_2.pdf" >
-File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_3.pdf" >
-File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_4.pdf" >
-File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_5.pdf" >
-File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strut_1_15.pdf" >
-File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_2_15.pdf" >
-File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_3_15.pdf" >
-File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_4_15.pdf" >
-File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_5_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[30
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_2.pdf" >
-File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_3.pdf" >
-File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_4.pdf" >
-File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_5.pdf" >
-File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strut_1_15.pdf" >
-File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_2_15.pdf" >
-File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_3_15.pdf" >
-File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_4_15.pdf" >
-File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_5_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[31
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_2.pdf" >
-File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_3.pdf" >
-File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_4.pdf" >
-File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_5.pdf" >
-File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strut_1_15.pdf" >
-File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_2_15.pdf" >
-File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_3_15.pdf" >
-File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_4_15.pdf" >
-File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_5_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[32
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_2.pdf" >
-File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_3.pdf" >
-File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_4.pdf" >
-File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_ser_5.pdf" >
-File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strut_1_15.pdf" >
-File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_2_15.pdf" >
-File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_3_15.pdf" >
-File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_4_15.pdf" >
-File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strut_5_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2834,6 +2719,32 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [39
 
 ]
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_2.pdf" >
+File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_3.pdf" >
+File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_4.pdf" >
+File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_5.pdf" >
+File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strut_1_15.pdf" >
+File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_2_15.pdf" >
+File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_3_15.pdf" >
+File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_4_15.pdf" >
+File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_5_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2841,6 +2752,32 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [40
 
 ]
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_2.pdf" >
+File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_3.pdf" >
+File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_4.pdf" >
+File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_5.pdf" >
+File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strut_1_15.pdf" >
+File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_2_15.pdf" >
+File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_3_15.pdf" >
+File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_4_15.pdf" >
+File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_5_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -2848,11 +2785,124 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [41
 
 ]
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_2.pdf" >
+File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_3.pdf" >
+File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_4.pdf" >
+File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_5.pdf" >
+File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strut_1_15.pdf" >
+File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_2_15.pdf" >
+File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_3_15.pdf" >
+File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_4_15.pdf" >
+File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_5_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [42
+
+]
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_2.pdf" >
+File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_3.pdf" >
+File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_4.pdf" >
+File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_5.pdf" >
+File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strut_1_15.pdf" >
+File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_2_15.pdf" >
+File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_3_15.pdf" >
+File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_4_15.pdf" >
+File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_5_15.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[43
+
+]
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_ser_2.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_2.pdf" >
+File: ./images/schemas_ser_3.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_3.pdf" >
+File: ./images/schemas_ser_4.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_4.pdf" >
+File: ./images/schemas_ser_5.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_ser_5.pdf" >
+File: ./images/schemas_strut_1_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strut_1_15.pdf" >
+File: ./images/schemas_strut_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_2_15.pdf" >
+File: ./images/schemas_strut_3_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_3_15.pdf" >
+File: ./images/schemas_strut_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_4_15.pdf" >
+File: ./images/schemas_strut_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strut_5_15.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[44
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[45
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[46
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[47
 
 ]
 File: ./images/leaf_loss_NTarget200_Lambda1.pdf Graphic file (type QTm)
@@ -2866,154 +2916,6 @@ File: ./images/leaf_loss_NTarget200_Lambda01.pdf Graphic file (type QTm)
 File: ./images/leaf_loss_NTarget100_Lambda01.pdf Graphic file (type QTm)
 
 <use  "./images/leaf_loss_NTarget100_Lambda01.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[43
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_1_15.pdf" >
-File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_2_15.pdf" >
-File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_3_15.pdf" >
-File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_4_15.pdf" >
-File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_5_15.pdf" >
-File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_6_15.pdf" >
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 6.0pt on input line 243.
-Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;mapping=tex-text;+tnum;" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-B.otf
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 5.0pt on input line 243.
-Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;mapping=tex-text;+tnum;" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-B.otf
-
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[44
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_1_15.pdf" >
-File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_2_15.pdf" >
-File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_3_15.pdf" >
-File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_4_15.pdf" >
-File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_5_15.pdf" >
-File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_6_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[45
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_1_15.pdf" >
-File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_2_15.pdf" >
-File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_3_15.pdf" >
-File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_4_15.pdf" >
-File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_5_15.pdf" >
-File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_6_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[46
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_1_15.pdf" >
-File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_2_15.pdf" >
-File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_3_15.pdf" >
-File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_4_15.pdf" >
-File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_5_15.pdf" >
-File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_6_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[47
-
-]
-File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
- <use  "./images/schemas_ser_1.pdf" >
-File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_1_15.pdf" >
-File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_2_15.pdf" >
-File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_3_15.pdf" >
-File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_4_15.pdf" >
-File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_5_15.pdf" >
-File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_sernr_6_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3041,6 +2943,19 @@ File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
 File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
 
 <use  "./images/schemas_sernr_6_15.pdf" >
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
+(Font)              scaled to size 6.0pt on input line 251.
+Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;mapping=tex-text;+tnum;" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+B.otf
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
+(Font)              scaled to size 5.0pt on input line 251.
+Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;mapping=tex-text;+tnum;" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+B.otf
+
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3075,17 +2990,26 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [50
 
 ]
-File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_0_15.pdf" >
-File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_1_15.pdf" >
-File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_1_15.pdf" >
+File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_2_15.pdf" >
-File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_2_15.pdf" >
+File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_3_15.pdf" >
+<use  "./images/schemas_sernr_3_15.pdf" >
+File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_4_15.pdf" >
+File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_5_15.pdf" >
+File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_6_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3093,17 +3017,26 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [51
 
 ]
-File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_0_15.pdf" >
-File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_1_15.pdf" >
-File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_1_15.pdf" >
+File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_2_15.pdf" >
-File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_2_15.pdf" >
+File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_3_15.pdf" >
+<use  "./images/schemas_sernr_3_15.pdf" >
+File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_4_15.pdf" >
+File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_5_15.pdf" >
+File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_6_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3111,17 +3044,26 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [52
 
 ]
-File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_0_15.pdf" >
-File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_1_15.pdf" >
-File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_1_15.pdf" >
+File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_2_15.pdf" >
-File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_2_15.pdf" >
+File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_3_15.pdf" >
+<use  "./images/schemas_sernr_3_15.pdf" >
+File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_4_15.pdf" >
+File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_5_15.pdf" >
+File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_6_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3129,17 +3071,26 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [53
 
 ]
-File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_0_15.pdf" >
-File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_1_15.pdf" >
-File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_1_15.pdf" >
+File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_2_15.pdf" >
-File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+<use  "./images/schemas_sernr_2_15.pdf" >
+File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_3_15.pdf" >
+<use  "./images/schemas_sernr_3_15.pdf" >
+File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_4_15.pdf" >
+File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_5_15.pdf" >
+File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_6_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3147,6 +3098,33 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [54
 
 ]
+File: ./images/schemas_ser_1.pdf Graphic file (type QTm)
+ <use  "./images/schemas_ser_1.pdf" >
+File: ./images/schemas_sernr_1_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_1_15.pdf" >
+File: ./images/schemas_sernr_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_2_15.pdf" >
+File: ./images/schemas_sernr_3_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_3_15.pdf" >
+File: ./images/schemas_sernr_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_4_15.pdf" >
+File: ./images/schemas_sernr_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_5_15.pdf" >
+File: ./images/schemas_sernr_6_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_sernr_6_15.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[55
+
+]
 File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
  <use  "./images/schemas_strutoptim_0_15.pdf" >
 File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
@@ -3162,32 +3140,20 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[55
-
-]
-File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_3_15.pdf" >
-File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strutoptim_4_15.pdf" >
-File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strutoptim_5_15.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
 [56
 
 ]
+File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_0_15.pdf" >
+File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_1_15.pdf" >
+File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_2_15.pdf" >
 File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_3_15.pdf" >
-File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_4_15.pdf" >
-File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strutoptim_5_15.pdf" >
+<use  "./images/schemas_strutoptim_3_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3195,14 +3161,17 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [57
 
 ]
+File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_0_15.pdf" >
+File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_1_15.pdf" >
+File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_2_15.pdf" >
 File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_3_15.pdf" >
-File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_4_15.pdf" >
-File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strutoptim_5_15.pdf" >
+<use  "./images/schemas_strutoptim_3_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3210,14 +3179,17 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [58
 
 ]
+File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_0_15.pdf" >
+File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_1_15.pdf" >
+File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_2_15.pdf" >
 File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
- <use  "./images/schemas_strutoptim_3_15.pdf" >
-File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
 
-<use  "./images/schemas_strutoptim_4_15.pdf" >
-File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
-
-<use  "./images/schemas_strutoptim_5_15.pdf" >
+<use  "./images/schemas_strutoptim_3_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3225,6 +3197,24 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [59
 
 ]
+File: ./images/schemas_strutoptim_0_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_0_15.pdf" >
+File: ./images/schemas_strutoptim_1_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_1_15.pdf" >
+File: ./images/schemas_strutoptim_2_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_2_15.pdf" >
+File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_3_15.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[60
+
+]
 File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
  <use  "./images/schemas_strutoptim_3_15.pdf" >
 File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
@@ -3237,16 +3227,17 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[60
-
-]
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
 [61
 
 ]
+File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_3_15.pdf" >
+File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_4_15.pdf" >
+File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_5_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3254,11 +3245,70 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [62
 
 ]
+File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_3_15.pdf" >
+File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_4_15.pdf" >
+File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_5_15.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [63
+
+]
+File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_3_15.pdf" >
+File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_4_15.pdf" >
+File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_5_15.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[64
+
+]
+File: ./images/schemas_strutoptim_3_15.pdf Graphic file (type QTm)
+ <use  "./images/schemas_strutoptim_3_15.pdf" >
+File: ./images/schemas_strutoptim_4_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_4_15.pdf" >
+File: ./images/schemas_strutoptim_5_15.pdf Graphic file (type QTm)
+
+<use  "./images/schemas_strutoptim_5_15.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[65
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[66
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[67
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[68
 
 ]
 File: ./images/Source_D_2_C_3_N_200_Target_drift_deg_10_imb_10_Source_2_epure.p
@@ -3280,7 +3330,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[64
+[69
 
 ]
 File: ./images/SER_ll_05_DataSYNTH_Source_D_3_C_10_N_200_Target_drift_deg_5_Sco
@@ -3329,7 +3379,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[65
+[70
 
 ]
 File: ./images/SER_ll_05_Datamagic_gamma_telescope_Scorefilescores_2020_02_17_2
@@ -3372,7 +3422,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[66
+[71
 
 ]
 File: ./images/SER_ll_05_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020
@@ -3400,7 +3450,14 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[67
+[72
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[73
 
 ]
 File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
@@ -3414,7 +3471,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[68
+[74
 
 ]
 File: ./images/signal_walk_young_female_before_preproc_2.pdf Graphic file (type
@@ -3428,13 +3485,13 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[69
+[75
 
 ]
 File: ./images/schema_cnn_all.pdf Graphic file (type QTm)
  <use  "./images/schema_cnn_all.pdf" >
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 576.
+(Font)              scaled to size 8.0pt on input line 594.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;+smcp;+smcp;" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -3444,95 +3501,11 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[70
-
-]
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
- <use  "./images/cdl_example_2.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[71
-
-]
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
- <use  "./images/cdl_example_2.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[72
-
-]
-File: ./images/cdl_example_2.pdf Graphic file (type QTm)
- <use  "./images/cdl_example_2.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[73
-
-]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[74
-
-]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[75
-
-]
-File: ./images/dictionary.pdf Graphic file (type QTm)
- <use  "./images/dictionary.pdf" >
-File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_1.pdf" >
-File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_2.pdf" >
-File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_csc_3.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
 [76
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
-
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+ <use  "./images/cdl_example_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3540,11 +3513,8 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [77
 
 ]
-File: ./images/rcnn_images.png Graphic file (type QTm)
- <use  "./images/rcnn_images.png" >
-File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
-
-<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+ <use  "./images/cdl_example_2.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3552,6 +3522,69 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [78
 
 ]
+File: ./images/cdl_example_2.pdf Graphic file (type QTm)
+ <use  "./images/cdl_example_2.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[79
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[80
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[81
+
+]
+File: ./images/dictionary.pdf Graphic file (type QTm)
+ <use  "./images/dictionary.pdf" >
+File: ./images/signal_walk_young_female_csc_1.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_1.pdf" >
+File: ./images/signal_walk_young_female_csc_2.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_2.pdf" >
+File: ./images/signal_walk_young_female_csc_3.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_csc_3.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[82
+
+]
 File: ./images/rcnn_images.png Graphic file (type QTm)
  <use  "./images/rcnn_images.png" >
 File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
@@ -3561,7 +3594,31 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[79
+[83
+
+]
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[84
+
+]
+File: ./images/rcnn_images.png Graphic file (type QTm)
+ <use  "./images/rcnn_images.png" >
+File: ./images/faster_rnn_rpn_imageoutputs.png Graphic file (type QTm)
+
+<use  "./images/faster_rnn_rpn_imageoutputs.png" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[85
 
 ]
 File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
@@ -3573,7 +3630,7 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[80
+[86
 
 ]
 File: ./images/faster_rnn_wholenetwork.png Graphic file (type QTm)
@@ -3585,13 +3642,13 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[81
+[87
 
 ]
 File: ./images/schema_cnn_rpn.pdf Graphic file (type QTm)
  <use  "./images/schema_cnn_rpn.pdf" >
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/sc' will be
-(Font)              scaled to size 7.0pt on input line 728.
+(Font)              scaled to size 7.0pt on input line 746.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;+smcp;+smcp;" at 7.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -3601,109 +3658,16 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[82
-
-]
-File: ./images/iou_scheme.pdf Graphic file (type QTm)
- <use  "./images/iou_scheme.pdf" >
-File: ./images/example_step.pdf Graphic file (type QTm)
- <use  "./images/example_step.pdf" >
-File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_stepboxes.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[83
-
-]
-File: ./images/iou_scheme.pdf Graphic file (type QTm)
- <use  "./images/iou_scheme.pdf" >
-File: ./images/example_step.pdf Graphic file (type QTm)
- <use  "./images/example_step.pdf" >
-File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
-
-<use  "./images/signal_walk_young_female_stepboxes.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[84
-
-]
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[85
-
-]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[86
-
-]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
-[87
-
-]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
-Overfull \hbox (1.25pt too wide) has occurred while \output is active
-[][]
- []
-
 [88
 
 ]
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
-e QTm)
- <use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
- QTm)
+File: ./images/iou_scheme.pdf Graphic file (type QTm)
+ <use  "./images/iou_scheme.pdf" >
+File: ./images/example_step.pdf Graphic file (type QTm)
+ <use  "./images/example_step.pdf" >
+File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
 
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
-File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
- QTm)
-
-<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+<use  "./images/signal_walk_young_female_stepboxes.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
@@ -3711,11 +3675,158 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [89
 
 ]
+File: ./images/iou_scheme.pdf Graphic file (type QTm)
+ <use  "./images/iou_scheme.pdf" >
+File: ./images/example_step.pdf Graphic file (type QTm)
+ <use  "./images/example_step.pdf" >
+File: ./images/signal_walk_young_female_stepboxes.pdf Graphic file (type QTm)
+
+<use  "./images/signal_walk_young_female_stepboxes.pdf" >
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
 [90
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[91
+
+]
+File: ./images/schema_couloir_plan_blue.pdf Graphic file (type QTm)
+ <use  "./images/schema_couloir_plan_blue.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[92
+
+]
+File: ./images/schema_couloir_plan_blue.pdf Graphic file (type QTm)
+ <use  "./images/schema_couloir_plan_blue.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[93
+
+]
+File: ./images/schema_couloir_plan_blue.pdf Graphic file (type QTm)
+ <use  "./images/schema_couloir_plan_blue.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[94
+
+]
+File: ./images/schema_couloir_plan_blue.pdf Graphic file (type QTm)
+ <use  "./images/schema_couloir_plan_blue.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[95
+
+]
+File: ./images/schema_couloir_plan_blue.pdf Graphic file (type QTm)
+ <use  "./images/schema_couloir_plan_blue.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[96
+
+]
+File: ./images/schema_couloir_plan_blue.pdf Graphic file (type QTm)
+ <use  "./images/schema_couloir_plan_blue.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf Graphic file (typ
+e QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf" >
+File: ./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf Graphic file (type
+ QTm)
+
+<use  "./images/Mercredi_10_19_13_00_to_10_19_18_85_th_03.pdf" >
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[97
+
+]
+Overfull \hbox (1.25pt too wide) has occurred while \output is active
+[][]
+ []
+
+[98
 
 ]
 File: ./images/roc_per_class.pdf Graphic file (type QTm)
@@ -3729,28 +3840,28 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[91
+[99
 
 ]
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[92
+[100
 
 ])
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[93
+[101
 
 ] (./main.bbl)
 Overfull \hbox (1.25pt too wide) has occurred while \output is active
 [][]
  []
 
-[94
+[102
 
 ]
 \tf@nav=\write8
@@ -3762,20 +3873,24 @@ Overfull \hbox (1.25pt too wide) has occurred while \output is active
 \tf@snm=\write10
 \openout10 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 271.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 271.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 256.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 256.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
  ) 
 Here is how much of TeX's memory you used:
- 45080 strings out of 495631
- 907041 string characters out of 6186784
- 837643 words of memory out of 5000000
+ 45082 strings out of 495631
+ 907181 string characters out of 6186784
+ 836272 words of memory out of 5000000
  47485 multiletter control sequences out of 15000+600000
- 11299 words of font info for 76 fonts, out of 8000000 for 9000
+ 11307 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 76i,20n,106p,10391b,957s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,20n,106p,10391b,947s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (94 pages).
+Output written on main.pdf (102 pages).
