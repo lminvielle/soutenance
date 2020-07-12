@@ -18,7 +18,7 @@
     \setbeamertemplate{headline}{}
 
 \begin{frame}{Introduction}
-\begin{minipage}[t]{0.5\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
     \vspace{0pt}
         \centering\textbf{General context}
         \begin{itemize}
@@ -27,15 +27,21 @@
             \item Increasing demand for reliable monitoring devices
             \item Tarkett, French company: 12,500 employees, 13 industrial sites, 1.3 millions m$^2$ of flooring per day
             \item \emph{Floor in Motion}: a floor-based sensor for elderly care
-            \item \textbf{Objective}: providing tools for elderly monitoring in nursing homes
+%             \item \textbf{Objective}: 
         \end{itemize}
             \smallskip
             \onslide<2->\includegraphics[width=0.4\linewidth]{FIM.jpg}\\[2pt]
             \onslide<2->\includegraphics[width=0.95\linewidth]{schema_fall_detector.pdf}\\
     \pause \pause
 \end{minipage}\hfill
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.47\linewidth}
         \vspace{0pt}
+        \centering\textbf{Objective}\\
+        \smallskip
+        {\textcolor{myblue}{Providing tools for elderly monitoring\\ in nursing homes}}
+    
+        \pause
+        \medskip
         \centering\textbf{Scientific context}
         \begin{itemize}
             \item Processing and understanding time series
@@ -61,28 +67,29 @@
 %         \end{figure}
 %     \bigskip
         \centering
-        \begin{minipage}[t]{0.45\linewidth}
+        \begin{minipage}[t]{0.9\linewidth}
             \vspace{0.5pt}
             \centering
-            \onslide<3->\includegraphics[width=0.91\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
+            \onslide<4->\includegraphics[width=0.7\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
             {\small Foot-attached accelerometer}
-        \end{minipage}
-        \begin{minipage}[t]{0.45\linewidth}
+        \end{minipage}\\
+        \smallskip
+        \begin{minipage}[t]{0.9\linewidth}
             \vspace{0pt}
             \centering
-            \onslide<3->\includegraphics[width=\linewidth]{signal_marche_tarkett_epure.pdf}\\
+            \onslide<4->\includegraphics[width=0.75\linewidth]{signal_marche_tarkett_epure.pdf}\\
             {\small Tarkett's floor sensor}
         \end{minipage}
         
-    \pause
-    \medskip
-    \centering\textbf{Questions}
-    \begin{itemize}
-        \item Is a floor-based system a good idea ?
-        \item How to build a fall detector out of it ?
-        \item How to use real data to improve our model ?
-        \item The signal is unidimensional: can we still distinguish people ?
-    \end{itemize}
+%     \pause
+%     \medskip
+%     \centering\textbf{Questions}
+%     \begin{itemize}
+%         \item Is a floor-based system a good idea ?
+%         \item How to build a fall detector out of it ?
+%         \item How to use real data to improve our model ?
+%         \item The signal is unidimensional: can we still distinguish people ?
+%     \end{itemize}
 \end{minipage}
 \end{frame}
 
@@ -94,6 +101,7 @@
 \setbeamertemplate{navigation symbols}{}  % remove page number within the group
 \setcounter{tocdepth}{1}
 \begin{frame}[noframenumbering]{Table of contents}
+% \begin{minipage}[t]{0.49\linewidth}
 % \parbox[t]{.85\textwidth}{
 %     \begin{minipage}[c][0.65\textheight]{\textwidth}
     \centering
@@ -102,17 +110,21 @@
     \tableofcontents
 %     \end{minipage}
 % }
+% \end{minipage}
 \end{frame}
 \endgroup
 
 \section{Monitoring systems}
 
-\begin{frame}{}
+\begingroup
+\setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\begin{frame}[noframenumbering]{}
     \centering
     \vspace{3cm}
     \Huge
     \textcolor{myblue}{Monitoring systems for fall detection}
 \end{frame}
+\endgroup
 
 
 \subsection{Sensors}
@@ -181,22 +193,27 @@ What makes a good monitoring system ?
         \item All systems use feature extraction
         \item The ``level'' of feature engineering depends on the complexity / dimensionality of the input signal
     \end{itemize}
-    How to deal with processed signals ?
-    \begin{tcolorbox}[title=Time series classification]
-%         \textbf{Time series classification}\\[-5pt]
-        \begin{enumerate}
-            \item Series as \emph{sequences}
-            \begin{itemize}
-                \item Distance-based methods
-            \end{itemize}
-            \item Series as \emph{feature vectors}
-            \begin{itemize}
-                \item Computing several measures over a fixed size
-                \item Classification models
-                (Anomaly detection, classical supervised models...)
-            \end{itemize}
-        \end{enumerate}
-    \end{tcolorbox}
+    \onslide<2>{
+    How to deal with feature signals ?
+    \begin{itemize}
+        \item Use simple thresholds
+        \item Use them as feature vectors for classification models (anomaly detection, classical supervised models)
+    \end{itemize}
+    }
+%     \begin{tcolorbox}[title=Time series classification]
+%         \begin{enumerate}
+%             \item Series as \emph{sequences}
+%             \begin{itemize}
+%                 \item Distance-based methods
+%             \end{itemize}
+%             \item Series as \emph{feature vectors}
+%             \begin{itemize}
+%                 \item Computing several measures over a fixed size
+%                 \item Classification models
+%                 (Anomaly detection, classical supervised models...)
+%             \end{itemize}
+%         \end{enumerate}
+%     \end{tcolorbox}
 %     \vfill
 %     \vspace{10cm}
     \end{minipage}
@@ -206,7 +223,8 @@ What makes a good monitoring system ?
         \begin{overprint}
 %             \onslide<3>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_2-14.pdf}
 %             \onslide<4>\includegraphics[width=\linewidth, trim={190 50 150 20}, clip]{fall_systems_1_3-14.pdf}
-            \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
+            \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{fall_systems_2-14.pdf}
+            \onslide<2>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{fall_systems_3-14.pdf}
         \end{overprint}
     \end{minipage}
 % \end{minipage}
@@ -217,12 +235,15 @@ What makes a good monitoring system ?
 
 \section{Fall detection}
 
-\begin{frame}{}
+\begingroup
+\setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\begin{frame}[noframenumbering]{}
     \centering
     \vspace{3cm}
     \Huge
     \textcolor{myblue}{A fall detection system}
 \end{frame}
+\endgroup
 
 \subsection{Tarkett sensor}
 \begin{frame}{Tarkett sensor}
@@ -324,22 +345,24 @@ What makes a good monitoring system ?
     \pause \pause
     \textbf{Experimental dataset}
     \begin{itemize}
-        \item 742 signals
+        \item 742 signals collected in \textbf{controlled environment}
         \item 55\% \emph{fall}, 45\% \emph{non-fall}
         \item varied fall events (forward, backward...) and activities of daily living (walking, sitting...)
     \end{itemize}
 %     \end{itemize}
-    \medskip
+    \smallskip
     \centering
-    \includegraphics[width=0.85\textwidth]{ex_signal_chute_2.pdf}\\
-    \includegraphics[width=0.8\linewidth]{exp_database_epure_2.pdf}
+    \includegraphics[width=0.8\linewidth]{exp_database_epure_2.pdf}\\
 
 \end{minipage}
+    \pause
+    \centering
+    \includegraphics[width=0.51\textwidth]{ex_signal_chute_2.pdf}
 
 \end{frame}
 
 \subsection{Method}
-\begin{frame}{Method}
+\begin{frame}{Method}{Model}
 
 
 \begin{minipage}[t]{0.49\linewidth}
@@ -398,7 +421,7 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     Division of $\XX$ into non-overlapping regions $R_1,...,R_J$.
     Algorithm CART: recursive binary splits \cite{breiman84} that solve:
     \begin{gather*}
-        \argmin_{X_{q}, \tau} \IG\;, \\
+        \argmax_{X_{q}, \tau} \IG\;,  \;\;\;\text{\small{(information gain)}}\\
         \text{with} \quad \IG(X_{q}, \tau) = I(n) - \frac{N_{l}}{N_n}I(l) - \frac{N_{r}}{N_{n}}I(r)\;,\\
         \text{and} \quad I(n) = \mathrm{Gini}(n) = \sum_{k}p_{nk}(1-p_{nk})\;.
     \end{gather*}
@@ -423,8 +446,8 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 \end{minipage}
 \end{frame}
 
-\begin{frame}{Method}
-\begin{minipage}[t]{0.4\linewidth}
+\begin{frame}{Method}{Model}
+\begin{minipage}[t]{0.45\linewidth}
     \vspace{0pt}
     \begin{tcolorbox}[title=Random forest,size=title,boxrule=0.2pt]
         Decision trees $d_1,...,d_{N_T}$ grown with two rules:
@@ -433,66 +456,39 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
             \item At each split, access to a random subset of pool of features
         \end{itemize}
         Each tree is a ``vote'' for a class.
-        The prediction function is then
-        \begin{gather*}
-        f(x) = \argmax_{k}f_{k}(x)\;,\\
-        \text{with} \quad f_{k}(x) = \frac{1}{N_T}\sum_{i=1}^{N_T}\mathbbm{1}(d_i(x)=k)
-        \end{gather*}
+%         The prediction function is then
+%         \begin{gather*}
+%         f(x) = \argmax_{k}f_{k}(x)\;,\\
+%         \text{with} \quad f_{k}(x) = \frac{1}{N_T}\sum_{i=1}^{N_T}\mathbbm{1}(d_i(x)=k)
+%         \end{gather*}
+        The estimated probability of belonging to class $k$ is then:
+        \begin{equation*}
+            f_{k}(x) = \frac{1}{N_T}\sum_{i=1}^{N_T}\mathbbm{1}(d_i(x)=k)
+        \end{equation*}
+
     \end{tcolorbox}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.58\linewidth}
+\begin{minipage}[t]{0.52\linewidth}
     \vspace{0pt}
 %     \medskip
-    \renewcommand{\ratio}{0.5}
-    \begin{overlayarea}{\linewidth}{3.4cm} %{width}{height}
-%     \begin{overprint}
-        \only<1>{\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP_beforebuff.pdf}}
-        \only<1>{\includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN_beforebuff_noleg.pdf}}
-        \only<2->{\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP.pdf}}
-        \only<2->{\includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN.pdf}}
-    \end{overlayarea}
-%     \end{overprint}
-    
-    \textbf{Time aggregation}
-    
-    $N_f(t)$ : number of trees voting for \emph{fall}\\
-    Use a buffer $B_s \in \NN$ and a threshold $T_h \in [0, 1]$
-    \begin{gather*}
-    g(t) = \frac{\sum\limits_{u=t-B_{s}+1}^{t}N_{f}(u)}{B_{s}\times N_{T}}\\
-    \text{New binary classification function:} \quad
-    d(t) = 
-    \begin{cases}
-    1, & \textit{if}\ g(t) > T_{h} \\
-    0, & \textit{otherwise}
-    \end{cases}
-    \end{gather*}
-\end{minipage}
-
-
-
-\end{frame}
-
-\begin{frame}{Method}
-
-\begin{minipage}[t]{0.49\linewidth}
-    \vspace{0pt}
-    \textbf{Data augmentation}\\
+    \pause
+    \centering\textbf{Data augmentation}\\
     Select $r$ windows in training signals
 
     \centering
     \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm]
     \node[inner sep=0pt] at (0,0)
         {\includegraphics[width=0.55\linewidth, trim= 0 0 250 0, clip]{ex_signal_chute_2_epure.pdf}};
-    \onslide<1>\draw[color=gray!90,  line width=0.5pt] (-3.3,-2.1) rectangle (-0.5,2.2);
-    \onslide<2>\draw[color=gray!90,  line width=0.5pt] (-2.5,-2.1) rectangle (0.3,2.2);
-    \onslide<3->\draw[color=gray!90,  line width=0.5pt] (-2.9,-2.1) rectangle (-0.1,2.2);
+    \onslide<2>\draw[color=gray!90,  line width=0.5pt] (-3.3,-2.1) rectangle (-0.5,2.2);
+    \onslide<3>\draw[color=gray!90,  line width=0.5pt] (-2.5,-2.1) rectangle (0.3,2.2);
+    \onslide<4->\draw[color=gray!90,  line width=0.5pt] (-2.9,-2.1) rectangle (-0.1,2.2);
 %     \draw (-2.5,-2.5) node[right]{$\mathbf{x} \in \RR^{87}$};
     \end{tikzpicture}
     
     \begin{overlayarea}{\linewidth}{1.25cm}
     \small
     \centering
-    \only<1-3>{
+    \only<2-4>{
     $\left[
     \begin{array}{ccc}
         x_{1,1} & ... & x_{1,Q} \\
@@ -502,7 +498,7 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     \right]
     $
     }
-    \only<4->{
+    \only<5->{
     $\left[
     \begin{array}{ccc}
         x_{1,1} & ... & x_{1,Q} \\
@@ -513,45 +509,66 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     $
     }
     \end{overlayarea}
-    
-%     \pause
-%     \pause \pause \pause \pause
-    \only<5->{
-    \raggedright
-    \textbf{Feature reduction}
-    \begin{tcolorbox}[title=Feature importance,size=title,boxrule=0.2pt]
-        \begin{gather*}
-        \text{Tree: } I(X_{q}) = \sum_{\text{nodes}\ t}p(t)\Delta i(t)\mathbbm{1}(v(t)=X_{q})\\
-        \text{Random forest: }I(X_{q}) = \frac{1}{N_{T}}\sum_{n=1}^{N_T}I(T_n, X_{q})
-        \end{gather*}
-    \end{tcolorbox}
-    }
-\end{minipage}\hfill
-\begin{minipage}[t]{0.49\linewidth}
-    \vspace{0pt}
-    \begin{overlayarea}{\textwidth}{\textheight}
-    \only<5>{
-    \centerline{\includegraphics[width=0.75\linewidth, trim= 0 0 0 0, clip]{plot_feature_importance_all_epure.pdf}}
-    }
-    \only<6->{
-    \begin{tcolorbox}[title=Recursive feature elimination,size=title,boxrule=0.2pt]
-    Initial pool of $Q$ features $X_1, ..., X_Q$.
-        \begin{enumerate}
-            \item Train several times and record variable importances
-            \item Average of importances over trainings. $X_{q}* = \argmin_{X_i} I(X_{i})$
-            \item Remove $X_{q}*$ from the pool of features and back to step 1
-        \end{enumerate}
-    \end{tcolorbox}
-    \smallskip
-    \centerline{\includegraphics[width=0.7\linewidth]{plot_rf_feat_reduc_AUC_epure.pdf}}
 
-    }
-    \end{overlayarea}
 \end{minipage}
+
+
+
 \end{frame}
 
-\subsection{Results}
-\begin{frame}{Results}
+\begin{frame}{Method}{Time aggregation}
+
+\centering
+\begin{minipage}[t]{0.7\linewidth}
+    \centering
+    \vspace{0pt}
+    \renewcommand{\ratio}{0.5}
+%     \begin{overlayarea}{\linewidth}{0cm} %{width}{height}
+    \begin{overprint}
+        
+        \onslide<1-2>
+        \centering\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP_beforebuff_noth.pdf}
+        \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN_beforebuff_noleg_noth.pdf}
+        \onslide<3->
+        \centering\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP.pdf}
+        \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN.pdf}
+%     \end{overlayarea}
+    \end{overprint}
+
+\end{minipage}
+
+    \pause
+    \medskip
+    \centering\textbf{Time aggregation}
+    
+    \raggedright
+    
+    \centering
+    \begin{minipage}[t]{0.42\linewidth}
+        \vspace{0pt}
+        $N_f(t)$ : number of trees voting for \emph{fall}\\
+        Use a buffer $B_s \in \NN$ and a threshold $T_h \in [0, 1]$
+        \begin{equation*}
+        g(t) = \frac{\sum\limits_{u=t-B_{s}+1}^{t}N_{f}(u)}{B_{s}\times N_{T}}\\
+        \end{equation*}
+    \end{minipage}\hspace{0.2cm}
+    \begin{minipage}[t]{0.42\linewidth}
+        \vspace{0pt}
+        New binary classification function:
+        \begin{equation*}
+        d(t) = 
+        \begin{cases}
+        1, & \textit{if}\ g(t) > T_{h} \\
+        0, & \textit{otherwise}
+        \end{cases}
+        \end{equation*}
+    \end{minipage}
+
+\end{frame}
+
+\begin{frame}{Methods}{Time aggregation}
+    
+    \vspace{1.0cm}
     \renewcommand{\ratio}{0.32}
     \centering
     \begin{minipage}[t]{0.9\linewidth}
@@ -575,15 +592,72 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
             {\small Accuracy}
         \end{minipage}
     \end{minipage}
+    
+    \pause
+    \vspace{0.5cm}
+    Decision rule is ready. Is it implementable ?
 
-\medskip
+\end{frame}
+
+\subsection{Feature selection}
+
+\begin{frame}{Feature selection}
+
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    \begin{tcolorbox}[title=Feature importance,size=title,boxrule=0.2pt]
+        \begin{gather*}
+        \text{Tree: } I(X_{q}) = \sum_{\text{nodes}\ t}p(t)\Delta i(t)\mathbbm{1}(v(t)=X_{q})\\
+        \text{Random forest: }I(X_{q}) = \frac{1}{N_{T}}\sum_{n=1}^{N_T}I(T_n, X_{q})
+        \end{gather*}
+    \end{tcolorbox}
+    \only<3->{
+    \begin{tcolorbox}[title=Recursive feature elimination,size=title,boxrule=0.2pt]
+    Initial pool of $Q$ features $X_1, ..., X_Q$.
+        \begin{enumerate}
+            \item Train several times and record variable importances
+            \item Average of importances over trainings. $X_{q}* = \argmin_{X_i} I(X_{i})$
+            \item Remove $X_{q}*$ from the pool of features and back to step 1
+        \end{enumerate}
+    \end{tcolorbox}
+    }
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    \begin{overlayarea}{\textwidth}{\textheight}
+    \only<2-3>{
+    \centerline{\includegraphics[width=0.75\linewidth, trim= 0 0 0 0, clip]{plot_feature_importance_all_epure.pdf}}
+    }
+    \only<4->{
+    \vspace{1.0cm}
+    \centerline{\includegraphics[width=0.9\linewidth]{plot_rf_feat_reduc_AUC_epure.pdf}}
+    }
+    \end{overlayarea}
+\end{minipage}
+\end{frame}
+
+\subsection{Results}
+\begin{frame}{Results}
+
+\centering
+\begin{minipage}[t]{0.7\linewidth}
+\textbf{Set up}:
+    \begin{itemize}
+        \item Fixed params: $r$ set to 5 and $Q$ set to 20
+        \item Varying $T_h$ (0.5 to 1) and $B_s$ (5 to 250)
+        \item Record best Accuracy and show corresponding TPR, FPR
+        \item If FPR is constrained to be max 10\%, what is the range of TPRs ?
+    \end{itemize}
+\end{minipage}
+
+\smallskip
 
 \begin{table}[ht]
 \small
 \begin{center}
 \begin{tabular}{c c c c c c}
 \toprule
-  Model     & $\Acc$ & $\TPR$ & $\FPR$ & $\TPR_{\text{min}}^{\FPR<10}$ & $\TPR_{\text{max}}^{\FPR<10}$ \\
+  Model     & Accuracy & TPR & FPR & $\text{TPR}_{\text{min}}^{\text{FPR}<10}$ & $\text{TPR}_{\text{max}}^{\text{FPR}<10}$ \\
 \midrule
  \multicolumn{6}{c}{\footnotesize $r = 5,\; Q = 20$} \\
 \hline
@@ -606,5 +680,15 @@ RF  & \textbf{88.2  $\pm$  1.5} & \textbf{91.7 $\pm$ 3.5} & 16.2  $\pm$  6.2 & 6
 \end{tabular}
 \end{center}
 \end{table}
+
+\begin{minipage}[t]{0.7\linewidth}
+\textbf{Comments}:
+    \begin{itemize}
+        \item Parametric methods perform slightly worse than non-parametric
+        %that contain variable selection (RF), feature space modification (SVM) or feature construction (MLP)
+        \item RF is slightly better than others
+        \item Buffer/threshold trade-off useful for maintaining low FPR while improving TPR
+    \end{itemize}
+\end{minipage}
 
 \end{frame}

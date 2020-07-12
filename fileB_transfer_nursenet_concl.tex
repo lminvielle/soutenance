@@ -1,15 +1,32 @@
 \section{Transfer learning}
 
-\begin{frame}{}
+\begingroup
+\setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\begin{frame}[noframenumbering]{}
     \centering
     \vspace{3cm}
     \Huge
     \textcolor{myblue}{Transfer learning on decision tree}
 \end{frame}
+\endgroup
 
 \subsection{Context}
 
-\begin{frame}{Experimental vs. operational}
+\begin{frame}{Context}{Experimental vs. operational}
+    
+    \renewcommand{\ratio}{0.9}
+    \begin{overprint}
+        \onslide<1>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_1.pdf}
+        \onslide<2>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_2.pdf}
+        \onslide<3>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_3.pdf}
+        \onslide<4>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_4.pdf}
+        \onslide<5>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_5.pdf}
+    \end{overprint}
+
+\end{frame}
+
+
+\begin{frame}{Context}{Transfer learning}
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
     \textbf{Transfer learning}
@@ -43,7 +60,7 @@
     \end{minipage}
     \begin{minipage}[t]{\ratio\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Source_On_Target_ROC.pdf}\\
+        \includegraphics[width=\linewidth]{kfold_10_ntree_1_featmat_base_ech1nb_feat_872019_11_25RF_Source_On_Target_ROC_2.pdf}\\
         {\small \emph{Source} tested on target}
     \end{minipage}
     \begin{minipage}[t]{\ratio\linewidth}
@@ -226,7 +243,7 @@
     \vspace{1.5cm}
     \begin{itemize}
     \pause \pause
-    \item Extension left unchanged
+    \item Expansion left unchanged
     \pause
     \item Reduction constrained
     \end{itemize}
@@ -340,7 +357,7 @@
     % \label{probcond}
     % \end{equation}
     \begin{align*}
-        & p^T(y/x) = \lambda_y \frac{p^S(y/x)}{\int{\lambda_y p^S(y/x)dy}} \tag{2}
+        & p^T(y/x) = \lambda_y \frac{p^S(y/x)}{\int{\lambda_y p^S(y/x)dy}}
     %       & \textrm{with} \quad \lambda_y = \frac{P_y^T}{P_y^S} 
     \end{align*}
     %      \flushright $\textrm{with} \quad \lambda_y = \frac{P_y^T}{P_y^S}$\ref{eq:}
@@ -348,7 +365,7 @@
     \begin{equation*}
     {Q_l^S} ' = \lambda_k\frac{ Q_l^S}{\sum \limits_{k}{ \lambda_{k}Q_l^S}} \quad \quad
     {Q_r^S} ' = \lambda_k\frac{ Q_r^S}{\sum \limits_{k}{ \lambda_{k}Q_r^S}} 
-    \label{probcond}
+%     \label{probcond}
     \end{equation*}
     \end{tcolorbox}
     \pause
@@ -358,26 +375,34 @@
 
 \subsection{Results}
 
-\begin{frame}{Data}
+\begin{frame}{Results}{Synthetic data}
     
-\textbf{Gaussian Generator}\\
-Each dataset consists of a combination of several Gaussian cluster.
-For each class $k$ with $N_k$ clusters of this class :
-$$ C^k = \{  \mathcal{N}(\mu_1,\sigma_1),..., \mathcal{N}(\mu_{N_k},\sigma_{N_k} )\}$$ 
-$$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j)$$
-
+% \centering
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
-    \textbf{Dataset synthetic transformations}\\
-    Some basics synthetic transformations on Source clusters are applied to get a Target dataset
-    \begin{itemize}
-        \item Imbalance : Clusters weights changes ($ w_j^k$)
-        \item Drifts  ($\mu_j$)
-        \item Squeezes and Stretches ($\sigma_j$)
-        \item Adding or removing clusters
-    \end{itemize}
+    \textbf{Gaussian generator}\\
+    Source dataset: combination of several multivariate Gaussian clusters.
+    We use $N_\text{source} = 200$ and $N_{clust} = 10$.
+    Initial parameters are randomly drawn from Uniform distribution: $\mu_i \in [-70,70]$ and $\sigma_i \in [5,15]$
+    % For each class $k$ with $N_k$ clusters of this class :
+    % $$ C^k = \{  \mathcal{N}(\mu_1,\sigma_1),..., \mathcal{N}(\mu_{N_k},\sigma_{N_k} )\}$$ 
+    % $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j)$$
 \end{minipage}\hfill
 \begin{minipage}[t]{0.49\linewidth}
+    \vspace{0pt}
+    \textbf{Transformations}\\
+    Basic transformations on Source clusters are applied to get a Target dataset:
+    \begin{itemize}
+        \item Drifts  \, ($\mu_i$)
+        \item Stretch / Squeeze \, ($\sigma_i$)
+        \item Adding / Remove clusters
+    \end{itemize}
+    Transformations are combined with imbalance ratio (from 2\% to 50\%), and $N_\text{target} = 1000$
+\end{minipage}
+
+\bigskip
+\centering
+\begin{minipage}[t]{0.7\linewidth}
     \vspace{0pt}
     \renewcommand{\ratio}{0.32}
     \renewcommand{\ratiob}{0.85}
@@ -400,20 +425,20 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
 
 \end{frame}
 
-\begin{frame}{Results}
+\begin{frame}{Results}{Synthetic data}
 
 \centering
-\textbf{Synthetic data}
+% \textbf{Synthetic data}
 
-    \renewcommand{\ratio}{1.0}
+    \renewcommand{\ratio}{0.9}
 %         \centering
         \begin{minipage}[t]{0.33\linewidth}\vspace{0pt}
             \centering
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{SER_ll_05_DataSYNTH_Source_D_3_C_10_N_200_Target_drift_deg_5_Scorefilescores_2020_02_22_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_DataSYNTH_Source_D_3_C_10_N_200_Target_drift_deg_5_Scorefilescores_2020_02_22_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone_bigleg.pdf}}
             \end{minipage}\\
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{STRUT_DataSYNTH_Source_D_3_C_10_N_200_Target_drift_deg_5_Scorefilescores_2020_02_22_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_DataSYNTH_Source_D_3_C_10_N_200_Target_drift_deg_5_Scorefilescores_2020_02_22_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone_bigleg.pdf}}
             \end{minipage}\\
             \medskip
             {\small(a)\; Drift}
@@ -421,10 +446,10 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
         \begin{minipage}[t]{0.33\linewidth}\vspace{0pt}
             \centering
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{SER_ll_05_DataSYNTH_Source_D_3_C_10_N_200_Target_std_deg_9_Scorefilescores_2020_02_19_3_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_DataSYNTH_Source_D_3_C_10_N_200_Target_std_deg_9_Scorefilescores_2020_02_19_3_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone_noleg.pdf}}
             \end{minipage}\\
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{STRUT_DataSYNTH_Source_D_3_C_10_N_200_Target_std_deg_9_Scorefilescores_2020_02_19_3_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_DataSYNTH_Source_D_3_C_10_N_200_Target_std_deg_9_Scorefilescores_2020_02_19_3_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone_noleg.pdf}}
             \end{minipage}\\
             \medskip
             {\small(b)\; Stretch / Squeeze}
@@ -432,32 +457,41 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
         \begin{minipage}[t]{0.33\linewidth}\vspace{0pt}
             \centering
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{SER_ll_05_DataSYNTH_Source_D_3_C_10_N_200_Target_add_remove_deg_0_Scorefilescores_2020_02_20_2_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_DataSYNTH_Source_D_3_C_10_N_200_Target_add_remove_deg_0_Scorefilescores_2020_02_20_2_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone_noleg.pdf}}
             \end{minipage}\\
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{STRUT_DataSYNTH_Source_D_3_C_10_N_200_Target_add_remove_deg_0_Scorefilescores_2020_02_20_2_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_DataSYNTH_Source_D_3_C_10_N_200_Target_add_remove_deg_0_Scorefilescores_2020_02_20_2_synth_BALANCESOURCE50_KFOLD_NTARGET150_NB_TREE1_BarPlot_AUC_depthNone_noleg.pdf}}
             \end{minipage}\\
             \medskip
             {\small(c)\; Add / Remove}
         \end{minipage}
 
+\begin{itemize}
+    \item Strong imbalance leads to negative transfer
+    % COM: mais expereience avec transfo plus violente font que le transfer est tt le temps + interessant
+    \item SER: \serll\ close to SER, \serr\ better than SER (esp. with high imbalance)
+    \item STRUT: both variants beat the original STRUT
+\end{itemize}
+
     
 \end{frame}
 
-\begin{frame}{Results}
+\begin{frame}{Results}{Public data}
 
 \centering
-\textbf{Real data}
+Two real data sets where the imbalance ratio is controlled with downsampling.
 
-\renewcommand{\ratio}{1.0}
+% \textbf{Real data}
+
+\renewcommand{\ratio}{0.9}
         \centering
         \begin{minipage}[t]{0.33\linewidth}\vspace{0pt}
             \centering
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{SER_ll_05_Datamagic_gamma_telescope_Scorefilescores_2020_02_17_2_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_Datamagic_gamma_telescope_Scorefilescores_2020_02_17_2_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
             \end{minipage}\\
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{STRUT_Datamagic_gamma_telescope_Scorefilescores_2020_02_17_2_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_Datamagic_gamma_telescope_Scorefilescores_2020_02_17_2_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
             \end{minipage}\\
             \medskip
             {\small(a)\; Magic Gamma Telescope}
@@ -465,10 +499,10 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
         \begin{minipage}[t]{0.33\linewidth}\vspace{0pt}
             \centering
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{SER_ll_05_Dataoffice_caltech_am_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_Dataoffice_caltech_am_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
             \end{minipage}\\
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{STRUT_Dataoffice_caltech_am_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_Dataoffice_caltech_am_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
             \end{minipage}\\
             \medskip
             {\small(b)\; Office-Caltech: \emph{amazon} $\rightarrow$ \emph{webcam}}
@@ -476,61 +510,107 @@ $$  \forall k, (X,Y = k) \sim \sum_{j=1}^{N_k}  w_j^k \mathcal{N}(\mu_j,\sigma_j
         \begin{minipage}[t]{0.329\linewidth}\vspace{0pt}
             \centering
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{SER_ll_05_Dataoffice_caltech_cal_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_Dataoffice_caltech_cal_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
             \end{minipage}\\
             \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 0}, clip]{STRUT_Dataoffice_caltech_cal_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
+            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_Dataoffice_caltech_cal_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
             \end{minipage}\\
             \medskip
             {\small(c)\; Office-Caltech: \emph{caltech} $\rightarrow$ \emph{webcam}}
         \end{minipage}
     
+\begin{itemize}
+    \item SER: \serll\ close to SER, \serr\ either better... or worse
+    \item STRUT: both variants perform as well or better
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Results}
+\begin{frame}{Results}{Fall data}
 
 \centering
-\textbf{Fall data}
+% \textbf{Fall data}
 
 Operational data set: 174 fall events and 2619 non-fall events (6\%)
 
-k-fold testing with varying $k$
+k-fold testing with varying $k$ to observe lack of data
 
 \vspace{-0.2cm}
-\renewcommand{\ratio}{0.65}
+\renewcommand{\ratio}{0.60}
     \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
         \centering
         \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-        \centerline{\includegraphics[width=\linewidth]{SER_ll_05_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_01_15_bis__NB_TREE1_AUC_of_kfold__depthNone_nbtree1.pdf}}
+        \centerline{\includegraphics[width=\linewidth, trim={0 0 0 20}, clip]{SER_ll_05_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_01_15_bis__NB_TREE1_AUC_of_kfold__depthNone_nbtree1.pdf}}
         \end{minipage}\\
         \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-        \centerline{\includegraphics[width=\linewidth]{STRUT_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_01_15_bis__NB_TREE1_AUC_of_kfold__depthNone_nbtree1.pdf}}
+        \centerline{\includegraphics[width=\linewidth, trim={0 0 0 30}, clip]{STRUT_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_01_15_bis__NB_TREE1_AUC_of_kfold__depthNone_nbtree1.pdf}}
         \end{minipage}\\
 %         \medskip
         {\small(a)\; Decision tree model}
-    \end{minipage}
+\begin{itemize}
+    \item SER: variants give similar or better results
+    \item STRUT: \strutnd\ better, \struthi\ better \textit{only when enough data}
+\end{itemize}
+    \end{minipage}\hspace{-0.5cm}
     \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
         \centering
         \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-        \centerline{\includegraphics[width=\linewidth]{SER_ll_05_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_04_02__NB_TREE10_AUC_of_kfold__depthNone_nbtree10.pdf}}
+        \centerline{\includegraphics[width=\linewidth, trim={0 0 0 20}, clip]{SER_ll_05_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_04_02__NB_TREE10_AUC_of_kfold__depthNone_nbtree10.pdf}}
         \end{minipage}\\
         \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-        \centerline{\includegraphics[width=\linewidth]{STRUT_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_04_02__NB_TREE10_AUC_of_kfold__depthNone_nbtree10.pdf}}
+        \centerline{\includegraphics[width=\linewidth, trim={0 0 0 30}, clip]{STRUT_Datatarkett_transfer_db_all_c_all_Scorefilescores_2020_04_02__NB_TREE10_AUC_of_kfold__depthNone_nbtree10.pdf}}
         \end{minipage}\\
 %         \medskip
         {\small(b)\; Random forest model with 10 decision trees}
+        \begin{minipage}[t]{0.9\linewidth}\vspace{0pt}
+            \begin{itemize}
+                \item Same overall conclusions
+                %COM: mais Source est meilleur, une RF est possiblement + resistance aux changement des données
+            \end{itemize}
+        \end{minipage}
     \end{minipage}
 
 \end{frame}
 
+\begin{frame}{Results}{Overall}
+
+%   \begin{table}[h]
+%   \small
+%   \centering
+%   \begin{tabular}{c c c}
+%   \hline
+%    & \textbf{STRUT*} & \textbf{SER*}  \\
+%   \hline
+%   Synth data & Better & Better   \\
+%   Fall data & Comparable & Better only when few data, Comparable otherwise   \\
+%   \hline
+%   \end{tabular}
+%   \end{table}
+    
+    \vspace{1cm}
+    \centering
+    \begin{minipage}[t]{0.8\linewidth}
+        \begin{itemize}
+            \item \serll\ quite close to original SER
+            \item \serr\ generally better except with one real dataset
+            \item Both STRUT variants give better results with one exception on fall data (when data is scarce)
+            \item This suggests a data-dependency of the algorithms
+        \end{itemize}
+    \end{minipage}
+    
+\end{frame}
+
+
 \section{Elderly activity recognition}
 
-\begin{frame}{}
+\begingroup
+\setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\begin{frame}[noframenumbering]{}
     \centering
     \vspace{3cm}
     \Huge
     \textcolor{myblue}{Elderly activity recognition with convolutional representations}
 \end{frame}
+\endgroup
 
 
 \subsection{Motivation}
@@ -926,6 +1006,17 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
 
 \section{Conclusion}
+
+\begingroup
+\setbeamertemplate{navigation symbols}{}  % remove page number within the group
+\begin{frame}[noframenumbering]{}
+    \centering
+    \vspace{3cm}
+    \Huge
+    \textcolor{myblue}{Conclusion}
+\end{frame}
+\endgroup
+
 \subsection{}
 
 \begin{frame}{Conclusion}
