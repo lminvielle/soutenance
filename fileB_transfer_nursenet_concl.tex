@@ -623,7 +623,7 @@ k-fold testing with varying $k$ to observe lack of data
     \begin{itemize}
         \item Most signals are made of walks of staff individuals
     \end{itemize}
-    \item \textbf{Subtask}: Bring the model's attention over step-related signals
+    \item {Subtask}: Bring the model's attention over step-related signals
 \end{itemize}
 % \begin{itemize}
 %     \item A model to recognize steps ?
@@ -647,14 +647,16 @@ k-fold testing with varying $k$ to observe lack of data
 %     \caption{Healthy individual walking on the sensor.}
 %     \label{fig:walk_class_ex_preprocessing}
 % \end{figure}
-\begin{itemize}
-    \item Signals are rather complex
-\end{itemize}
+% \begin{itemize}
+%     \item Signals are rather complex
+% \end{itemize}
 
-    \textbf{This work:} A model to recognize elderly activity using convolutional representations and three training steps:
+\medskip
+
+    \textbf{What we propose:} A model to recognize elderly activity using a convolutional neural network and three training steps:
         \begin{enumerate}
-            \item Step proposal network inspired from Region proposal network
             \item Signal embedding using convolutional dictionary learning
+            \item Step proposal network inspired from Region proposal network
             \item The final classification task
         \end{enumerate}
 
