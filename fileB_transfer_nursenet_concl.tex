@@ -155,6 +155,7 @@
 
 \begin{frame}{Leaf loss risk}
 
+\vspace{-0.4cm}
 \begin{minipage}[t]{0.38\textwidth}
     \vspace{0pt}
     \begin{tcolorbox}[title=Homogeneous class imbalance,size=title,boxrule=0.2pt]
@@ -192,7 +193,31 @@
     \end{equation*}
 \end{tcolorbox}
 
+\vspace{-0.2cm}
+\renewcommand{\ratio}{0.85}
+    \begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget200_Lambda1.pdf}\\
+            {\footnotesize(a)\, Balanced data, $n=200$}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget100_Lambda1.pdf}\\
+            {\footnotesize(b)\, Balanced data, $n = 100$}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget200_Lambda01.pdf}\\
+            {\footnotesize (c)\, Imbalanced data (10\%) $n=200$}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+            \includegraphics[width=\ratio\linewidth]{leaf_loss_NTarget100_Lambda01.pdf}\\
+            {\footnotesize (d)\, Imbalanced data (10\%) $n = 100$}
+    \end{minipage}
+
+
 \end{frame}
+
+\begin{comment}
+    
+
 
 \begin{frame}{Leaf loss risk}
 
@@ -227,6 +252,9 @@
     \end{minipage}
 
 \end{frame}
+
+\end{comment}
+
 
 \subsection{SER for class imbalance}
 
@@ -488,54 +516,6 @@
     
 \end{frame}
 
-\begin{frame}{Results}{Public data}
-
-\centering
-Two real data sets where the imbalance ratio is controlled with downsampling.
-
-% \textbf{Real data}
-
-\renewcommand{\ratio}{0.9}
-        \centering
-        \begin{minipage}[t]{0.33\linewidth}\vspace{0pt}
-            \centering
-            \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_Datamagic_gamma_telescope_Scorefilescores_2020_02_17_2_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
-            \end{minipage}\\
-            \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_Datamagic_gamma_telescope_Scorefilescores_2020_02_17_2_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
-            \end{minipage}\\
-            \medskip
-            {\small(a)\; Magic Gamma Telescope}
-        \end{minipage}\hfill
-        \begin{minipage}[t]{0.33\linewidth}\vspace{0pt}
-            \centering
-            \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_Dataoffice_caltech_am_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
-            \end{minipage}\\
-            \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_Dataoffice_caltech_am_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
-            \end{minipage}\\
-            \medskip
-            {\small(b)\; Office-Caltech: \emph{amazon} $\rightarrow$ \emph{webcam}}
-        \end{minipage}\hfill
-        \begin{minipage}[t]{0.329\linewidth}\vspace{0pt}
-            \centering
-            \begin{minipage}[t]{\ratio\linewidth}\vspace{0pt}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{SER_ll_05_Dataoffice_caltech_cal_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone.pdf}}
-            \end{minipage}\\
-            \begin{minipage}[t]{\ratio\linewidth}\vspace{0cm}
-            \centerline{\includegraphics[width=\linewidth, trim={0 0 0 40}, clip]{STRUT_Dataoffice_caltech_cal_webcam_Scorefilescores_2020_02_17_8_BALANCESOURCE50_KFOLD5_NTARGET_NB_TREE1_BarPlot_AUC_depthNone_ig.pdf}}
-            \end{minipage}\\
-            \medskip
-            {\small(c)\; Office-Caltech: \emph{caltech} $\rightarrow$ \emph{webcam}}
-        \end{minipage}
-    
-\begin{itemize}
-    \item SER: \serll\ close to SER, \serr\ either better... or worse
-    \item STRUT: both variants perform as well or better
-\end{itemize}
-\end{frame}
 
 \begin{frame}{Results}{Fall data}
 
@@ -621,6 +601,7 @@ k-fold testing with varying $k$ to observe lack of data
             \item Explore meta models for transfer procedures
             \item What if features change ? Consider heterogeneous transfer
             \item Methods fitted for decision trees, other model-based transfer might be investigated (\ie neural networks)
+            \item If access to source data, then use of domain adaptation techniques
         \end{itemize}
 
     \end{minipage}
@@ -805,51 +786,6 @@ k-fold testing with varying $k$ to observe lack of data
 
 \subsection{Step proposal network}
 
-\begin{frame}{Step proposal network}{Region proposal network}
-
-
-
-\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
-
-\centering\textbf{Object detection}
-\begin{itemize}
-%     \item Classification: What is the image class ?
-%     \pause
-    \item Object detection: Where are the objects and what are they classes ?
-%     \pause
-    \item How to efficiently localize objects ?
-    \item Proposal models
-    \item Faster R-CNN (\citet{ren2015faster}) use the Region proposal network
-\end{itemize}
-% \begin{figure}
-    \centering
-%     \onslide<1->\includegraphics[width=0.5\linewidth, trim=0 0 340 0, clip]{rcnn_images.png}
-    \onslide<1->\includegraphics[width=0.6\linewidth]{faster_rnn_rpn_imageoutputs.png}\\
-    \smallskip
-    \onslide<1->\centerline{\small Object detection. Source:\citet{ren2015faster}}
-% \end{figure}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.54\linewidth}\vspace{0pt}
-\centering\textbf{Region proposal network}
-% \end{frame}
-% \begin{frame}{Region proposal network}{Faster R-CNN}
-\begin{itemize}
-    \item Main idea: proposals are generated by a CNN
-%     \pause
-    \item A sliding window is passed: multiple \emph{anchors} over each location (various sizes and scales)
-    \item Two layers: Classification (Object / Not Object) and Regression (anchor coordinates)
-\end{itemize}
-    
-\renewcommand{\ratio}{0.45}
-    \centering
-    \onslide<1->\includegraphics[width=0.35\linewidth]{faster_rnn_wholenetwork.png}
-    \onslide<1->\includegraphics[width=0.50\linewidth]{faster_rnn_rpn.png}\\
-    \smallskip
-    \onslide<1->\centerline{\small Region proposal network. Source: \citet{ren2015faster}}
-
-\end{minipage}
-
-\end{frame}
 
 
 % \begin{frame}[noframenumbering]{\ }
@@ -864,7 +800,8 @@ k-fold testing with varying $k$ to observe lack of data
 \begin{frame}{Step proposal network}{Main architecture}
 
 \begin{itemize}
-    \item Directly inspired from RPN
+    \item Object detection: how to localize objects ? 
+    \item Faster R-CNN (\citet{ren2015faster}) use the Region proposal network
     \item Simple architecture with three hidden layers, all \textbf{convolutional}
     \item Output: probability of having a step at a specific window location and size
     \begin{itemize}
@@ -886,80 +823,6 @@ k-fold testing with varying $k$ to observe lack of data
 
 % \subsection{Step proposal network}
 
-\begin{frame}{Step proposal network}{Principle}
-
-\begin{minipage}{0.7\linewidth}
-    \begin{itemize}
-        \item Objective of \subalgo: output boxes with largest Intersection over Union ($\iou$)
-        \item $\iou$: $\mathbf{b_j}$ are labelled boxes, $\hat{b}$ is an estimated box:
-    \begin{equation*}\label{eq: def IOU}
-    \iou(\hat{b}) \doteq \max_{j} \frac{ \vert \mathbf{b_j} \cap \hat{b}\vert}{\vert \mathbf{b_j} \cup \hat{b}\vert}
-    \end{equation*}
-    \end{itemize}
-\end{minipage}\hfill
-\begin{minipage}{0.3\linewidth}
-    \centering
-    \includegraphics[width=0.65\linewidth]{iou_scheme.pdf}
-\end{minipage}
-
-\pause
-
-    \centering
-    \begin{minipage}[t]{0.4\linewidth}
-        \centering
-        \includegraphics[width=0.55\linewidth]{example_step.pdf}\\
-        {\small (a)\; Step signal}
-    \end{minipage}\hfill
-    \begin{minipage}[t]{0.5\linewidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{signal_walk_young_female_stepboxes.pdf}\\
-        {\small (b)\; Step labels over a walk signal}
-    \end{minipage}
-%     \label{fig:walk_class_ex_stepboxes}
-\end{frame}
-
-\begin{frame}{Step proposal network}{Training}
-
-\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
-\centering\textbf{Boxes and loss}
-\begin{itemize}
-    \item Output: a matrix $\mathbf{W} \in \mathbb{R}^{T \times K}$
-    \begin{itemize}
-        \item $T$: signal length
-        \item $K$: number of different box sizes
-    \end{itemize}
-
-    \item $\mathbf{W}_{t,k}$: probability that the box $b_t^k$ starting at time $t$ and of size $0.4$s, $0.5$s, or $0.6$s (for respectively $k=1$, $2$, or $3$) has a large $\iou$ score
-    \item Positive boxes: $\iou(b_t^{k}) > \sqrt{0.7}$
-    \item Negative boxes: $\iou(b_t^{k}) < \sqrt{0.3}$
-    \item Other are not used for training
-\end{itemize}
-
-\vspace{0.1cm}
-
-The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
-\begin{equation*}\label{eq: loss training CNN}
-\mathcal{L}(\bfs, \mathbf{W}) = \sum_{t} \sum_{k \in \left[1, 2, 3 \right]} \bbmind_{ \iou(b_t^{k})> \sqrt{0.7} } \log(\mathbf{W}_{t,k}) + \bbmind_{ \iou(b_t^{k})< \sqrt{0.3} } \log(1-\mathbf{W}_{t,k}). 
-\end{equation*}
-
-\end{minipage}\hfill
-\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
-\centering\textbf{Procedure}
-    \begin{itemize}
-        \item Use the 43 walk signals from caregivers
-        \item \subalgo is trained using classical gradient descent
-        \item Training time: < 5 minutes
-        \item Inference (detection over a 10s signal): < 1 second
-        \item Optimization details
-        \begin{itemize}
-            \item learning rate of $10^{-3}$
-            \item learning rate decay ($\times 0.9$ every 10 epochs)
-            \item Nesterov momentum
-        \end{itemize}
-    \end{itemize}
-\end{minipage}
-
-\end{frame}
 
 \begin{frame}{Step proposal network}{Results}
 \centering
@@ -1015,7 +878,7 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
     \begin{itemize}
         \item Use the whole set of 146 signals, labeled as \emph{Elderly} and \emph{Staff} 
-        \item \subalgo is trained using classical gradient descent
+        \item \algo is trained using classical gradient descent
         \item Training time: < 5 minutes
         \item Inference (detection over a 10s signal): < 1 second
         \item Optimization details
@@ -1134,7 +997,7 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 \textit{Sensors}, 19(18), 2019
     \item P. Humbert, B. Le Bars, L. Minvielle, and N. Vayatis. \textcolor{myblue}{Robust Kernel Density Estimation with Median-of-Means principle}. \textit{Submitted for publication}, 2020
     \item M. Atiq, L. Minvielle, C. Truong. \textcolor{myblue}{A data set for fall detection with smart floor sensors.} \textit{In preparation}, 2020
-    \item (Poster) L. Minvielle, M. Atig, S. Peignier, M. Mougeot, N. Vayatis. \textcolor{myblue}{Transfer learning to detect falls}, 2$^{\text{nd}}$ Summer school on transfer learning, 2018, Cachan, France 
+%     \item (Poster) L. Minvielle, M. Atig, S. Peignier, M. Mougeot, N. Vayatis. \textcolor{myblue}{Transfer learning to detect falls}, 2$^{\text{nd}}$ Summer school on transfer learning, 2018, Cachan, France 
 \end{itemize}
 
 % \textbf{Future work}
