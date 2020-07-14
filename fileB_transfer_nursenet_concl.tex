@@ -110,7 +110,7 @@
     \textcolor{myblue}{1. Expansion}\\
     \pause
     \textcolor{myorange}{2. Reduction}\\
-    \bigskip
+    \smallskip
     \onslide<11->{Partition refinement or simplification}
 
 \end{minipage}\hfill
@@ -139,10 +139,15 @@
     \textcolor{myorange}{1. Pruning}\\
     \onslide<10->
     \textcolor{myblue}{2. Threshold update}\\
-    \bigskip
+    \smallskip
     \onslide<11->
     Drifts
 \end{minipage}
+
+\centering
+\medskip
+\pause[12]
+\textcolor{myblue}{How about imbalanced data ?}
 
 \end{frame}
 
@@ -636,88 +641,100 @@ k-fold testing with varying $k$ to observe lack of data
 \endgroup
 
 
-\subsection{Motivation}
+\subsection{Introduction}
 
-\begin{frame}{Motivation}{}
+\begin{frame}{Introduction}{}
+\centering
 \begin{itemize}
+    \centering
     \item \textbf{Issue}: one-dimensional signals for large areas
     \item Goal: Classify elderly from other individuals
-%     using a convolutional neural network 
+\end{itemize}
+\begin{minipage}[t]{0.40\linewidth}\vspace{0pt}
+    \centering\textbf{Data}
+    \begin{itemize}
+        \item 146 signals recorded in a nursing home
+        \item Walks (one or several persons), Wheelchair (manual, electrical, pushed by another), Walk with carts...
+    \end{itemize}
+    \includegraphics[width=0.95\linewidth, trim= 110 150 130 210, clip]{schema_couloir_plan_blue.pdf}
+    \begin{table}[h]
+        \small
+        \centering 
+        \begin{tabular}{lcc}
+        \toprule
+        \textbf{Sublabel} & \textbf{Staff} & \textbf{Elderly} \\
+        \midrule
+        Single walk & 43 & 31 \\
+        Multiple walks & 19 & 11 \\
+        Other & 19 & 23 \\
+        \bottomrule
+        \end{tabular}
+    \end{table}
+    \centering
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.59\linewidth}\vspace{0pt}
+    \centering
+    \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+    \centering
+    \includegraphics[trim= 0 30 0 30, width=0.95\linewidth, clip]{signal_walk_young_female_1_bis.pdf}\\
+    {\small Caregiver walk}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+    \centering
+    \includegraphics[trim= 0 30 0 30, width=0.95\linewidth, clip]{signal_walk_old_female_1_bis.pdf}\\
+    {\small Elderly walk}
+    \end{minipage}
+
+
     \begin{itemize}
         \item Most signals are made of walks of staff individuals
+        \item {Idea}: Bring the model's attention over step-related signals
     \end{itemize}
-    \item {Subtask}: Bring the model's attention over step-related signals
-\end{itemize}
-% \begin{itemize}
-%     \item A model to recognize steps ?
-% \end{itemize}
-
-\pause
-% \begin{figure}[h]
-    \begin{minipage}{\linewidth}
-        \centering
-        \begin{minipage}{0.49\linewidth}
-            \centering
-            \includegraphics[width=0.85\linewidth]{signal_walk_young_female_before_preproc_2.pdf}\\
-            {\small (a)\; Raw signal}
-        \end{minipage}
-        \begin{minipage}{0.49\linewidth}
-            \centering
-            \includegraphics[width=0.85\linewidth]{signal_walk_young_female_after_preproc_2.pdf}\\
-            {\small (b)\; Preprocessed signal}
-        \end{minipage}
-    \end{minipage}
-%     \caption{Healthy individual walking on the sensor.}
-%     \label{fig:walk_class_ex_preprocessing}
-% \end{figure}
-% \begin{itemize}
-%     \item Signals are rather complex
-% \end{itemize}
-
-\medskip
-
-    \textbf{What we propose:} A model to recognize elderly activity using a convolutional neural network and three training steps:
+    \textbf{What we propose:} \algo, a model to recognize elderly activity using a convolutional neural network and three training steps:
         \begin{enumerate}
             \item Signal embedding using convolutional dictionary learning
             \item Step proposal network inspired from Region proposal network
             \item The final classification task
         \end{enumerate}
 
+\end{minipage}
 
 \end{frame}
 
 \subsection{Main architecture}
 
-\begin{frame}{Main architecture}{}
+\begin{frame}{\algo}{}
 
 \makebox[\textwidth][c]{\includegraphics[width=1.1\linewidth, trim= 0 340 0 0, clip]{schema_cnn_all.pdf}}
     
+\medskip
 \begin{itemize}
-    \item Use the convolutional representation to ``boost'' training
-    \item First layer (Signal embedding) of \algo is trained \textbf{separately} using convolutional dictionary learning
+    \item Use the convolutional representation to ``boost'' training: First layer (Signal embedding) of \algo is trained \textbf{separately} using convolutional dictionary learning
 \end{itemize}
 \end{frame}
 
 \subsection{Signal embedding}
 
 \begin{frame}{Signal embedding}{Convolutional dictionary learning}
-\begin{minipage}[t]{0.45\linewidth}
+\vspace{0.3cm}
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
     \begin{itemize}
         \item $\bfs$ : data to be represented
         \item Objective : find $M$ atoms $\bfd_m$ and activation signals $\bfx_m$ such that
         $$\bfs \approx \sum_{m=1}^{M}\bfx_m * \bfd_m$$
         \item $*$ : convolution
     \end{itemize}
-    \pause[3]
+%     \pause[3]
     CDL general problem:
     \begin{gather*}\label{eq:cdl_baseform}
     \argmin_{\bfx_m,\bfd_m} \frac{1}{2} \left\| \sum_{m=1}^{M} \bfx_{m} * \bfd_m - \bfs \right\|_2^2 + \lambda \sum_{m=1}^{M} \|\bfx_m \|_1 \ \\
         \text{s.t.}\quad \| \bfd_m\|_2 \leq 1 \quad \forall m \;. \nonumber
     \end{gather*}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.4\linewidth}
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
     \centering
-    \pause[2]
+%     \pause[2]
 %     \begin{figure}[h]
         \centering
         \includegraphics[width=0.9\linewidth]{cdl_example_2.pdf}\\
@@ -775,35 +792,50 @@ k-fold testing with varying $k$ to observe lack of data
 
 \end{frame}
 
+\begin{frame}{\algo}{}
 
-\subsection{Region proposal network}
-
-\begin{frame}{Region proposal network}{Object detection}
-
+\makebox[\textwidth][c]{\includegraphics[width=1.1\linewidth, trim= 0 340 0 0, clip]{schema_cnn_all.pdf}}
+    
+\medskip
 \begin{itemize}
-    \item Classification: What is the image class ?
-    \pause
+\centering
+    \item Second part: Step Proposal Network (SPN)
+\end{itemize}
+\end{frame}
+
+\subsection{Step proposal network}
+
+\begin{frame}{Step proposal network}{Region proposal network}
+
+
+
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
+
+\centering\textbf{Object detection}
+\begin{itemize}
+%     \item Classification: What is the image class ?
+%     \pause
     \item Object detection: Where are the objects and what are they classes ?
-    \pause
+%     \pause
     \item How to efficiently localize objects ?
-    \item Proposal models (\citet{hosang2016what})
-    \item Faster R-CNN (\citet{ren2015faster})
+    \item Proposal models
+    \item Faster R-CNN (\citet{ren2015faster}) use the Region proposal network
 \end{itemize}
 % \begin{figure}
     \centering
-    \onslide<1->\includegraphics[width=0.5\linewidth, trim=0 0 340 0, clip]{rcnn_images.png}
-    \onslide<2->\includegraphics[width=0.4\linewidth]{faster_rnn_rpn_imageoutputs.png}\\
+%     \onslide<1->\includegraphics[width=0.5\linewidth, trim=0 0 340 0, clip]{rcnn_images.png}
+    \onslide<1->\includegraphics[width=0.6\linewidth]{faster_rnn_rpn_imageoutputs.png}\\
     \smallskip
-    \onslide<1->\centerline{\small Classification vs Object detection. Source: \citet{girshick2014rich},  \citet{ren2015faster}}
+    \onslide<1->\centerline{\small Object detection. Source:\citet{ren2015faster}}
 % \end{figure}
-
-\end{frame}
-
-\begin{frame}{Region proposal network}{Faster R-CNN}
-
+\end{minipage}\hfill
+\begin{minipage}[t]{0.54\linewidth}\vspace{0pt}
+\centering\textbf{Region proposal network}
+% \end{frame}
+% \begin{frame}{Region proposal network}{Faster R-CNN}
 \begin{itemize}
-    \item Main idea: proposals are generated by a CNN called Region Proposal Network
-    \pause
+    \item Main idea: proposals are generated by a CNN
+%     \pause
     \item A sliding window is passed: multiple \emph{anchors} over each location (various sizes and scales)
     \item Two layers: Classification (Object / Not Object) and Regression (anchor coordinates)
 \end{itemize}
@@ -811,9 +843,11 @@ k-fold testing with varying $k$ to observe lack of data
 \renewcommand{\ratio}{0.45}
     \centering
     \onslide<1->\includegraphics[width=0.35\linewidth]{faster_rnn_wholenetwork.png}
-    \onslide<2->\includegraphics[width=0.50\linewidth]{faster_rnn_rpn.png}\\
+    \onslide<1->\includegraphics[width=0.50\linewidth]{faster_rnn_rpn.png}\\
     \smallskip
     \onslide<1->\centerline{\small Region proposal network. Source: \citet{ren2015faster}}
+
+\end{minipage}
 
 \end{frame}
 
@@ -850,7 +884,7 @@ k-fold testing with varying $k$ to observe lack of data
     
 \end{frame}
 
-\subsection{Step proposal network}
+% \subsection{Step proposal network}
 
 \begin{frame}{Step proposal network}{Principle}
 
@@ -873,18 +907,21 @@ k-fold testing with varying $k$ to observe lack of data
     \centering
     \begin{minipage}[t]{0.4\linewidth}
         \centering
-        \includegraphics[width=0.6\linewidth]{example_step.pdf}\\
+        \includegraphics[width=0.55\linewidth]{example_step.pdf}\\
         {\small (a)\; Step signal}
     \end{minipage}\hfill
     \begin{minipage}[t]{0.5\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{signal_walk_young_female_stepboxes.pdf}\\
+        \includegraphics[width=0.9\linewidth]{signal_walk_young_female_stepboxes.pdf}\\
         {\small (b)\; Step labels over a walk signal}
     \end{minipage}
 %     \label{fig:walk_class_ex_stepboxes}
 \end{frame}
 
 \begin{frame}{Step proposal network}{Training}
+
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+\centering\textbf{Boxes and loss}
 \begin{itemize}
     \item Output: a matrix $\mathbf{W} \in \mathbb{R}^{T \times K}$
     \begin{itemize}
@@ -898,39 +935,18 @@ k-fold testing with varying $k$ to observe lack of data
     \item Other are not used for training
 \end{itemize}
 
-\vspace{0.8cm}
+\vspace{0.1cm}
 
 The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 \begin{equation*}\label{eq: loss training CNN}
 \mathcal{L}(\bfs, \mathbf{W}) = \sum_{t} \sum_{k \in \left[1, 2, 3 \right]} \bbmind_{ \iou(b_t^{k})> \sqrt{0.7} } \log(\mathbf{W}_{t,k}) + \bbmind_{ \iou(b_t^{k})< \sqrt{0.3} } \log(1-\mathbf{W}_{t,k}). 
 \end{equation*}
-\end{frame}
 
-% \subsection{}
-
-% \begin{frame}[noframenumbering]{\ }
-% \hfill
-% \parbox[t]{.85\textwidth}{
-%   \begin{minipage}[c][0.65\textheight]{\textwidth}
-%   \tableofcontents[currentsection, subsectionstyle=show/shaded/shaded]
-%   \end{minipage}
-% }
-% \end{frame}
-
-
-\begin{frame}{Step proposal network}{Results}
-\begin{minipage}[t]{0.48\linewidth}
-    \vspace{0pt}
-    \centering\textbf{Data}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+\centering\textbf{Procedure}
     \begin{itemize}
-        \item 43 signals recorded in a nursing home
-        \item Manually labeled steps
-    \end{itemize}
-    \includegraphics[width=0.95\linewidth, trim= 110 150 130 210, clip]{schema_couloir_plan_blue.pdf}
-
-    \pause
-    \centering\textbf{Training}
-    \begin{itemize}
+        \item Use the 43 walk signals from caregivers
         \item \subalgo is trained using classical gradient descent
         \item Training time: < 5 minutes
         \item Inference (detection over a 10s signal): < 1 second
@@ -941,24 +957,26 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
             \item Nesterov momentum
         \end{itemize}
     \end{itemize}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.51\linewidth}
-    \vspace{0pt}
-    \pause
-    \centering\textbf{Results}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}{Step proposal network}{Results}
+\centering
+\begin{minipage}[t]{0.8\linewidth}\vspace{0pt}
     \begin{itemize}
         \item Object detection use the mean Average Precision (mAP): area under the Precision-Recall curve
-        \item \textbf{Without} embedding, mAP = 72,5\%
-        \item \textbf{With} embedding, mAP = 78,6\%
+%         \item \textbf{Without} embedding, mAP = 72,5\%
+        \item mAP = 78,6\%
     \end{itemize}
 %     \begin{figure}[h]
 %             \centering
 %             \includegraphics[width=\linewidth]{spn_train_test_errors.pdf}
 %         \caption{\subalgo training and testing errors.}
 %     \end{figure}
-\pause
+% \pause
 \vspace{-0.1cm}
-\renewcommand{\ratio}{1.00}
+\renewcommand{\ratio}{0.7}
     \begin{overprint}
         \onslide<+>\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_005.pdf}
         \onslide<+>\centering\includegraphics[width=\ratio\linewidth]{Mercredi_10_19_13_00_to_10_19_18_85_th_02.pdf}
@@ -973,26 +991,30 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
 \subsection{Classification}
 
+\begin{frame}{\algo}{}
+
+\makebox[\textwidth][c]{\includegraphics[width=1.1\linewidth, trim= 0 340 0 0, clip]{schema_cnn_all.pdf}}
+    
+\medskip
+\begin{itemize}
+\centering
+    \item Final part: the classification task
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{Classification}{Training}
+\vspace{0.2cm}
+\centering
+\begin{minipage}[t]{0.8\linewidth}
+
+\centering\textbf{Classification loss}
 \begin{equation*}\label{eq: loss training algp}
     \mathcal{L}(\bfs_i, \hat{y}_i) = - \big( \bbmind_{{y_i =1}} \log( \hat{y}_i ) + \bbmind_{ y_i=0 } \log(1- \hat{y}_i) \big)
 \end{equation*}
 
-\begin{table}[h]
-    \centering 
-    \begin{tabular}{lcc}
-    \toprule
-    \textbf{Sublabel} & \textbf{Staff} & \textbf{Elderly} \\
-    \midrule
-    Single walk & 43 & 31 \\
-    Multiple walks & 19 & 11 \\
-    Other & 19 & 23 \\
-    \bottomrule
-    \end{tabular}
-%     \caption{Repartition of signals across main labels (\emph{staff} / \emph{elderly}) and sublabels.}
-%     \label{tab:walk_class_demographic_xp}
-\end{table}
     \begin{itemize}
+        \item Use the whole set of 146 signals, labeled as \emph{Elderly} and \emph{Staff} 
         \item \subalgo is trained using classical gradient descent
         \item Training time: < 5 minutes
         \item Inference (detection over a 10s signal): < 1 second
@@ -1003,6 +1025,8 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
             \item Nesterov momentum
         \end{itemize}
     \end{itemize}
+
+\end{minipage}
 
 \end{frame}
 
@@ -1029,12 +1053,21 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
         \end{minipage}
     \end{minipage}
 
+\centering
+\begin{minipage}{0.8\linewidth}
 \centering\textbf{Conclusion}
+\begin{itemize}
+    \item Good results over all sub-labels
+    \item Interest of the successive trainings
+    \item Better results than a RF with statistical features
+\end{itemize}
+\centering\textbf{Future work}
 \begin{itemize}
     \item Improve step detection precision (with regression layer ?)
     \item Test on benchmarks step data sets
     \item Is it possible to distinguish activities or individuals ?
 \end{itemize}
+\end{minipage}
 
 \end{frame}
 
@@ -1070,7 +1103,7 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 \begin{minipage}[t]{0.47\linewidth}
     \vspace{0pt}
     \includegraphics[width=0.95\linewidth]{schema_fall_detector.pdf}\\
-        \centering\textbf{Tarkett's objective}\\
+        \centering\textbf{Industrial objective}\\
         \smallskip
         {\textcolor{myblue}{Providing tools for elderly monitoring\\ in nursing homes}}
         \medskip
@@ -1100,8 +1133,8 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
     \item L. Minvielle and J. Audiffren. \textcolor{myblue}{Nursenet: Monitoring elderly levels of activity with a piezoelectric floor.}
 \textit{Sensors}, 19(18), 2019
     \item P. Humbert, B. Le Bars, L. Minvielle, and N. Vayatis. \textcolor{myblue}{Robust Kernel Density Estimation with Median-of-Means principle}. \textit{Submitted for publication}, 2020
-    \item C. Truong, L. Minvielle. \textcolor{myblue}{A data set for fall detection with smart floor sensors.} \textit{In preparation}, 2020
-    \item (Poster) L. Minvielle, M. Atig, S. Peignier, M. Mougeot, N. Vayatis. \textcolor{myblue}{Transfer learning to detect falls}, 3$^{\text{rd}}$ Summer school on transfer learning, 2019, Passau, Germany 
+    \item M. Atiq, L. Minvielle, C. Truong. \textcolor{myblue}{A data set for fall detection with smart floor sensors.} \textit{In preparation}, 2020
+    \item (Poster) L. Minvielle, M. Atig, S. Peignier, M. Mougeot, N. Vayatis. \textcolor{myblue}{Transfer learning to detect falls}, 2$^{\text{nd}}$ Summer school on transfer learning, 2018, Cachan, France 
 \end{itemize}
 
 % \textbf{Future work}
