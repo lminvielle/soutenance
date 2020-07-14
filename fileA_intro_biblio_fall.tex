@@ -30,26 +30,26 @@
 %             \item \textbf{Objective}: 
         \end{itemize}
             \smallskip
-            \onslide<2->\includegraphics[width=0.4\linewidth]{FIM.jpg}\\[2pt]
-            \onslide<2->\includegraphics[width=0.95\linewidth]{schema_fall_detector.pdf}\\
-    \pause \pause
+            \onslide<1->\includegraphics[width=0.4\linewidth]{FIM.jpg}\\[2pt]
+            \onslide<1->\includegraphics[width=0.95\linewidth]{schema_fall_detector.pdf}\\
+    \pause
 \end{minipage}\hfill
 \begin{minipage}[t]{0.47\linewidth}
         \vspace{0pt}
-        \centering\textbf{Objective}\\
+        \centering\textbf{Tarkett's objective}\\
         \smallskip
         {\textcolor{myblue}{Providing tools for elderly monitoring\\ in nursing homes}}
     
-        \pause
+%         \pause
         \medskip
-        \centering\textbf{Scientific context}
+        \centering\textbf{Challenges}
         \begin{itemize}
-            \item Processing and understanding time series
+            \item Signal interpretability (external perturbations, artefacts, unidimensional for one area)
     %         \begin{itemize}
     %             \item Proliferation of sensor-based systems
     %             \item Redundancy, interpretability, external pertubations
     %         \end{itemize}
-            \item Real world application
+            \item Real world application (data scarcity, model for embedded systems)
     %         \begin{itemize}
     %             \item Real-time processing in a limited system
     %             \item Convenient hypotheses not granted
@@ -70,15 +70,15 @@
         \begin{minipage}[t]{0.9\linewidth}
             \vspace{0.5pt}
             \centering
-            \onslide<4->\includegraphics[width=0.7\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
-            {\small Foot-attached accelerometer}
+            \onslide<2->\includegraphics[width=0.7\linewidth]{signal_marche_accelerometre_left_right_epure.pdf}\\
+            {\small Walk recorded with accelerometers}
         \end{minipage}\\
         \smallskip
         \begin{minipage}[t]{0.9\linewidth}
             \vspace{0pt}
             \centering
-            \onslide<4->\includegraphics[width=0.75\linewidth]{signal_marche_tarkett_epure.pdf}\\
-            {\small Tarkett's floor sensor}
+            \onslide<2->\includegraphics[width=0.75\linewidth]{signal_marche_tarkett_epure.pdf}\\
+            {\small Walk recorded with Tarkett's floor sensor}
         \end{minipage}
         
 %     \pause
@@ -100,14 +100,34 @@
 \setbeamertemplate{headline}{}
 \setbeamertemplate{navigation symbols}{}  % remove page number within the group
 \setcounter{tocdepth}{1}
-\begin{frame}[noframenumbering]{Table of contents}
+\begin{frame}[noframenumbering]{Outline}
 % \begin{minipage}[t]{0.49\linewidth}
 % \parbox[t]{.85\textwidth}{
 %     \begin{minipage}[c][0.65\textheight]{\textwidth}
     \centering
 %     \vspace{1.0cm}
-    \large
-    \tableofcontents
+    \Large
+    \renewcommand{\ratio}{0.5}
+%     \tableofcontents
+    \vspace{\ratio cm}
+    
+    \textcolor{myblue}{1. Monitoring systems for fall detection}
+    
+    \vspace{\ratio cm}
+            
+     \textcolor{myblue}{       2. Fall detection using a floor sensor and machine learning}
+            
+    \vspace{\ratio cm}
+    
+     \textcolor{myblue}{      3. Transfer learning from experimental setup to operational data}
+     
+    \vspace{\ratio cm}
+            
+     \textcolor{myblue}{       4. Elderly activity recognition with convolutional neural networks}
+     
+    \vspace{\ratio cm}
+    
+     \textcolor{myblue}{       5. Conclusion}
 %     \end{minipage}
 % }
 % \end{minipage}
@@ -167,7 +187,7 @@ What makes a good monitoring system ?
 % \small
     \begin{tabular}{l c c c c c c c}
 %     \hline
-    Criteria & \onslide<2->{\rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam}} & \onslide<3->{\rotatebox{\myvar}{Wearable}} & \onslide<4->{\rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{Floor}} \\
+    Criteria & \onslide<2->{\rotatebox{\myvar}{RGB cam} & \rotatebox{\myvar}{Depth cam}} & \onslide<3->{\rotatebox{\myvar}{Wearable}} & \onslide<4->{\rotatebox{\myvar}{Acoustic} & \rotatebox{\myvar}{Radar / Wi-Fi} & \rotatebox{\myvar}{Vibration} & \rotatebox{\myvar}{\textbf{Floor}}} \\
     \midrule
     Coverage/Occlusion & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starb} & \onslide<4->{\starb\starb\starw & \starb\starw\starw & \starb\starb\starb & \starb\starb\starb} \\
     Intrusiveness & \onslide<2->{\starb\starw\starw & \starb\starw\starw} & \onslide<3->{\starb\starb\starw} & \onslide<4->{\starb\starw\starw & \starb\starb\starw & \starb\starb\starb & \starb\starb\starb} \\
@@ -196,7 +216,7 @@ What makes a good monitoring system ?
         \item All systems use feature extraction
         \item The ``level'' of feature engineering depends on the complexity / dimensionality of the input signal
     \end{itemize}
-    \onslide<2>{
+    \onslide<1>{
     \vspace{0.2cm}
     How to deal with feature signals ?
     \begin{itemize}
@@ -225,8 +245,8 @@ What makes a good monitoring system ?
     \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
         \begin{overprint}
-            \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{schemas_fallsystems_4_14.pdf}
-            \onslide<2>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{schemas_fallsystems_5_14.pdf}
+%             \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{schemas_fallsystems_4_14.pdf}
+            \onslide<1>\includegraphics[width=\linewidth, trim={190 50 150 60}, clip]{schemas_fallsystems_5_14.pdf}
         \end{overprint}
     \end{minipage}
 % \end{minipage}
@@ -243,7 +263,7 @@ What makes a good monitoring system ?
     \centering
     \vspace{3cm}
     \Huge
-    \textcolor{myblue}{A fall detection system}
+    \textcolor{myblue}{Fall detection using a floor sensor and machine learning}
 \end{frame}
 \endgroup
 
@@ -313,6 +333,10 @@ What makes a good monitoring system ?
 \subsection{Data}
 
 \begin{frame}{Data}
+
+
+\vspace{0.5cm}
+
 \begin{minipage}[t]{0.49\linewidth}
     \vspace{0pt}
 %     \begin{itemize}
@@ -324,7 +348,7 @@ What makes a good monitoring system ?
             \item sum over all channels
         \end{itemize}
 %     \end{itemize}
-    \medskip
+    \vspace{0.5cm}
     \begin{overprint}
 %         \begin{minipage}{0.49\linewidth}
 %         \centering
@@ -347,6 +371,7 @@ What makes a good monitoring system ?
     \pause \pause
     \textbf{Experimental dataset}
     \begin{itemize}
+        \item 28 volunteers aged 25 to 45
         \item 742 signals collected in \textbf{controlled environment}
         \item 55\% \emph{fall}, 45\% \emph{non-fall}
         \item varied fall events (forward, backward...) and activities of daily living (walking, sitting...)
@@ -354,17 +379,15 @@ What makes a good monitoring system ?
 %     \end{itemize}
     \smallskip
     \centering
-    \includegraphics[width=0.8\linewidth]{exp_database_epure_2.pdf}\\
+    \vspace{0.3cm}
+    \includegraphics[width=0.9\textwidth]{ex_signal_chute_2.pdf}
 
 \end{minipage}
-    \pause
-    \centering
-    \includegraphics[width=0.51\textwidth]{ex_signal_chute_2.pdf}
 
 \end{frame}
 
-\subsection{Method}
-\begin{frame}{Method}{Model}
+\subsection{Model}
+\begin{frame}{Model}{}
 
 
 \begin{minipage}[t]{0.49\linewidth}
@@ -408,9 +431,9 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     \end{overlayarea}
     
     \vspace{3cm}
-    \pause[3]
+    \pause[2]
     \begin{enumerate}
-        \item[3.] Classification model: Random Forest \cite{Breiman2001}, based on \textbf{decision trees}
+        \item[3.] Classification model: Random Forest (\citet{Breiman2001}), based on \textbf{decision trees}
         
 %     \textbf{Random Forest}: Aggregation of \textbf{decision trees}.
     \end{enumerate}
@@ -448,7 +471,7 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 \end{minipage}
 \end{frame}
 
-\begin{frame}{Method}{Model}
+\begin{frame}{Model}{}
 \begin{minipage}[t]{0.45\linewidth}
     \vspace{0pt}
     \begin{tcolorbox}[title=Random forest,size=title,boxrule=0.2pt]
@@ -494,8 +517,8 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     $\left[
     \begin{array}{ccc}
         x_{1,1} & ... & x_{1,Q} \\
-        \onslide<2-3>{x_{2,1} & ... & x_{2,Q}} \\
-        \onslide<3>{x_{3,1} & ... & x_{3,Q}} \\
+        \onslide<3-4>{x_{2,1} & ... & x_{2,Q}} \\
+        \onslide<4>{x_{3,1} & ... & x_{3,Q}} \\
     \end{array}
     \right]
     $
@@ -511,6 +534,11 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
     $
     }
     \end{overlayarea}
+    \begin{itemize}
+        \item \textit{Fall} signals: encompass the fall
+        \item \textit{Non-fall} signals: random location
+    \end{itemize}
+
 
 \end{minipage}
 
@@ -518,7 +546,7 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 
 \end{frame}
 
-\begin{frame}{Method}{Time aggregation}
+\begin{frame}{Model}{Time aggregation}
 
 \centering
 \begin{minipage}[t]{0.7\linewidth}
@@ -568,7 +596,7 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 
 \end{frame}
 
-\begin{frame}{Methods}{Time aggregation}
+\begin{frame}{Model}{Parameters evaluation}
     
     \vspace{1.0cm}
     \renewcommand{\ratio}{0.32}
@@ -595,9 +623,16 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
         \end{minipage}
     \end{minipage}
     
+    \medskip
+    
+    \begin{itemize}
+    \centering
+        \item Buffer/threshold trade-off useful for maintaining low FPR while improving TPR
+    \end{itemize}
+
     \pause
     \vspace{0.5cm}
-    Decision rule is ready. Is it implementable ?
+    Decision rule is ready. Is it implementable in the local processing unit ?
 
 \end{frame}
 
@@ -648,7 +683,9 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
         \item Fixed params: $r$ set to 5 and $Q$ set to 20
         \item Varying $T_h$ (0.5 to 1) and $B_s$ (5 to 250)
         \item Record best Accuracy and show corresponding TPR, FPR
-        \item If FPR is constrained to be max 10\%, what is the range of TPRs ?
+%         \onslide<1>{
+%         \item If FPR is constrained to be max 10\%, what is the range of TPRs ?
+%         }
     \end{itemize}
 \end{minipage}
 
@@ -657,29 +694,30 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 \begin{table}[ht]
 \small
 \begin{center}
-\begin{tabular}{c c c c c c}
+\begin{tabular}{c c c c }
 \toprule
-  Model     & Accuracy & TPR & FPR & $\text{TPR}_{\text{min}}^{\text{FPR}<10}$ & $\text{TPR}_{\text{max}}^{\text{FPR}<10}$ \\
+  Model     & Accuracy & TPR & FPR \\
 \midrule
- \multicolumn{6}{c}{\footnotesize $r = 5,\; Q = 20$} \\
-\hline
-LR   &  86.8 $\pm$ 1.5 & 90.5  $\pm$  2.4 &  17.7  $\pm$  4.9 & 67.0  $\pm$  10.8 & 80.4 $\pm$  6.4 \\
-LDA   &  85.5  $\pm$  1.2  & 91.0  $\pm$  2.1 &  21.7  $\pm$  3.7 & 56.9  $\pm$  7.0 & 78.7  $\pm$  3.8 \\
-k-NN  &    87.0  $\pm$  1.9 & 89.2  $\pm$  1.4  & \textbf{16.0  $\pm$  4.7} & 63.1  $\pm$  4.2 & 83.1  $\pm$  2.5 \\
-SVM  &   87.6  $\pm$  3.2 & 90.0  $\pm$  4.5 & \textbf{15.5  $\pm$  6.8} & 69.2 $\pm$ 2.1 & 82.9  $\pm$  3.2 \\
-MLP  &\textbf{88.2  $\pm$  1.5} & \textbf{92.4  $\pm$  1.2} & 17.3  $\pm$  4.1 & 71.4  $\pm$  4.5 & 85.1  $\pm$  2.1\\
-RF  & \textbf{88.2  $\pm$  1.5} & \textbf{91.7 $\pm$ 3.5} & 16.2  $\pm$  6.2 & 63.8  $\pm$  6.8 & 84.3  $\pm$  7.9 \\
-% \hline
-%  \multicolumn{6}{c}{\rule{0pt}{12pt} \footnotesize $r = 10,\; Q = 30$} \\
-% \hline
-% LR   & 87.5  $\pm$  2.5 & 93.4  $\pm$  2.3 & 20.0  $\pm$  4.2  & 66.5  $\pm$  2.4 & 83.1  $\pm$  1.9 \\
-% LDA   & 86.4  $\pm$  1.3  & 89.5  $\pm$  2.3  & 17.5  $\pm$  2.6 & 56.7  $\pm$  4.2 & 76.8  $\pm$  3.7\\
-% k-NN  & 87.8  $\pm$  4.1  & 90.7  $\pm$  4.3  & 16.0  $\pm$  4.7 & 63.8  $\pm$  5.3 & 80.7  $\pm$  4.5 \\
-% SVM  &  88.3  $\pm$  3.4  & 88.0  $\pm$  4.2 & \textbf{11.3  $\pm$  4.0} & 68.7  $\pm$  5.7 & 85.3  $\pm$  4.7 \\
-% MLP  & \textbf{89.8  $\pm$  1.8} & \textbf{95.4  $\pm$  1.2} & 17.2  $\pm$  3.6 & 72.1  $\pm$  4.8 & 88.3  $\pm$  1.6 \\
-% RF  & \textbf{89.9  $\pm$  2.5} & \textbf{93.6  $\pm$  2.5} & \textbf{15.0  $\pm$  3.0} & 62.6  $\pm$  3.8 & 85.1  $\pm$  2.9 \\
+LR   &  86.8 $\pm$ 1.5 & 90.5  $\pm$  2.4 &  17.7  $\pm$  4.9 \\
+LDA   &  85.5  $\pm$  1.2  & 91.0  $\pm$  2.1 &  21.7  $\pm$  3.7 \\
+k-NN  &    87.0  $\pm$  1.9 & 89.2  $\pm$  1.4  & \textbf{16.0  $\pm$  4.7} \\
+SVM  &   87.6  $\pm$  3.2 & 90.0  $\pm$  4.5 & \textbf{15.5  $\pm$  6.8} \\
+MLP  &\textbf{88.2  $\pm$  1.5} & \textbf{92.4  $\pm$  1.2} & 17.3  $\pm$  4.1 \\
+RF  & \textbf{88.2  $\pm$  1.5} & \textbf{91.7 $\pm$ 3.5} & 16.2  $\pm$  6.2 \\
 \bottomrule
 \end{tabular}
+% \begin{tabular}{c c c c | c c}
+% \toprule
+%   Model     & Accuracy & TPR & FPR & $\text{TPR}_{\text{min}}^{\text{FPR}<10}$ & $\text{TPR}_{\text{max}}^{\text{FPR}<10}$ \\
+% \midrule
+% LR   &  86.8 $\pm$ 1.5 & 90.5  $\pm$  2.4 &  17.7  $\pm$  4.9 & 67.0  $\pm$  10.8 & 80.4 $\pm$  6.4 \\
+% LDA   &  85.5  $\pm$  1.2  & 91.0  $\pm$  2.1 &  21.7  $\pm$  3.7 & 56.9  $\pm$  7.0 & 78.7  $\pm$  3.8 \\
+% k-NN  &    87.0  $\pm$  1.9 & 89.2  $\pm$  1.4  & \textbf{16.0  $\pm$  4.7} & 63.1  $\pm$  4.2 & 83.1  $\pm$  2.5 \\
+% SVM  &   87.6  $\pm$  3.2 & 90.0  $\pm$  4.5 & \textbf{15.5  $\pm$  6.8} & 69.2 $\pm$ 2.1 & 82.9  $\pm$  3.2 \\
+% MLP  &\textbf{88.2  $\pm$  1.5} & \textbf{92.4  $\pm$  1.2} & 17.3  $\pm$  4.1 & 71.4  $\pm$  4.5 & 85.1  $\pm$  2.1\\
+% RF  & \textbf{88.2  $\pm$  1.5} & \textbf{91.7 $\pm$ 3.5} & 16.2  $\pm$  6.2 & 63.8  $\pm$  6.8 & 84.3  $\pm$  7.9 \\
+% \bottomrule
+% \end{tabular}
 \end{center}
 \end{table}
 
@@ -689,7 +727,8 @@ RF  & \textbf{88.2  $\pm$  1.5} & \textbf{91.7 $\pm$ 3.5} & 16.2  $\pm$  6.2 & 6
         \item Parametric methods perform slightly worse than non-parametric
         %that contain variable selection (RF), feature space modification (SVM) or feature construction (MLP)
         \item RF is slightly better than others
-        \item Buffer/threshold trade-off useful for maintaining low FPR while improving TPR
+%         \onslide<1>{
+%         }
     \end{itemize}
 \end{minipage}
 

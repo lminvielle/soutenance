@@ -6,7 +6,7 @@
     \centering
     \vspace{3cm}
     \Huge
-    \textcolor{myblue}{Transfer learning on decision tree}
+    \textcolor{myblue}{Transfer learning from experimental setup to operational data}
 \end{frame}
 \endgroup
 
@@ -19,8 +19,8 @@
         \onslide<1>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_1.pdf}
         \onslide<2>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_2.pdf}
         \onslide<3>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_3.pdf}
-        \onslide<4>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_4.pdf}
-        \onslide<5>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_5.pdf}
+%         \onslide<4>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_4.pdf}
+        \onslide<4>\centering\includegraphics[width=\ratio\linewidth,trim={0 20 0 60},clip]{schemas_tl_5.pdf}
     \end{overprint}
 
 \end{frame}
@@ -51,7 +51,8 @@
 \bigskip
 
 \renewcommand{\ratio}{0.32}
-\begin{minipage}[t]{\linewidth}
+\centering
+\begin{minipage}[t]{0.85\linewidth}
     \centering
     \begin{minipage}[t]{\ratio\linewidth}
         \centering
@@ -69,6 +70,12 @@
         {\small \emph{Target} tested on target}
     \end{minipage}
 \end{minipage}
+
+\begin{itemize}
+    \item \textbf{Goal}: Use knowledge from source and target domains to improve the final task while avoiding \textit{negative transfer}
+    \item Model-based transfer: we have access to the Source model and target data
+\end{itemize}
+
 
 \end{frame}
 
@@ -281,18 +288,18 @@
     \begin{overprint}
         \onslide<1>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_0_15.pdf}
         \onslide<2>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_1_15.pdf}
-        \onslide<3>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_2_15.pdf}
-        \onslide<4->\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_3_15.pdf}
+%         \onslide<3>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_2_15.pdf}
+        \onslide<3->\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_3_15.pdf}
     \end{overprint}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.55\linewidth}
     \vspace{0pt}
     \pause \pause
     $Q_{l}^{S}$, $Q_{r}^{S}$: class proportions of source data in children w.r.t.\ the \emph{original} split\\
-    \pause
+%     \pause
     $S_{v,l}^{T}$, $S_{v,r}^{T}$: subsets of $S_{v}^{T}$ that fall in the children nodes of $v$\\
     $Q_{l}^{T}(\tau)$, $Q_{r}^{T}(\tau)$: class proportions of target data in children w.r.t.\ the \emph{new} split\\
-    \pause
+%     \pause
     \textbf{Divergence Gain}: similarity between the original label distributions and the new ones
     $$
     DG\left(\tau\right) = 1 - \frac{|S_{v,l}^{T}|}{|S_{v}^{T}|}JSD(Q_{l}^{S}, Q_{l}^{T})
@@ -319,16 +326,16 @@
     \textbf{STRUT: How are updated the new thresholds ?}\\
     \renewcommand{\ratio}{1.0}
     \begin{overprint}
-        \onslide<1>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_3_15.pdf}
-        \onslide<2>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_4_15.pdf}
-        \onslide<3->\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_5_15.pdf}
+%         \onslide<1>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_3_15.pdf}
+%         \onslide<2>\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_4_15.pdf}
+        \onslide<1->\includegraphics[width=\ratio\linewidth, trim={150 120 320 200}, clip]{schemas_strutoptim_5_15.pdf}
     \end{overprint}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.55\linewidth}
     \vspace{0pt}
     
     \textbf{Goal: } Maximize DG while being in a local maximum of Information Gain (IG) (here IG = Gini gain)
-    \pause \pause \pause
+%     \pause \pause \pause
     \begin{align*}
         &\tau_{m} = \argmax_{\tau \in \mathrm{T}_{v}}\left(DG\left(  \tau ,  Q_{l}^{T}(\tau), Q_{r}^{T}(\tau)\right)\right) \\
         &\text{s.t.\ } IG(\tau_{m-1}) < IG(\tau_{m}) \text{ and } IG(\tau_{m}) > IG(\tau_{m+1})
@@ -571,7 +578,9 @@ k-fold testing with varying $k$ to observe lack of data
 
 \end{frame}
 
-\begin{frame}{Results}{Overall}
+\subsection{Conclusion}
+
+\begin{frame}{Conclusion}{}
 
 %   \begin{table}[h]
 %   \small
@@ -588,13 +597,27 @@ k-fold testing with varying $k$ to observe lack of data
     
     \vspace{1cm}
     \centering
-    \begin{minipage}[t]{0.8\linewidth}
+    \begin{minipage}[t]{0.75\linewidth}
+    
+        \centering
+        \textbf{Conclusion}
         \begin{itemize}
-            \item \serll\ quite close to original SER
-            \item \serr\ generally better except with one real dataset
-            \item Both STRUT variants give better results with one exception on fall data (when data is scarce)
+%             \item \serll\ quite close to original SER
+%             \item \serr\ generally better except with one real dataset
+%             \item Both STRUT variants give better results with one exception on fall data (when data is scarce)
+            \item Good results when comparing with original methods
+            \item Choosing one method is not easy
             \item This suggests a data-dependency of the algorithms
         \end{itemize}
+        \medskip
+        \centering
+        \textbf{Future works}
+        \begin{itemize}
+            \item Explore meta models for transfer procedures
+            \item What if features change ? Consider heterogeneous transfer
+            \item Methods fitted for decision trees, other model-based transfer might be investigated (\ie neural networks)
+        \end{itemize}
+
     \end{minipage}
     
 \end{frame}
@@ -608,7 +631,7 @@ k-fold testing with varying $k$ to observe lack of data
     \centering
     \vspace{3cm}
     \Huge
-    \textcolor{myblue}{Elderly activity recognition with convolutional representations}
+    \textcolor{myblue}{Elderly activity recognition with convolutional neural networks}
 \end{frame}
 \endgroup
 
@@ -713,7 +736,7 @@ k-fold testing with varying $k$ to observe lack of data
 \begin{minipage}[t]{0.45\linewidth}
     \vspace{0pt}
     \begin{itemize}
-        \item Learning with Alternating Direction Method of Multipliers (ADMM) \cite{bristow2013fast}
+        \item Learning with Alternating Direction Method of Multipliers (ADMM) (\citet{bristow2013fast})
     %     \begin{itemize}
             \item 3 atoms of length 0.7 second
     %     \end{itemize}
@@ -983,7 +1006,9 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
 \end{frame}
 
-\begin{frame}{Classification}{Results}
+\subsection{Results}
+
+\begin{frame}{Results}{}
 \renewcommand{\ratiob}{0.98}
     \begin{minipage}{\linewidth}
         \centering
@@ -1004,10 +1029,21 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
         \end{minipage}
     \end{minipage}
 
+\centering\textbf{Conclusion}
+\begin{itemize}
+    \item Improve step detection precision (with regression layer ?)
+    \item Test on benchmarks step data sets
+    \item Is it possible to distinguish activities or individuals ?
+\end{itemize}
+
 \end{frame}
+
+\subsection{}
 
 
 \section{Conclusion}
+
+
 
 \begingroup
 \setbeamertemplate{navigation symbols}{}  % remove page number within the group
@@ -1025,24 +1061,51 @@ The loss function $\mathcal{L}$ over a signal $\bfs$ is defined as:
 
 % \vspace{1cm}
 \centering
-\begin{minipage}[t]{0.8\linewidth}
+% \begin{minipage}[t]{0.8\linewidth}
 \centering
 \textbf{Contributions}
 
+    
+\centering
+\begin{minipage}[t]{0.47\linewidth}
+    \vspace{0pt}
+    \includegraphics[width=0.95\linewidth]{schema_fall_detector.pdf}\\
+        \centering\textbf{Tarkett's objective}\\
+        \smallskip
+        {\textcolor{myblue}{Providing tools for elderly monitoring\\ in nursing homes}}
+        \medskip
+%         \centering\textbf{Challenges}
+%         \begin{itemize}
+%             \item Signal interpretability (external perturbations, artefacts, unidimensional for one area)
+%             \item Real world application (data scarcity, model for embedded systems)
+%         \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\linewidth}
 \begin{itemize}
     \item A simple and practical model for fall detection
     \item Transfer procedure for decision tree adapted to class imbalance
     \item A model to distinguish elderly vs. other with high accuracy
 \end{itemize}
-\textbf{Future work}
-\begin{itemize}
-    \item Explore meta models for transfer procedures
-    \item What if features change ? Consider heterogeneous transfer
-    \item Improve step detection precision (with regression layer ?)
-    \item Test on benchmarks step data sets
-    \item Is it possible to distinguish activities or individuals ?
-\end{itemize}
 \end{minipage}
+
+\centering
+\textbf{Publications}
+\begin{itemize}
+    \small
+    \item L. Minvielle, M. Atiq, R. Serra, M. Mougeot, and N. Vayatis. \textcolor{myblue}{Fall detection using smart floor sensor and supervised learning.}
+\textit{In 2017 39th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)}, pages
+3445–3448, July 2017
+    \item L. Minvielle, M. Atiq, S. Peignier, and M. Mougeot. \textcolor{myblue}{Transfer learning on decision tree with class imbalance.}
+\textit{In 2019 IEEE 31st International Conference on Tools with Artificial Intelligence (ICTAI)}, pages 1003–1010, Nov 2019
+    \item L. Minvielle and J. Audiffren. \textcolor{myblue}{Nursenet: Monitoring elderly levels of activity with a piezoelectric floor.}
+\textit{Sensors}, 19(18), 2019
+    \item P. Humbert, B. Le Bars, L. Minvielle, and N. Vayatis. \textcolor{myblue}{Robust Kernel Density Estimation with Median-of-Means principle}. \textit{Submitted for publication}, 2020
+    \item C. Truong, L. Minvielle. \textcolor{myblue}{A data set for fall detection with smart floor sensors.} \textit{In preparation}, 2020
+    \item (Poster) L. Minvielle, M. Atig, S. Peignier, M. Mougeot, N. Vayatis. \textcolor{myblue}{Transfer learning to detect falls}, 3$^{\text{rd}}$ Summer school on transfer learning, 2019, Passau, Germany 
+\end{itemize}
+
+% \textbf{Future work}
+% \end{minipage}
 
 \vfill
 \end{frame}
