@@ -22,7 +22,7 @@
     \vspace{0pt}
         \centering\textbf{General context}
         \begin{itemize}
-            \item Elderly population is growing
+            \item Elderly population is growing (\citet{WorldHealthOrganization2007})
             \item Higher levels of frailty globally
             \item Increasing demand for reliable monitoring devices
             \item Tarkett, French company: 12,500 employees, 13 industrial sites, 1.3 millions m$^2$ of flooring per day
@@ -552,18 +552,41 @@ node[midway,below,yshift=-3pt]{$\mathbf{x} \in \RR^{87}$};
 \begin{minipage}[t]{0.7\linewidth}
     \centering
     \vspace{0pt}
-    \renewcommand{\ratio}{0.5}
-%     \begin{overlayarea}{\linewidth}{0cm} %{width}{height}
+%     \renewcommand{\ratio}{0.5}
+    \renewcommand{\ratio}{1.0}
     \begin{overprint}
-        
+%         \onslide<1-2>
+%         \centering\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP_beforebuff_noth.pdf}
+%         \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN_beforebuff_noleg_noth.pdf}\\
+%         \onslide<3->
+%         \centering\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP.pdf}
+%         \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN.pdf}
         \onslide<1-2>
-        \centering\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP_beforebuff_noth.pdf}
-        \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN_beforebuff_noleg_noth.pdf}
+        \centering
+        \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP_beforebuff_noth.pdf}\\
+            {\small Fall}
+        \end{minipage}
+        \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN_beforebuff_noleg_noth.pdf}\\
+            {\small Jump}
+        \end{minipage}
         \onslide<3->
-        \centering\includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP.pdf}
-        \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN.pdf}
-%     \end{overlayarea}
+        \centering
+        \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\ratio\linewidth]{20140925a-1101-1115-FallLateral-Lateral-Yamina_begin_423_end_549_RFresponse_TP.pdf}\\
+            {\small Fall}
+        \end{minipage}
+        \begin{minipage}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\ratio\linewidth]{20140925a-0905-0943-Jump1-Yamina_RFresponse_TN.pdf}\\
+            {\small Jump}
+        \end{minipage}
     \end{overprint}
+    
 
 \end{minipage}
 
